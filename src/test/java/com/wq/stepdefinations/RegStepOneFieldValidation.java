@@ -5,19 +5,20 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
+
+import com.wq.common.Commons;
 
 import io.cucumber.java.en.*;
 
 public class RegStepOneFieldValidation {
 	WebDriver driver;
-
+	ChromeOptions chromeOptions = new ChromeOptions();
+	
 	@Given("user launched the moneytap webqual page")
 	public void user_launched_the_moneytap_webqual_page() {
-
-		System.setProperty("webdriver.chrome.driver", "C:/Work/workspace/Automation/chrome/chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.get("https://dev.moneytap.com/jqual");
+		Commons.browserInitialization();
 	}
 	
 	@Then("verify firstname text field")
@@ -73,8 +74,8 @@ public class RegStepOneFieldValidation {
 	
 	@Then("verify continue button")
 	public void verify_continue_button() {	
-		Boolean phoneNumber = driver.findElement(By.xpath("//button[@class='btn btn-orange submitBtn']")).isEnabled();		
-		Assert.assertTrue(phoneNumber);
+		Boolean submitBtn = driver.findElement(By.xpath("//button[@class='btn btn-orange submitBtn']")).isEnabled();		
+		Assert.assertTrue(submitBtn);
 		
 	}
 	

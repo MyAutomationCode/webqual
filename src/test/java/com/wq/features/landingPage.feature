@@ -23,15 +23,15 @@ Scenario: Validate moneytap benefits
 
 Scenario: Validate login button
 	Given user already launched the moneytap webqual page 
-	Then click on login button
+	Then verify login button
 	Then close the webpage
 
-Scenario: Validate customer reg title
+Scenario: Validate customer reg step one title
 	Given user already launched the moneytap webqual page 
-	Then verify customer reg subtitle
+	Then verify customer reg step one title
 	Then close the webpage
 	
 Scenario: Validate scroll bar option in landing page	
 	Given user already launched the moneytap webqual page 
 	Then find the scroll bar in webpage and verify
-#	Then close the webpage
+	Then close the webpage
