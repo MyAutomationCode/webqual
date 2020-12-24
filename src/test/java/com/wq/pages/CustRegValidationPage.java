@@ -77,7 +77,7 @@ public class CustRegValidationPage extends Commons{
 	}
 	public static String credtiHistoryErrorMsg() {		
 
-		String errorMsg =driver.findElement(By.xpath(prop.getProperty("credtiHistoryErrorMsg"))).getText();
+		String errorMsg =driver.findElement(By.xpath(prop.getProperty("creditHistoryErrorMsg"))).getText();
 		return errorMsg;
 
 	}

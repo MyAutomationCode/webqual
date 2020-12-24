@@ -1,7 +1,6 @@
 @custRegValidation
 Feature: Customer data validations
 
-@smoketest
 Scenario: verify continue option without providing details
 	Given user launched webpage
 	Then click on continue button
