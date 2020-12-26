@@ -14,6 +14,7 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.messages.internal.com.google.common.base.Strings;
 
 public class CustRegValidation extends Commons {
 
@@ -37,23 +38,8 @@ public class CustRegValidation extends Commons {
 	}
 
 	@And("user entered invalid firstname")
-	//fetching dynamic data from feature file using data table with maps mechanism
-	//	public void user_entered_invalid_firstname(DataTable regData) throws IOException {
-	public void user_entered_invalid_firstname() throws IOException {
+	public void user_entered_invalid_firstname(DataTable regData) throws IOException {
 
-		//Fecth data from external resource(excel file and pass it)
-		DataHelper helper = new DataHelper();
-		Map<String, String> data = helper.readExcelData(prop.getProperty(Constants.FILE_PATH),
-				prop.getProperty(Constants.FILE_NAME), prop.getProperty(Constants.SHEET_NAME));	
-
-		RegistrationPage.passCustStepOneInfo(data.get("firstName"), data.get("middleName"),data.get("lastName"), 
-				data.get("dob"), data.get("gender"), data.get("city"),data.get("creditHistory"), 
-				data.get("phoneNumber"));
-		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.FIRSTNAME_ERROR_MSG), "Name can contain only letters and spaces. Please check to continue");
-		driver.navigate().refresh();
-
-		/*
- 		//Another Approach
 		//fetching dynamic data from feature file using data table with maps mechanism
 		//Provide sample data under the test step in feature file and pass the data in the below method
 		for (Map<String, String> data : regData.asMaps()){
@@ -63,7 +49,23 @@ public class CustRegValidation extends Commons {
 			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.FIRSTNAME_ERROR_MSG), "Name can contain only letters and spaces. Please check to continue");
 			driver.navigate().refresh();
 		}	
-		 */
+		/*		
+		//fetching test data using external resources(ex:excel file).
+		public void user_entered_invalid_firstname() throws IOException {
+
+			//Fecth data from external resource(excel file and pass it)
+			DataHelper helper = new DataHelper();
+		Map<String, String> data =  helper.readExcelData(prop.getProperty(Constants.FILE_PATH),
+					prop.getProperty(Constants.FILE_NAME), prop.getProperty(Constants.SHEET_NAME));	
+
+			RegistrationPage.passCustStepOneInfo(data.get("firstName"), data.get("middleName"),data.get("lastName"), 
+					data.get("dob"),data.get("gender"), data.get("city"),data.get("creditHistory"), 
+					data.get("phoneNumber"));
+
+			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.FIRSTNAME_ERROR_MSG), "Name can contain only letters and spaces. Please check to continue");
+			driver.navigate().refresh();
+			}	
+		 */		 
 	}
 
 	@And("user entered invalid middlename")
@@ -130,17 +132,27 @@ public class CustRegValidation extends Commons {
 		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.PHONE_ERROR_MSG), "The Phone field should be of minimum 10 characters.");
 	}
 	@Then("click on continue button without providing values in step one page")
-	public void click_on_continue_button_without_providing_values_in_step_one_page() {
+	public void click_on_continue_button_without_providing_values_in_step_one_page(DataTable regData) {
 
-		RegistrationPage.passCustStepOneInfo("","","","","Select gender","","-- Select --","");
-		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.FIRSTNAME_ERROR_MSG), "First name is a required field");
-		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.LASTNAME_ERROR_MSG), "Last name is a required field");
-		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.DOB_ERROR_MSG), "Date of birth is required");
-		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.GENDER_ERROR_MSG), "Gender is a required field");
-		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.CITY_ERROR_MSG), "Current city is a required field");
-		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.CH_ERROR_MSG), "Credit history is a required field");
-		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.PHONE_ERROR_MSG), "Phone number is a required field");
-	}
+		for (Map<String, String> data : regData.asMaps()){
+			
+			RegistrationPage.passCustStepOneInfo(
+					(Strings.nullToEmpty(data.get("firstname"))),Strings.nullToEmpty(data.get("middlename")),
+					Strings.nullToEmpty(data.get("lastname")),Strings.nullToEmpty(data.get("dob")),
+					data.get("gender"),Strings.nullToEmpty(data.get("city")),
+					data.get("creditHistory"),Strings.nullToEmpty(data.get("phoneNumber")));
+
+				Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.FIRSTNAME_ERROR_MSG), "First name is a required field");
+				Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.LASTNAME_ERROR_MSG), "Last name is a required field");
+				Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.DOB_ERROR_MSG), "Date of birth is required");
+				Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.GENDER_ERROR_MSG), "Gender is a required field");
+				Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.CITY_ERROR_MSG), "Current city is a required field");
+				Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.CH_ERROR_MSG), "Credit history is a required field");
+				Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.PHONE_ERROR_MSG), "Phone number is a required field");
+
+				RegistrationPage.refreshBrowser();
+			}
+		}
 
 	//test cases for customer registration step-2 page
 
@@ -148,7 +160,7 @@ public class CustRegValidation extends Commons {
 	public void click_on_continue_button_without_providing_details_in_step_two_page() {
 
 		CustRegValidation.user_entered_all_mandatory_details_in_step_one();
-		RegistrationPage.passCustStepTwoInfo("-- Select --","--Select--","--Select--","","","");
+		RegistrationPage.passCustStepTwoInfo("-- Select --","-- Select --","-- Select --","","","");
 		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.RESIDENCE_TYPE_ERROR_MSG), "Type of residence is a required field");
 		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.CURRENT_RES_AGE_ERROR_MSG), "Current residence duration is a required field");
 		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.CURRENT_CITY_AGE_ERROR_MSG), "Current city duration is a required field");

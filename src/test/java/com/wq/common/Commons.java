@@ -31,16 +31,19 @@ public class Commons {
 
 		if(browserName.equals("chrome")) {			
 			System.setProperty("webdriver.chrome.driver", prop.getProperty("chromeLocation"));
-			//chromeOptions.addArguments("headless");
-			//driver = new ChromeDriver(chromeOptions);
-			driver = new ChromeDriver();
+			chromeOptions.addArguments("headless");
+			driver = new ChromeDriver(chromeOptions);
+			//driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.get(prop.getProperty("url"));
-			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+//			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		}
 	}
 
 	public static void closeBrowser() {
 		driver.close();
+	}
+	public static void refreshBrowser() {
+		driver.navigate().refresh();
 	}
 }

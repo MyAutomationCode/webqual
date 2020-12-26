@@ -29,7 +29,7 @@ public class DataHelper {
 		XSSFSheet sheet = book.getSheet(sheetName);
 		fis.close();
 
-		int rowCount = sheet.getLastRowNum();
+		int rowCount = sheet.getLastRowNum()-sheet.getFirstRowNum();
 		int colCount = sheet.getRow(0).getLastCellNum();
 		
 		//convert the excel data into map
