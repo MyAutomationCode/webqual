@@ -18,7 +18,7 @@ public class Commons {
 	public Commons() {
 		try {
 			prop = new Properties();
-			FileInputStream fis = new FileInputStream("C:\\Work\\workspace\\Automation\\eclipse\\Moneytap-WQ\\src\\test\\java\\com\\wq\\config\\config.properties");
+			FileInputStream fis = new FileInputStream("./src/test/java/com/wq/config/config.properties");
 			prop.load(fis);
 		}catch (IOException e) {
 			e.getMessage();
@@ -31,7 +31,8 @@ public class Commons {
 
 		if(browserName.equals("chrome")) {			
 			System.setProperty("webdriver.chrome.driver", prop.getProperty("chromeLocation"));
-			//	chromeOptions.addArguments("headless");
+			//chromeOptions.addArguments("headless");
+			//driver = new ChromeDriver(chromeOptions);
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.get(prop.getProperty("url"));

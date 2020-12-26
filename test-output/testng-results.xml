@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-12-25T13:12:02 IST" name="Default suite" finished-at="2020-12-25T13:12:14 IST" duration-ms="11927">
+  <suite started-at="2020-12-26T15:39:33 IST" name="Default suite" finished-at="2020-12-26T15:39:43 IST" duration-ms="9712">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@40cb8df7]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@51f116b8]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2020-12-25T13:12:02 IST" name="Default test" finished-at="2020-12-25T13:12:14 IST" duration-ms="11927">
+    <test started-at="2020-12-26T15:39:33 IST" name="Default test" finished-at="2020-12-26T15:39:43 IST" duration-ms="9712">
       <class name="com.wq.runner.RunnerService">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.wq.runner.RunnerService@40cb8df7]" started-at="2020-12-25T13:12:02 IST" name="setUpClass" finished-at="2020-12-25T13:12:02 IST" duration-ms="208" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.wq.runner.RunnerService@51f116b8]" started-at="2020-12-26T15:39:33 IST" name="setUpClass" finished-at="2020-12-26T15:39:33 IST" duration-ms="210" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@40cb8df7]" started-at="2020-12-25T13:12:02 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-25T13:12:14 IST" duration-ms="11687" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@51f116b8]" started-at="2020-12-26T15:39:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-26T15:39:43 IST" duration-ms="9467" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["verify step two page without passing any details"]]>
+                <![CDATA["verify step one reg details by providing invalid firstname"]]>
               </value>
             </param>
             <param index="1">
@@ -27,31 +27,10 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Cannot locate element with text: --Select--
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
-Driver info: driver.version: unknown]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate element with text: --Select--
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
-Driver info: driver.version: unknown
-at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
-at com.wq.pages.RegistrationPage.passCustStepTwoInfo(RegistrationPage.java:39)
-at com.wq.stepdefinations.CustRegValidation.click_on_continue_button_without_providing_details_in_step_two_page(CustRegValidation.java:130)
-at ✽.click on continue button without providing details in step two page(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/src/test/java/com/wq/features/custRegValidation.feature:67)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.wq.runner.RunnerService@40cb8df7]" started-at="2020-12-25T13:12:14 IST" name="tearDownClass" finished-at="2020-12-25T13:12:14 IST" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.wq.runner.RunnerService@51f116b8]" started-at="2020-12-26T15:39:43 IST" name="tearDownClass" finished-at="2020-12-26T15:39:43 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

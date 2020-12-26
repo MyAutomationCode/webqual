@@ -1,12 +1,14 @@
 package com.wq.stepdefinations;
 
-import java.util.List;
+import java.io.IOException;
+import java.util.Map;
 
 import org.testng.Assert;
 
 import com.wq.common.Commons;
 import com.wq.pages.RegistrationPage;
 import com.wq.utils.Constants;
+import com.wq.utils.DataHelper;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
@@ -17,6 +19,7 @@ public class CustRegValidation extends Commons {
 
 	RegistrationPage pages = new RegistrationPage();
 	Constants c = new Constants();
+	DataHelper helper = new DataHelper();
 
 	@Given("user launched webpage")
 	public void user_launched_webpage() {	
@@ -30,19 +33,37 @@ public class CustRegValidation extends Commons {
 
 		RegistrationPage.passCustStepOneInfo("Manikanta","Raju","Devathi","20/08/1993","Male","Bangalore",
 				"I have an active credit card and a loan","7666666790");
-		Assert.assertEquals(RegistrationPage.ValidateStepOnePageWithDetails(), "Current Residence Details");
+		Assert.assertEquals(RegistrationPage.ValidateNextPage(Constants.STEP_TWO_TITLE), "Current Residence Details");
 	}
 
 	@And("user entered invalid firstname")
-	public void user_entered_invalid_firstname(DataTable credentials) {
+	//fetching dynamic data from feature file using data table with maps mechanism
+	//	public void user_entered_invalid_firstname(DataTable regData) throws IOException {
+	public void user_entered_invalid_firstname() throws IOException {
 
-		List<List<String>> data = credentials.cells();
-		RegistrationPage.passCustStepOneInfo(
-				data.get(0).get(0), data.get(0).get(1),
-				data.get(0).get(2), data.get(0).get(3), 
-				data.get(0).get(4),	data.get(0).get(5), 
-				data.get(0).get(6), data.get(0).get(7));
+		//Fecth data from external resource(excel file and pass it)
+		DataHelper helper = new DataHelper();
+		Map<String, String> data = helper.readExcelData(prop.getProperty(Constants.FILE_PATH),
+				prop.getProperty(Constants.FILE_NAME), prop.getProperty(Constants.SHEET_NAME));	
+
+		RegistrationPage.passCustStepOneInfo(data.get("firstName"), data.get("middleName"),data.get("lastName"), 
+				data.get("dob"), data.get("gender"), data.get("city"),data.get("creditHistory"), 
+				data.get("phoneNumber"));
 		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.FIRSTNAME_ERROR_MSG), "Name can contain only letters and spaces. Please check to continue");
+		driver.navigate().refresh();
+
+		/*
+ 		//Another Approach
+		//fetching dynamic data from feature file using data table with maps mechanism
+		//Provide sample data under the test step in feature file and pass the data in the below method
+		for (Map<String, String> data : regData.asMaps()){
+
+			RegistrationPage.passCustStepOneInfo(data.get("firstname"), data.get("middlename"),data.get("lastname"), data.get("dob"), 
+					data.get("gender"), data.get("city"),data.get("creditHistory"), data.get("phoneNumber"));
+			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.FIRSTNAME_ERROR_MSG), "Name can contain only letters and spaces. Please check to continue");
+			driver.navigate().refresh();
+		}	
+		 */
 	}
 
 	@And("user entered invalid middlename")
@@ -125,76 +146,114 @@ public class CustRegValidation extends Commons {
 
 	@Then("click on continue button without providing details in step two page")
 	public void click_on_continue_button_without_providing_details_in_step_two_page() {
-		
+
 		CustRegValidation.user_entered_all_mandatory_details_in_step_one();
-		RegistrationPage.passCustStepTwoInfo("--Select--","--Select--","","","");
+		RegistrationPage.passCustStepTwoInfo("-- Select --","--Select--","--Select--","","","");
 		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.RESIDENCE_TYPE_ERROR_MSG), "Type of residence is a required field");
 		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.CURRENT_RES_AGE_ERROR_MSG), "Current residence duration is a required field");
 		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.CURRENT_CITY_AGE_ERROR_MSG), "Current city duration is a required field");
 		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.RES_ADD_LINE_ONE_ERROR_MSG), "Address is a required field");
-//		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.RES_ADD_LINE_TWO_ERROR_MSG), "Current city is a required field");
+		//		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.RES_ADD_LINE_TWO_ERROR_MSG), "Current city is a required field");
 		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.PINCDOE_ERROR_MSG), "Pincode is a required field");
-		
-	}
-	@Then("user given valid residence type")
-	public void user_given_valid_residence_type() {
 
 	}
-	@Then("user given valid years in current address details")
-	public void user_given_valid_years_in_current_address_details() {
-	}
-	@Then("user given valid years in current city details")
-	public void user_given_valid_years_in_current_city_details() {
+	@Then("user given valid details")
+	public void user_given_valid_details() {
+		CustRegValidation.user_entered_all_mandatory_details_in_step_one();
+		RegistrationPage.passCustStepTwoInfo("Rented with Family","More than 3 years","More than 3 years","14-s,M layout","Kalkere","560043");
+		Assert.assertEquals(RegistrationPage.ValidateNextPage(Constants.STEP_THREE_TITLE), "Work and Income Details");
 
-	}
-	@Then("user entered valid details in first address line")
-	public void user_entered_valid_details_in_first_address_line() {
-	   
 	}
 	@Then("user entered first adrress line with less than minimum chars")
 	public void user_entered_first_adrress_line_with_less_than_minimum_chars() {
 
+		CustRegValidation.user_entered_all_mandatory_details_in_step_one();
+		RegistrationPage.passCustStepTwoInfo("Rented with Family","More than 3 years","More than 3 years",
+				"4-","Kalkere","560043");
+		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.RES_ADD_LINE_ONE_ERROR_MSG), "Address field cannot have less than 3 characters");
+
+	}	
+	@Then("user entered first adrress line with less than minimum chars includes special chars")
+	public void user_entered_first_adrress_line_with_less_than_minimum_chars_includes_special_chars() {
+		CustRegValidation.user_entered_all_mandatory_details_in_step_one();
+		RegistrationPage.passCustStepTwoInfo("Rented with Family","More than 3 years","More than 3 years",
+				"*1","Kalkere","560043");
+		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.RES_ADD_LINE_ONE_ERROR_MSG), "Address field can have only these special characters [./,-]");
+
 	}
 	@Then("user entered first adrress line with three repeated chars")
 	public void user_entered_first_adrress_line_with_three_repeated_chars() {
+		CustRegValidation.user_entered_all_mandatory_details_in_step_one();
+		RegistrationPage.passCustStepTwoInfo("Rented with Family","More than 3 years","More than 3 years",
+				"aaa aaa 123 shanti nagar","Kalkere","560043");
+		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.RES_ADD_LINE_ONE_ERROR_MSG), "Address field does not allow three repeated characters.");
+
 	}
 	@Then("user entered first adrress line with unsupported special chars")
 	public void user_entered_first_adrress_line_with_unsupported_special_chars() {
+		CustRegValidation.user_entered_all_mandatory_details_in_step_one();
+		RegistrationPage.passCustStepTwoInfo("Rented with Family","More than 3 years","More than 3 years",
+				"*&*(asadd-2jds","Kalkere","560043");
+		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.RES_ADD_LINE_ONE_ERROR_MSG), "Address field can have only these special characters [./,-]");
 
-	}
-	@Then("user entered valid details in second address line")
-	public void user_entered_valid_details_in_second_address_line() {
-	   
 	}
 	@Then("user entered second adrress line with less than minimum chars")
 	public void user_entered_second_adrress_line_with_less_than_minimum_chars() {
-	   
+		CustRegValidation.user_entered_all_mandatory_details_in_step_one();
+		RegistrationPage.passCustStepTwoInfo("Rented with Family","More than 3 years","More than 3 years",
+				"*1","Kalkere","560043");
+		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.RES_ADD_LINE_TWO_ERROR_MSG), "Address field can have only these special characters [./,-]");
+
+	}
+	@Then("user entered second adrress line with less than minimum chars includes special chars")
+	public void user_entered_second_adrress_line_with_less_than_minimum_chars_includes_special_chars() {
+		CustRegValidation.user_entered_all_mandatory_details_in_step_one();
+		RegistrationPage.passCustStepTwoInfo("Rented with Family","More than 3 years","More than 3 years",
+				"*1","Kalkere","560043");
+		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.RES_ADD_LINE_TWO_ERROR_MSG), "Address field can have only these special characters [./,-]");
+
 	}
 	@Then("user entered second adrress line with three repeated chars")
 	public void user_entered_second_adrress_line_with_three_repeated_chars() {
-	    
+		CustRegValidation.user_entered_all_mandatory_details_in_step_one();
+		RegistrationPage.passCustStepTwoInfo("Rented with Family","More than 3 years","More than 3 years",
+				"aaa aaa 123 shanti nagar","Kalkere","560043");
+		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.RES_ADD_LINE_TWO_ERROR_MSG), "Address field does not allow three repeated characters.");
+
 	}
 	@Then("user entered second adrress line with unsupported special chars")
 	public void user_entered_second_adrress_line_with_unsupported_special_chars() {
-	    
-	}
-	@Then("user entered valid details in pincode")
-	public void user_entered_valid_details_in_pincode() {
-	    
+		CustRegValidation.user_entered_all_mandatory_details_in_step_one();
+		RegistrationPage.passCustStepTwoInfo("Rented with Family","More than 3 years","More than 3 years",
+				"*&*(asadd-2jds","Kalkere","560043");
+		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.RES_ADD_LINE_TWO_ERROR_MSG), "Address field can have only these special characters [./,-]");
+
 	}
 	@Then("user entered invalid details in pincode")
 	public void user_entered_invalid_details_in_pincode() {
-	 
+		CustRegValidation.user_entered_all_mandatory_details_in_step_one();
+		RegistrationPage.passCustStepTwoInfo("Rented with Family","More than 3 years","More than 3 years",
+				"14-s,M layout","Kalkere","110043");
+		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.PINCDOE_ERROR_MSG), "Your chosen city and given pincode don’t match. Please check to continue");
+
 	}
 	@Then("user entered alphanumeric values in pincode")
 	public void user_entered_alphanumeric_values_in_pincode() {
-	    
+		CustRegValidation.user_entered_all_mandatory_details_in_step_one();
+		RegistrationPage.passCustStepTwoInfo("Rented with Family","More than 3 years","More than 3 years",
+				"14-s,M layout","Kalkere","4e@1");
+		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.PINCDOE_ERROR_MSG), 
+				"Pincode must be 6 digits only. Please check to continue");
 	}
 	@Then("user entered pincode with less than six digits")
 	public void user_entered_pincode_with_less_than_six_digits() {
-	   
+		CustRegValidation.user_entered_all_mandatory_details_in_step_one();
+		RegistrationPage.passCustStepTwoInfo("Rented with Family","More than 3 years","More than 3 years",
+				"14-s,M layout","Kalkere","5600");
+		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.PINCDOE_ERROR_MSG), 
+				"Pincode must be 6 digits only. Please check to continue");
 	}
-	
+
 	@Then("quit the page")
 	public void quit_the_page() {
 		RegistrationPage.closeBrowser();

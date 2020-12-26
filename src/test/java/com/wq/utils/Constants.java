@@ -10,7 +10,8 @@ public class Constants {
 	public static final String CITY="city";
 	public static final String CREDIT_HISTORY="creditHistory";	
 	public static final String PHONE="phoneNumber";
-	public static final String CONTINUE_BUTTON="continueButton";	
+	public static final String CONTINUE_BUTTON="continueButton";
+	public static final String STEP_TWO_TITLE="custRegStepTwoTitle";
 	public static final String FIRSTNAME_ERROR_MSG = "firstNameErrorMsg";
 	public static final String MIDDLENAME_ERROR_MSG = "middleNameErrorMsg";
 	public static final String LASTNAME_ERROR_MSG = "lastNameErrorMsg";
@@ -31,7 +32,16 @@ public class Constants {
 	public static final String CURRENT_CITY_AGE_ERROR_MSG = "currentCityAgeErrorMsg";
 	public static final String RES_ADD_LINE_ONE_ERROR_MSG = "residenceAddressLineOneErrorMsg";
 	public static final String RES_ADD_LINE_TWO_ERROR_MSG = "residenceAddressLineTwoErrorMsg";
-	public static final String PINCDOE_ERROR_MSG="pincodeErrorMsg";
+	public static final String PINCDOE_ERROR_MSG= "pincodeErrorMsg";
+	public static final String STEP_THREE_TITLE= "custRegStepThreeTitle";
+	
+	public static final String FILE_PATH= "filePath";
+	public static final String FILE_NAME = "fileName";
+	public static final String SHEET_NAME = "sheetName";
+
+	
+	
+
 
 
 	

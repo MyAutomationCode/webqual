@@ -12,7 +12,8 @@ public class RegistrationPage extends Commons{
 	Constants c = new Constants();
 
 	//Passing Customer info 
-	public static void passCustStepOneInfo(String firstname, String middlename, String lastname, String dob,String gender,String city,String chValue, String phoneNumber) {
+	public static void passCustStepOneInfo(String firstname, String middlename, String lastname, String dob,String gender,
+			String city,String chValue, String phoneNumber) {
 
 		driver.findElement(By.xpath(prop.getProperty(Constants.FISRTNAME))).sendKeys(firstname);
 		driver.findElement(By.xpath(prop.getProperty(Constants.MIDDLENAME))).sendKeys(middlename);	
@@ -25,7 +26,6 @@ public class RegistrationPage extends Commons{
 		chOptions.selectByVisibleText(chValue);
 		driver.findElement(By.xpath(prop.getProperty(Constants.PHONE))).sendKeys(phoneNumber);
 		driver.findElement(By.xpath(prop.getProperty(Constants.CONTINUE_BUTTON))).click();
-		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
 	}
 	public static void passCustStepTwoInfo(String residenceType, String residenceAge, String cityAge,String address1,
@@ -33,7 +33,6 @@ public class RegistrationPage extends Commons{
 		
 		
 		Select residenceTypeOptions = new Select (driver.findElement(By.xpath(prop.getProperty(Constants.RESIDENCE_TYPE))));
-		System.out.println(residenceTypeOptions.getFirstSelectedOption());
 		residenceTypeOptions.selectByVisibleText(residenceType);
 		Select residenceAgeOptions = new Select (driver.findElement(By.xpath(prop.getProperty(Constants.CURRENT_RESIDENCE_AGE))));
 		residenceAgeOptions.selectByVisibleText(residenceAge);
@@ -46,11 +45,11 @@ public class RegistrationPage extends Commons{
 		
 	}
 
-	public static String ValidateStepOnePageWithDetails() {
+	public static String ValidateNextPage(String verifyCustRegStep) {
 
 		driver.navigate().refresh();
-		String stepTwoLaunchVerification = driver.findElement(By.xpath(prop.getProperty("custRegStepTwoTitle"))).getText();
-		return stepTwoLaunchVerification;
+		String stageVerification = driver.findElement(By.xpath(prop.getProperty(verifyCustRegStep))).getText();
+		return stageVerification;
 
 	}
 	public static String errorMsgValidation(String errorValue) {		
