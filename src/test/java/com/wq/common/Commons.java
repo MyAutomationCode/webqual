@@ -9,6 +9,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import com.wq.utils.Constants;
+
 public class Commons {
 
 	public static WebDriver driver;
@@ -31,12 +33,12 @@ public class Commons {
 
 		if(browserName.equals("chrome")) {			
 			System.setProperty("webdriver.chrome.driver", prop.getProperty("chromeLocation"));
-			chromeOptions.addArguments("headless");
-			driver = new ChromeDriver(chromeOptions);
-			//driver = new ChromeDriver();
+			//chromeOptions.addArguments("headless");
+			//driver = new ChromeDriver(chromeOptions);
+			driver = new ChromeDriver();
 			driver.manage().window().maximize();
-			driver.get(prop.getProperty("url"));
-//			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			driver.get(prop.getProperty(Constants.CUSTOMER_REG_URL));
+			//			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		}
 	}
 

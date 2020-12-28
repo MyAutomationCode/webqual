@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>48/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Dec 27 16:12:41 IST 2020</td>
+<td>Started on:</td><td>Mon Dec 28 20:01:45 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (678 ms)</td>
+<tr><td>Total time:</td><td>50 seconds (50270 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,38 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page by providing address2 with three repeated chars", "Optional[Customer registration page data validations]"</td>
+<td><div><pre>java.lang.AssertionError: expected [Address field does not allow three repeated characters.] but found [Address Line 1 does not allow three repeated characters.]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.wq.stepdefinations.CustRegDataValidation.user_entered_second_adrress_line_with_three_repeated_chars(CustRegDataValidation.java:314)
+	at ?.user entered second adrress line with three repeated chars(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:174)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1962420141", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1962420141'><pre>java.lang.AssertionError: expected [Address field does not allow three repeated characters.] but found [Address Line 1 does not allow three repeated characters.]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.wq.stepdefinations.CustRegDataValidation.user_entered_second_adrress_line_with_three_repeated_chars(CustRegDataValidation.java:314)
+	at ?.user entered second adrress line with three repeated chars(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:174)
+</pre></div></td>
+<td>8</td>
+<td>com.wq.runner.RunnerService@51f116b8</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,244 +107,29 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step one page without providing details", "Optional[Customer registration page data validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify continue option by providing valid details in step one", "Optional[Customer registration page data validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step one reg details by providing invalid firstname", "Optional[Customer registration page data validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step one reg details by providing invalid middlename", "Optional[Customer registration page data validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step one reg details by providing invalid lastname", "Optional[Customer registration page data validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step one reg details by providing invalid dob", "Optional[Customer registration page data validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[Customer registration page data validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[Customer registration page data validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify auto complete city list in step one page", "Optional[Customer registration page data validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step one reg details by providing invalid city name", "Optional[Customer registration page data validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step one reg details by providing invalid phonenumber", "Optional[Customer registration page data validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step one reg details by providing number lessthan ten digits", "Optional[Customer registration page data validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
 <td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page without passing any details", "Optional[Customer registration page data validations]"</td>
 <td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page by valid details", "Optional[Customer registration page data validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[Customer registration page data validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page by providing address1 with less than 3 chars", "Optional[Customer registration page data validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page by providing address1 with less than 3 chars", "Optional[Customer registration page data validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page by providing address1 with three repeated chars", "Optional[Customer registration page data validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[Customer registration page data validations]"</td>
-<td></td>
-<td>0</td>
+<td>8</td>
 <td>com.wq.runner.RunnerService@51f116b8</td></tr>
 <tr>
 <td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page by providing address2 with less than 3 chars", "Optional[Customer registration page data validations]"</td>
 <td></td>
-<td>0</td>
+<td>8</td>
 <td>com.wq.runner.RunnerService@51f116b8</td></tr>
 <tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page by providing address2 with less than 3 chars", "Optional[Customer registration page data validations]"</td>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page by providing address2 with less than 3 chars which includes special chars", "Optional[Customer registration page data validations]"</td>
 <td></td>
-<td>0</td>
+<td>8</td>
 <td>com.wq.runner.RunnerService@51f116b8</td></tr>
 <tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page by providing address2 with three repeated chars", "Optional[Customer registration page data validations]"</td>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page by providing address2 with unsupported special chars", "Optional[Customer registration page data validations]"</td>
 <td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[Customer registration page data validations]"</td>
-<td></td>
-<td>0</td>
+<td>8</td>
 <td>com.wq.runner.RunnerService@51f116b8</td></tr>
 <tr>
 <td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page by providing invalid pincode", "Optional[Customer registration page data validations]"</td>
 <td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page by providing alphanumeric values in pincode", "Optional[Customer registration page data validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page by providing pincode with less than 6 digits", "Optional[Customer registration page data validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify firstname text field", "Optional[Customer registration page field validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify middlename text field", "Optional[Customer registration page field validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify lastname text field", "Optional[Customer registration page field validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify dob text field", "Optional[Customer registration page field validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify gender dropdown", "Optional[Customer registration page field validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify city of residence text field", "Optional[Customer registration page field validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify credit history dropdown", "Optional[Customer registration page field validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify phone number text field", "Optional[Customer registration page field validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify residence type drowndown option in step two page", "Optional[Customer registration page field validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify years in current residence drowndown option in step two page", "Optional[Customer registration page field validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify years in current city drowndown option in step two page", "Optional[Customer registration page field validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify address1 text field in step two page", "Optional[Customer registration page field validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify address2 text field in step two page", "Optional[Customer registration page field validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify pincode text field in step two page", "Optional[Customer registration page field validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify city text field in step two page", "Optional[Customer registration page field validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify state text field in step two page", "Optional[Customer registration page field validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify continue button", "Optional[Customer registration page field validations]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate landing page title", "Optional[WQ landing page Validataion]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate moneytap benefits", "Optional[WQ landing page Validataion]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate login button", "Optional[WQ landing page Validataion]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate customer reg step one title", "Optional[WQ landing page Validataion]"</td>
-<td></td>
-<td>0</td>
-<td>com.wq.runner.RunnerService@51f116b8</td></tr>
-<tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate scroll bar option in landing page", "Optional[WQ landing page Validataion]"</td>
-<td></td>
-<td>0</td>
+<td>8</td>
 <td>com.wq.runner.RunnerService@51f116b8</td></tr>
 </table><p>
 </body>
