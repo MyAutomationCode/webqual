@@ -2,12 +2,12 @@ package com.wq.utils;
 
 public class Constants {
 	
-	public static final String FISRTNAME="firstName";
+	public static final String FIRSTNAME="firstName";
 	public static final String MIDDLENAME="middleName";
 	public static final String LASTNAME="lastName";
 	public static final String DOB="dob";
 	public static final String GENDER="gender";
-	public static final String CITY="city";
+	public static final String CITY_OF_RESIDENCE="cityOfResidence";
 	public static final String CREDIT_HISTORY="creditHistory";	
 	public static final String PHONE="phoneNumber";
 	public static final String CONTINUE_BUTTON="continueButton";
@@ -20,6 +20,10 @@ public class Constants {
 	public static final String CITY_ERROR_MSG = "cityErrorMsg";
 	public static final String CH_ERROR_MSG = "creditHistoryErrorMsg";
 	public static final String PHONE_ERROR_MSG = "phoneErrorMsg";
+	public static final String STEP_TWO_PAGE="stepTwo";
+	public static final String STEP_THREE_PAGE="stepThree";
+	public static final String STEP_NOTIFICATION = "stepNotification";
+	
 	
 	public static final String RESIDENCE_TYPE = "residenceType";
 	public static final String CURRENT_RESIDENCE_AGE = "currentResidenceAge";
@@ -27,6 +31,8 @@ public class Constants {
 	public static final String RES_ADD_LINE_ONE = "residenceAddressLineOne";
 	public static final String RES_ADD_LINE_TWO = "residenceAddressLineTwo";
 	public static final String PINCODE = "pincode";
+	public static final String CITY="city";
+	public static final String STATE="state";
 	public static final String RESIDENCE_TYPE_ERROR_MSG = "residenceTypeErrorMsg";
 	public static final String CURRENT_RES_AGE_ERROR_MSG = "currentResidenceAgeErrorMsg";
 	public static final String CURRENT_CITY_AGE_ERROR_MSG = "currentCityAgeErrorMsg";
@@ -34,6 +40,7 @@ public class Constants {
 	public static final String RES_ADD_LINE_TWO_ERROR_MSG = "residenceAddressLineTwoErrorMsg";
 	public static final String PINCDOE_ERROR_MSG= "pincodeErrorMsg";
 	public static final String STEP_THREE_TITLE= "custRegStepThreeTitle";
+	public static final String AUTO_COMPLETE_CITY_LIST="autoCityList";
 	
 	public static final String FILE_PATH= "filePath";
 	public static final String FILE_NAME = "fileName";

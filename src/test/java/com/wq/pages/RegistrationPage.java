@@ -1,7 +1,9 @@
 package com.wq.pages;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import com.wq.common.Commons;
@@ -15,13 +17,13 @@ public class RegistrationPage extends Commons{
 	public static void passCustStepOneInfo(String firstname, String middlename, String lastname, String dob,String gender,
 			String city,String chValue, String phoneNumber) {
 
-		driver.findElement(By.xpath(prop.getProperty(Constants.FISRTNAME))).sendKeys(firstname);
+		driver.findElement(By.xpath(prop.getProperty(Constants.FIRSTNAME))).sendKeys(firstname);
 		driver.findElement(By.xpath(prop.getProperty(Constants.MIDDLENAME))).sendKeys(middlename);	
 		driver.findElement(By.xpath(prop.getProperty(Constants.LASTNAME))).sendKeys(lastname);
 		driver.findElement(By.xpath(prop.getProperty(Constants.DOB))).sendKeys(dob);
 		Select genderOption = new Select (driver.findElement(By.xpath(prop.getProperty(Constants.GENDER))));
 		genderOption.selectByVisibleText(gender);
-		driver.findElement(By.xpath(prop.getProperty(Constants.CITY))).sendKeys(city);		
+		driver.findElement(By.xpath(prop.getProperty(Constants.CITY_OF_RESIDENCE))).sendKeys(city);		
 		Select chOptions = new Select (driver.findElement(By.xpath(prop.getProperty(Constants.CREDIT_HISTORY))));
 		chOptions.selectByVisibleText(chValue);
 		driver.findElement(By.xpath(prop.getProperty(Constants.PHONE))).sendKeys(phoneNumber);
@@ -30,8 +32,7 @@ public class RegistrationPage extends Commons{
 	}
 	public static void passCustStepTwoInfo(String residenceType, String residenceAge, String cityAge,String address1,
 			String address2, String pincode) {
-		
-		
+				
 		Select residenceTypeOptions = new Select (driver.findElement(By.xpath(prop.getProperty(Constants.RESIDENCE_TYPE))));
 		residenceTypeOptions.selectByVisibleText(residenceType);
 		Select residenceAgeOptions = new Select (driver.findElement(By.xpath(prop.getProperty(Constants.CURRENT_RESIDENCE_AGE))));
@@ -45,10 +46,10 @@ public class RegistrationPage extends Commons{
 		
 	}
 
-	public static String ValidateNextPage(String verifyCustRegStep) {
+	public static String ValidateNextPageTitle(String verifyCustRegStepTitle) {
 
 		driver.navigate().refresh();
-		String stageVerification = driver.findElement(By.xpath(prop.getProperty(verifyCustRegStep))).getText();
+		String stageVerification = driver.findElement(By.xpath(prop.getProperty(verifyCustRegStepTitle))).getText();
 		return stageVerification;
 
 	}
@@ -57,4 +58,23 @@ public class RegistrationPage extends Commons{
 		String errorMsg =driver.findElement(By.xpath(prop.getProperty(errorValue))).getText();	
 		return errorMsg;
 		}
+	
+	public static List<WebElement> autoCompleteCityList(String value) {
+		
+		driver.findElement(By.xpath(prop.getProperty(Constants.CITY_OF_RESIDENCE))).sendKeys(value);
+		List<WebElement> autoList = driver.findElements(By.xpath(prop.getProperty(Constants.AUTO_COMPLETE_CITY_LIST)));
+		return autoList;
+	}
+/*
+	public static String custStepVerification(String verifycustRegStep) {
+		
+		driver.findElement(By.xpath(prop.getProperty(Constants.STEP_TWO_PAGE))).click();
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		String notificationMsg = driver.findElement(By.xpath(prop.getProperty(Constants.STEP_NOTIFICATION))).getText();
+		return notificationMsg;
+		
+	}
+*/
+
 }
+
