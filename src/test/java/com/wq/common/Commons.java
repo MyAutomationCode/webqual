@@ -2,12 +2,15 @@ package com.wq.common;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.wq.utils.Constants;
 
@@ -38,7 +41,7 @@ public class Commons {
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.get(prop.getProperty(Constants.CUSTOMER_REG_URL));
-			//			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			//driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		}
 	}
 
@@ -48,4 +51,10 @@ public class Commons {
 	public static void refreshBrowser() {
 		driver.navigate().refresh();
 	}
-}
+	public static void waitTime() {
+		
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+
+	}
+		
+	}

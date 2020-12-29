@@ -82,6 +82,27 @@ public class Constants {
 	public static final String AUTO_COMPLETE_COMPANY_LIST="autoCompanyList";
 	public static final String AUTO_COMPLETE_DESIGNATION_LIST="autoDesignationList";
 
+	public static final String MOBILE_NO = "mobileNo";
+	public static final String OTP = "otp";
+	public static final String PROMO_CODE = "promoCode";
+	public static final String TERMS_AND_CONDITIONS_CHECK_BOX = "termsAndConditionsCheckBox";
+	public static final String WHATSAPP_CHECK_BOX = "whatsAppNotificationCheckBox";
+	public static final String CHECK_LIMIT_BTN = "checkLimitButton";
+	public static final String APPLY_CODE="applyCode";
+	public static final String SEND_OTP = "sendOtp";
+	public static final String RESEND_OTP = "resendOtp";
+	public static final String MOBILE_NO_ERROR_MSG = "mobileNoErrorMsg";
+	public static final String OTP_ERROR_MSG = "otpErrorMsg";
+	public static final String PROMO_CODE_ERROR_MSG = "promoCodeErrorMsg";
+	public static final String TERMS_AND_CONDITIONS_ERROR_MSG = "termsAndConditionsErrorMsg";
+	public static final String TERMS_AND_CONDITIONS = "termsAndConditions";
+	public static final String PRIVACY_POLICY = "privacyPolicy";
+	public static final String USER_CONSENT = "userConsent";
+	public static final String NOTIFICATION_ERROR_MSG = "notificationErrorMsg";
+	public static final String NOTIFICATION_SUCCESS_MSG = "notificationSuccessMsg";
+	public static final String FINAL_SUBMISSION_LOADER="finalSubmissionLoaderScreen";
+	
+	
 
 
 

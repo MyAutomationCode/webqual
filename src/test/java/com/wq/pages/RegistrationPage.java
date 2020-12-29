@@ -4,8 +4,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.wq.common.Commons;
@@ -17,6 +21,9 @@ import io.cucumber.java.en.Given;
 public class RegistrationPage extends Commons{
 
 	Constants c = new Constants();
+	public static String phoneNumber = "7000000800";
+
+
 
 	//Passing Customer info 
 	public static void passCustStepOneInfo(String firstname, String middlename, String lastname, String dob,String gender,
@@ -74,20 +81,21 @@ public class RegistrationPage extends Commons{
 		Select bankNameOptions = new Select (driver.findElement(By.xpath(prop.getProperty(Constants.BANK_NAME))));
 		bankNameOptions.selectByVisibleText(bankName);
 		driver.findElement(By.xpath(prop.getProperty(Constants.CONTINUE_BUTTON))).click();
-
-
 	}
 
-	public static String ValidateNextPageTitle(String verifyCustRegStepTitle) {
+	public static String validateNextPageTitle(String verifyCustRegStepTitle) throws InterruptedException {
 
+		Thread.sleep(6000);
 		driver.navigate().refresh();
 		String stageVerification = driver.findElement(By.xpath(prop.getProperty(verifyCustRegStepTitle))).getText();
 		return stageVerification;
 
 	}
-	public static String errorMsgValidation(String errorValue) {		
+	public static String errorMsgValidation(String errorValue)  {		
 
-		String errorMsg =driver.findElement(By.xpath(prop.getProperty(errorValue))).getText();	
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(prop.getProperty(errorValue)))));
+		String errorMsg =(driver.findElement(By.xpath(prop.getProperty(errorValue)))).getText();	
 		return errorMsg;
 	}
 
@@ -109,16 +117,38 @@ public class RegistrationPage extends Commons{
 		List<WebElement> autoCompleteList = driver.findElements(By.xpath(prop.getProperty(Constants.AUTO_COMPLETE_DESIGNATION_LIST)));
 		return autoCompleteList;
 	}
+	public static void FinalSubmissionPage(String phone, String otp, String promoCode) {
+
+		driver.findElement(By.xpath(prop.getProperty(Constants.MOBILE_NO))).sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
+		driver.findElement(By.xpath(prop.getProperty(Constants.MOBILE_NO))).sendKeys(phone);
+		driver.findElement(By.xpath(prop.getProperty(Constants.OTP))).sendKeys(otp);
+		driver.findElement(By.xpath(prop.getProperty(Constants.PROMO_CODE))).sendKeys(promoCode);
+		if(phone != "" && otp != "") {
+			RegistrationPage.checkBoxSelection(Constants.TERMS_AND_CONDITIONS_CHECK_BOX);
+		}
+		driver.findElement(By.xpath(prop.getProperty(Constants.CHECK_LIMIT_BTN))).click();
+
+	}
+	public static void checkBoxSelection(String value) {
+		driver.findElement(By.xpath(prop.getProperty(value))).click();
+	}
+
 
 	//Generic methods used to complete step-1 and step-2 when test scripts are running for step-2 and step-3 cust reg pages respectively
 	public static void completeStepOne() {
 
-		RegistrationPage.passCustStepOneInfo("john","Abhraham","Mohammad","20/07/1992","Male","Bangalore","I have an active loan","7800000000");
+		RegistrationPage.passCustStepOneInfo("john","Abhraham","Mohammad","20/07/1992","Male","Bangalore","I have an active loan",phoneNumber);
 	}
 
 	public static void complteStepTwo() {
 
 		RegistrationPage.passCustStepTwoInfo("Rented with Family","More than 3 years","More than 3 years","14-s,M layout","Kalkere","560043");
+	}
+
+	public static void completeStepThree() {
+		RegistrationPage.passCustStepThreeInfo("MUDRA", "Multinational", "DESIGN ENGINEER", "CKOPW4009F", "Salaried", "More than 3 years", "More than 3 years", "abcd@moneytap.com", 
+				"56000", "Netbanking", "ICICI Bank");
+
 	}
 
 	/*

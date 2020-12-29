@@ -1,6 +1,8 @@
 package com.wq.stepdefinations;
 
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -9,7 +11,9 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import com.wq.common.Commons;
+import com.wq.pages.LandingPage;
 import com.wq.pages.RegistrationPage;
+import com.wq.utils.Connections;
 import com.wq.utils.Constants;
 import com.wq.utils.DataHelper;
 
@@ -33,13 +37,13 @@ public class CustRegDataValidation extends Commons {
 	//test cases for customer registration step-1 page
 
 	@And("user entered all mandatory details in step one")
-	public static void user_entered_all_mandatory_details_in_step_one(DataTable regData){
+	public static void user_entered_all_mandatory_details_in_step_one(DataTable regData) throws InterruptedException{
 
 		for (Map<String, String> data : regData.asMaps()){
 
 			RegistrationPage.passCustStepOneInfo(data.get("firstname"), data.get("middlename"),data.get("lastname"), data.get("dob"), 
 					data.get("gender"), data.get("city"),data.get("creditHistory"), data.get("phoneNumber"));
-			Assert.assertEquals(RegistrationPage.ValidateNextPageTitle(Constants.STEP_TWO_TITLE), "Current Residence Details");
+			Assert.assertEquals(RegistrationPage.validateNextPageTitle(Constants.STEP_TWO_TITLE), "Current Residence Details");
 			RegistrationPage.refreshBrowser();
 		}
 	}
@@ -221,13 +225,13 @@ public class CustRegDataValidation extends Commons {
 		}
 	}
 	@Then("user given valid details in step two page")
-	public static void user_given_valid_details_in_step_two_page(DataTable regData) {
+	public static void user_given_valid_details_in_step_two_page(DataTable regData) throws InterruptedException {
 
 		RegistrationPage.completeStepOne();
 		for(Map<String, String> data: regData.asMaps()) {
 			RegistrationPage.passCustStepTwoInfo(data.get("residenceType"), data.get("years in residence"),data.get("years in city"), data.get("address1"), 
 					data.get("address2"), data.get("pincode"));	
-			Assert.assertEquals(RegistrationPage.ValidateNextPageTitle(Constants.STEP_THREE_TITLE), "Work and Income Details");
+			Assert.assertEquals(RegistrationPage.validateNextPageTitle(Constants.STEP_THREE_TITLE), "Work and Income Details");
 
 		}}
 
@@ -360,13 +364,13 @@ public class CustRegDataValidation extends Commons {
 	//test cases for step 3 customer registration page
 
 	@Then("user provided all valid details and clicks on continue in step three page")
-	public void user_provided_all_valid_details_and_clicks_on_continue_in_step_three_page(DataTable regData) {
+	public void user_provided_all_valid_details_and_clicks_on_continue_in_step_three_page(DataTable regData) throws InterruptedException {
 
 		CustRegDataValidation.completePendingSteps();
 		for(Map<String, String> data: regData.asMaps()) {
 			RegistrationPage.passCustStepThreeInfo(data.get("companyName"), data.get("companyType"), data.get("designation"), data.get("PAN"), data.get("jobType"), data.get("totalWorkExp"), 
 					data.get("currentWorkExp"), data.get("officeEmail"), data.get("salary"), data.get("salaryMode"), data.get("bankName"));
-			Assert.assertEquals(RegistrationPage.ValidateNextPageTitle((Constants.SUBMISSION_PAGE_TITLE)), "Verification and application submission");
+			Assert.assertEquals(RegistrationPage.validateNextPageTitle((Constants.SUBMISSION_PAGE_TITLE)), "Verification and application submission");
 			RegistrationPage.refreshBrowser();
 		}
 
@@ -470,13 +474,13 @@ public class CustRegDataValidation extends Commons {
 	}
 
 	@Then("verify pan number field by providing number in case sensitive in step three page")
-	public void verify_pan_number_field_by_providing_number_in_case_sensitive_in_step_three_page(DataTable regData) {
+	public void verify_pan_number_field_by_providing_number_in_case_sensitive_in_step_three_page(DataTable regData) throws InterruptedException {
 
 		CustRegDataValidation.completePendingSteps();
 		for(Map<String, String> data: regData.asMaps()) {
 			RegistrationPage.passCustStepThreeInfo(data.get("companyName"), data.get("companyType"), data.get("designation"), data.get("PAN"), data.get("jobType"), data.get("totalWorkExp"), 
 					data.get("currentWorkExp"), data.get("officeEmail"), data.get("salary"), data.get("salaryMode"), data.get("bankName"));
-			Assert.assertEquals(RegistrationPage.ValidateNextPageTitle((Constants.SUBMISSION_PAGE_TITLE)), "Verification and application submission");
+			Assert.assertEquals(RegistrationPage.validateNextPageTitle((Constants.SUBMISSION_PAGE_TITLE)), "Verification and application submission");
 			RegistrationPage.refreshBrowser();
 		}
 	}
@@ -567,6 +571,258 @@ public class CustRegDataValidation extends Commons {
 
 	}
 
+	//test cases for verification and submission page	
+
+	@Given("user launched webpage and completed all three steps")
+	public void user_launched_webpage_and_completed_all_three_steps() {
+
+		Commons.browserInitialization();
+		RegistrationPage.completeStepOne();
+		RegistrationPage.complteStepTwo();  
+		RegistrationPage.completeStepThree();
+	}
+
+	@Then("verify submission page by providing valid details")
+	public void verify_submission_page_by_providing_valid_details(DataTable regData) throws SQLException, ClassNotFoundException, InterruptedException {
+
+		for(Map<String, String> data: regData.asMaps()) {
+
+			LinkedHashMap<String, String> map = DataHelper.getDbData(RegistrationPage.phoneNumber);
+			RegistrationPage.FinalSubmissionPage(RegistrationPage.phoneNumber,map.get("otp"),Strings.nullToEmpty(data.get("promoCode")));
+			Assert.assertEquals(RegistrationPage.validateNextPageTitle(Constants.FINAL_SUBMISSION_LOADER), "Waiting for credit response");
+			Thread.sleep(3000);
+			RegistrationPage.refreshBrowser();
+		}
+	}
+
+	@Then("verify submission page witout providng any details")
+	public void verify_submission_page_witout_providng_any_details(DataTable regData) throws InterruptedException {
+
+		for(Map<String, String> data: regData.asMaps()) {
+			RegistrationPage.FinalSubmissionPage(Strings.nullToEmpty(data.get("phone")),Strings.nullToEmpty(data.get("otp")),Strings.nullToEmpty(data.get("promoCode")));
+			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.MOBILE_NO_ERROR_MSG), "Phone number is a required field");
+			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.OTP_ERROR_MSG), "Please enter the OTP sent to your mobile number");
+			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.TERMS_AND_CONDITIONS_ERROR_MSG), "Please accept the given ‘User consent’ form to complete registration");
+			RegistrationPage.refreshBrowser();
+		}	
+
+	}
+	@Then("verify submission page when server is down")
+
+	public void verify_submission_page_when_server_is_down(DataTable dataTable) {
+
+	}
+
+	@Then("verify submission page by removing the pre-filled mobile number")
+	public void verify_submission_page_by_removing_the_pre_filled_mobile_number(DataTable regData) throws InterruptedException {
+
+		for(Map<String, String> data: regData.asMaps()) {
+			RegistrationPage.FinalSubmissionPage(Strings.nullToEmpty(data.get("phone")),Strings.nullToEmpty(data.get("otp")),Strings.nullToEmpty(data.get("promoCode")));
+			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.MOBILE_NO_ERROR_MSG), "Phone number is a required field");		
+			RegistrationPage.refreshBrowser();
+		}
+
+	}
+	@Then("verify submission page by providing mobile num with less than ten digits")
+	public void verify_submission_page_by_providing_mobile_num_with_less_than_ten_digits(DataTable regData) throws InterruptedException {
+
+		for(Map<String, String> data: regData.asMaps()) {
+			RegistrationPage.FinalSubmissionPage((data.get("phone")),Strings.nullToEmpty(data.get("otp")),Strings.nullToEmpty(data.get("promoCode")));
+			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.MOBILE_NO_ERROR_MSG), "The Phone field should be of minimum 10 characters.");		
+			RegistrationPage.refreshBrowser();
+		}
+	}
+	@Then("verify submission page by providing mobile num with alphanumeric values")
+	public void verify_submission_page_by_providing_mobile_num_with_alphanumeric_values(io.cucumber.datatable.DataTable regData) throws InterruptedException {
+
+		for(Map<String, String> data: regData.asMaps()) {
+			RegistrationPage.FinalSubmissionPage((data.get("phone")),Strings.nullToEmpty(data.get("otp")),Strings.nullToEmpty(data.get("promoCode")));
+			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.MOBILE_NO_ERROR_MSG), "The Phone field should be of minimum 10 characters.");		
+			RegistrationPage.refreshBrowser();
+		}
+	}	
+
+	@Then("verify submission page by providing mobile num with special chars")
+	public void verify_submission_page_by_providing_mobile_num_with_special_chars(io.cucumber.datatable.DataTable regData) throws InterruptedException {
+
+		for(Map<String, String> data: regData.asMaps()) {
+			RegistrationPage.FinalSubmissionPage((data.get("phone")),Strings.nullToEmpty(data.get("otp")),Strings.nullToEmpty(data.get("promoCode")));
+			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.MOBILE_NO_ERROR_MSG), "The Phone field should be of minimum 10 characters.");		
+			RegistrationPage.refreshBrowser();
+		}
+	}	
+
+	@Then("verify submission page by providing invalid otp")
+	public void verify_submission_page_by_providing_invalid_otp(DataTable regData) throws InterruptedException {
+
+		for(Map<String, String> data: regData.asMaps()) {
+			RegistrationPage.FinalSubmissionPage(RegistrationPage.phoneNumber,(data.get("otp")),Strings.nullToEmpty(data.get("promoCode")));
+			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.NOTIFICATION_ERROR_MSG), "Invalid OTP");	
+			Thread.sleep(3000);
+			RegistrationPage.refreshBrowser();
+		}
+
+	}
+
+	@Then("verify submission page by providing otp with alphabet values")
+	public void verify_submission_page_by_providing_otp_with_alphabet_values(DataTable regData) throws InterruptedException {
+
+		for(Map<String, String> data: regData.asMaps()) {
+			RegistrationPage.FinalSubmissionPage(RegistrationPage.phoneNumber,(data.get("otp")),Strings.nullToEmpty(data.get("promoCode")));
+			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.OTP_ERROR_MSG), "Please enter the OTP sent to your mobile number");		
+			Thread.sleep(2000);
+			RegistrationPage.refreshBrowser();
+		}
+	}
+
+	@Then("verify submission page by providing otp with less than required digits")
+	public void verify_submission_page_by_providing_otp_with_less_than_required_digits(io.cucumber.datatable.DataTable regData) throws InterruptedException {
+
+		for(Map<String, String> data: regData.asMaps()) {
+			RegistrationPage.FinalSubmissionPage(RegistrationPage.phoneNumber,(data.get("otp")),Strings.nullToEmpty(data.get("promoCode")));
+			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.NOTIFICATION_ERROR_MSG), "Invalid OTP");		
+			Thread.sleep(3000);
+			RegistrationPage.refreshBrowser();
+		}
+	}	
+
+	@Then("verify submission page by providing valid mobile num with wrong otp")
+	public void verify_submission_page_by_providing_valid_mobile_num_with_wrong_otp(io.cucumber.datatable.DataTable regData) throws InterruptedException {
+
+		for(Map<String, String> data: regData.asMaps()) {
+			RegistrationPage.FinalSubmissionPage(RegistrationPage.phoneNumber,(data.get("otp")),Strings.nullToEmpty(data.get("promoCode")));
+			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.NOTIFICATION_ERROR_MSG), "Invalid OTP");		
+			Thread.sleep(3000);
+			RegistrationPage.refreshBrowser();
+		}
+	}
+	@Then("verify submission page by providing valid mobile num without otp")
+	public void verify_submission_page_by_providing_valid_mobile_num_without_otp(io.cucumber.datatable.DataTable regData) throws InterruptedException {
+
+		for(Map<String, String> data: regData.asMaps()) {
+			RegistrationPage.FinalSubmissionPage(RegistrationPage.phoneNumber,Strings.nullToEmpty(data.get("otp")),Strings.nullToEmpty(data.get("promoCode")));
+			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.OTP_ERROR_MSG), "Please enter the OTP sent to your mobile number");		
+			Thread.sleep(2000);
+			RegistrationPage.refreshBrowser();
+		}
+	}
+
+	@Then("verify submission page without mobile num with valid otp")
+	public void verify_submission_page_without_mobile_num_with_valid_otp(io.cucumber.datatable.DataTable regData) throws InterruptedException {
+
+		for(Map<String, String> data: regData.asMaps()) {
+			RegistrationPage.FinalSubmissionPage(Strings.nullToEmpty(data.get("phone")),data.get("otp"),Strings.nullToEmpty(data.get("promoCode")));
+			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.MOBILE_NO_ERROR_MSG), "Phone number is a required field");		
+			Thread.sleep(2000);
+			RegistrationPage.refreshBrowser();
+		}	
+	}
+
+	@Then("verify submission page by providing different mobile num and otp")
+	public void verify_submission_page_by_providing_different_mobile_num_and_otp(io.cucumber.datatable.DataTable regData) throws InterruptedException, ClassNotFoundException, SQLException {
+
+		for(Map<String, String> data: regData.asMaps()) {
+			LinkedHashMap<String, String> map = DataHelper.getDbData(RegistrationPage.phoneNumber);
+			RegistrationPage.FinalSubmissionPage(data.get("phone"),map.get("otp"),Strings.nullToEmpty(data.get("promoCode")));
+			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.NOTIFICATION_ERROR_MSG), "Invalid OTP");		
+			Thread.sleep(2000);
+			RegistrationPage.refreshBrowser();
+		}
+	}
+
+	@Then("verify submission page by providing expired otp")
+	public void verify_submission_page_by_providing_expired_otp(DataTable regData) {
+
+		for(Map<String, String> data: regData.asMaps()) {
+			RegistrationPage.FinalSubmissionPage(RegistrationPage.phoneNumber,data.get("otp"),Strings.nullToEmpty(data.get("promoCode")));
+			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.NOTIFICATION_ERROR_MSG), "Invalid OTP");		
+			RegistrationPage.refreshBrowser();
+		}
+
+	}
+	@Then("verify apply code option by providing valid promo code")
+	public void verify_apply_code_option_by_providing_valid_promo_code(DataTable regData) {
+
+		for(Map<String, String> data: regData.asMaps()) {
+			RegistrationPage.FinalSubmissionPage(RegistrationPage.phoneNumber,Strings.nullToEmpty(data.get("otp")),(data.get("promoCode")));
+			RegistrationPage.checkBoxSelection(Constants.APPLY_CODE);	
+			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.NOTIFICATION_SUCCESS_MSG),"Coupon applied successfully");
+			RegistrationPage.refreshBrowser();	
+		}
+	}
+
+	@Then("verify apply code option by providing wrong promo code")
+	public void verify_apply_code_option_by_providing_wrong_promo_code(DataTable regData) {
+
+		for(Map<String, String> data: regData.asMaps()) {
+			RegistrationPage.FinalSubmissionPage(RegistrationPage.phoneNumber,Strings.nullToEmpty(data.get("otp")),(data.get("promoCode")));
+			RegistrationPage.checkBoxSelection(Constants.APPLY_CODE);
+			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.PROMO_CODE_ERROR_MSG), "Given promo code cannot be applied.");		
+			RegistrationPage.refreshBrowser();
+		}
+	}
+
+	@Then("verify apply code option without providing promo code")
+	public void verify_apply_code_option_without_providing_promo_code() {
+
+		RegistrationPage.checkBoxSelection(Constants.APPLY_CODE);
+		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.PROMO_CODE_ERROR_MSG), "Please enter a valid invite code");		
+	}
+
+	@Then("verify user consent weblink")
+	public void verify_user_consent_weblink() {
+
+		RegistrationPage.checkBoxSelection(Constants.USER_CONSENT);
+		Assert.assertEquals(LandingPage.validateTitle(), "Read about our user consent for data usage");
+
+	}
+
+	@Then("verify terms and conditions link")
+	public void verify_terms_and_conditions_link() {
+
+		RegistrationPage.checkBoxSelection(Constants.TERMS_AND_CONDITIONS);
+		Assert.assertEquals(LandingPage.validateTitle(), "Terms and Conditions");
+
+	}
+
+	@Then("verify privacy policy link")
+	public void verify_privacy_policy_link() {
+
+		RegistrationPage.checkBoxSelection(Constants.PRIVACY_POLICY);
+		Assert.assertEquals(LandingPage.validateTitle(), "Learn about our Privacy_policy and data protection");
+
+	}
+
+	@Then("verify submission page without selecting whatsup notifiation option")
+	public void verify_submission_page_without_selecting_whatsup_notifiation_option(DataTable regData) throws ClassNotFoundException, SQLException, InterruptedException {
+
+		for(Map<String, String> data: regData.asMaps()) {
+			LinkedHashMap<String, String> map = DataHelper.getDbData(RegistrationPage.phoneNumber);
+			RegistrationPage.FinalSubmissionPage(RegistrationPage.phoneNumber,(map.get("otp")),(data.get("promoCode")));
+			RegistrationPage.checkBoxSelection(prop.getProperty(Constants.WHATSAPP_CHECK_BOX));
+			Assert.assertEquals(RegistrationPage.validateNextPageTitle(Constants.FINAL_SUBMISSION_LOADER), "Waiting for credit response");		
+			RegistrationPage.refreshBrowser();
+		}
+	}
+
+	@Then("verify submission page by selecting whatsup notifiation option")
+	public void verify_submission_page_by_selecting_whatsup_notifiation_option(DataTable regData) throws InterruptedException {
+
+		for(Map<String, String> data: regData.asMaps()) {
+			RegistrationPage.FinalSubmissionPage(RegistrationPage.phoneNumber,(data.get("otp")),(data.get("promoCode")));
+			RegistrationPage.checkBoxSelection(prop.getProperty(Constants.TERMS_AND_CONDITIONS_CHECK_BOX));	
+			Assert.assertEquals(RegistrationPage.validateNextPageTitle(Constants.FINAL_SUBMISSION_LOADER), "Waiting for credit response");
+			RegistrationPage.refreshBrowser();
+		}
+	}
+
+	@Then("verify otp sent notification when user clicks on send otp option")
+	public void verify_otp_sent_notification_when_user_clicks_on_send_otp_option() {
+
+		RegistrationPage.checkBoxSelection(Constants.SEND_OTP);		
+		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.NOTIFICATION_SUCCESS_MSG),"Please enter the OTP sent to your given number");
+	}
+
 	@Then("quit the page")
 	public void quit_the_page() {
 		RegistrationPage.closeBrowser();
@@ -577,6 +833,7 @@ public class CustRegDataValidation extends Commons {
 	//These methods will help to call when test scripts has to execute step-2 and and step-3 reg cases
 
 	public static void completePendingSteps() {
+
 
 		RegistrationPage.completeStepOne();
 		RegistrationPage.complteStepTwo();
