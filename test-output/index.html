@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\DELL\AppData\Local\Temp\testng-eclipse-1089397003\testng-customsuite.xml</span>
+                    <span>C:\Users\DELL\AppData\Local\Temp\testng-eclipse-1435757436\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.wq.runner.RunnerService" class="method navigator-link" hash-for-method="runScenario(&quot;verify user consent weblink&quot;, &quot;Optional[Customer registration page data validations]&quot;)">runScenario("verify user consent weblink", "Optional[Customer registration page data validations]")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.wq.runner.RunnerService" class="method navigator-link" hash-for-method="runScenario(&quot;verify resend otp in 30sec option&quot;, &quot;Optional[Customer registration page data validations]&quot;)">runScenario("verify resend otp in 30sec option", "Optional[Customer registration page data validations]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -127,19 +127,17 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;verify user consent weblink&quot;, &quot;Optional[Customer registration page data validations]&quot;)">
-                  </a> <!-- runScenario("verify user consent weblink", "Optional[Customer registration page data validations]") -->
+                  <a name="runScenario(&quot;verify resend otp in 30sec option&quot;, &quot;Optional[Customer registration page data validations]&quot;)">
+                  </a> <!-- runScenario("verify resend otp in 30sec option", "Optional[Customer registration page data validations]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("verify user consent weblink", "Optional[Customer registration page data validations]")</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [Read about our user consent for data usage] but found []
+                  <span class="parameters">("verify resend otp in 30sec option", "Optional[Customer registration page data validations]")</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [false] but found [true]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-	at org.testng.Assert.assertEquals(Assert.java:122)
-	at org.testng.Assert.assertEquals(Assert.java:629)
-	at org.testng.Assert.assertEquals(Assert.java:639)
-	at com.wq.stepdefinations.CustRegDataValidation.verify_user_consent_weblink(CustRegDataValidation.java:776)
-	at ✽.verify user consent weblink(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/test.feature:142)
+	at org.testng.Assert.assertFalse(Assert.java:67)
+	at org.testng.Assert.assertFalse(Assert.java:77)
+	at com.wq.stepdefinations.CustRegDataValidation.verify_resend_otp_in_30sec_option(CustRegDataValidation.java:921)
+	at ✽.verify resend otp in 30sec option(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:504)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -151,7 +149,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\DELL\AppData\Local\Temp\testng-eclipse-1089397003\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\DELL\AppData\Local\Temp\testng-eclipse-1435757436\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -212,12 +210,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.wq.runner.RunnerService')
-data.setCell(0, 3, 16076);
+data.setCell(0, 3, 15379);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 16 seconds</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -251,12 +249,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("verify user consent weblink", "Optional[Customer registration page data validations]")</span>
-                <span class="method-start">598 ms</span>
+                <span class="method-name">runScenario("verify resend otp in 30sec option", "Optional[Customer registration page data validations]")</span>
+                <span class="method-start">288 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">16676 ms</span>
+                <span class="method-start">15669 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

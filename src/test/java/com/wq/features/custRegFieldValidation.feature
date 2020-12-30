@@ -149,6 +149,47 @@ Scenario: verify bank name dropdown button
 	Then verify bank name dropdown button
 	Then close the page	
 	
+#verification and submission field validation cases
+
+Scenario: verify phone number text field 
+	Given user launched the moneytap webqual page 
+	Then verify phone number text field
+	Then close the page 
+
+Scenario: verify otp text field 
+	Given user launched the moneytap webqual page 
+	Then verify otp text field
+	Then close the page
+
+Scenario: verify promo code text field 
+	Given user launched the moneytap webqual page 
+	Then verify promo code text field
+	Then close the page
+
+Scenario: verify send otp button 
+	Given user launched the moneytap webqual page 
+	Then verify send otp button
+	Then close the page
+
+Scenario: verify apply code button 
+	Given user launched the moneytap webqual page 
+	Then verify apply code button
+	Then close the page
+
+Scenario: verify userConsent checkbox
+	Given user launched the moneytap webqual page 
+	Then verify userConsent checkbox
+	Then close the page
+
+Scenario: verify whatsApp notification checkbox
+	Given user launched the moneytap webqual page 
+	Then verify whatsApp notification checkbox
+	Then close the page
+
+Scenario: verify check limit CTA button 
+	Given user launched the moneytap webqual page 
+	Then verify check limit CTA button
+	Then close the page
 	
 	
 	

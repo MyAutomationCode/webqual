@@ -91,6 +91,7 @@ public class Constants {
 	public static final String APPLY_CODE="applyCode";
 	public static final String SEND_OTP = "sendOtp";
 	public static final String RESEND_OTP = "resendOtp";
+	public static final String RESEND_OTP_TIMER = "resendOtpTimer";
 	public static final String MOBILE_NO_ERROR_MSG = "mobileNoErrorMsg";
 	public static final String OTP_ERROR_MSG = "otpErrorMsg";
 	public static final String PROMO_CODE_ERROR_MSG = "promoCodeErrorMsg";

@@ -9,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 
 import com.wq.common.Commons;
+import com.wq.pages.FieldValidationPage;
+import com.wq.pages.LandingPage;
 import com.wq.pages.RegistrationPage;
 import com.wq.utils.Constants;
 
@@ -17,7 +19,8 @@ import net.bytebuddy.matcher.CollectionOneToOneMatcher;
 
 public class CustRegFieldValidation extends Commons{
 
-	CustRegDataValidation page = new CustRegDataValidation();
+	CustRegDataValidation dataValidation = new CustRegDataValidation();
+	FieldValidationPage fieldValidation = new FieldValidationPage();
 
 	@Given("user launched the moneytap webqual page")
 	public void user_launched_the_moneytap_webqual_page() {
@@ -162,7 +165,7 @@ public class CustRegFieldValidation extends Commons{
 	}
 	@Then("verify company name text field")
 	public void verify_company_name_text_field() {
-		
+
 		CustRegDataValidation.completePendingSteps();
 		Boolean companyName = driver.findElement(By.xpath(prop.getProperty(Constants.COMPANY_NAME))).isEnabled();		
 		Assert.assertTrue(companyName);
@@ -180,7 +183,7 @@ public class CustRegFieldValidation extends Commons{
 
 	@Then("verify designation text field")
 	public void verify_designation_text_field() {
-		
+
 		CustRegDataValidation.completePendingSteps();
 		Boolean designation = driver.findElement(By.xpath(prop.getProperty(Constants.DESIGNATION))).isEnabled();		
 		Assert.assertTrue(designation);
@@ -189,7 +192,7 @@ public class CustRegFieldValidation extends Commons{
 
 	@Then("verify pan number text field")
 	public void verify_pan_number_text_field() {
-		
+
 		CustRegDataValidation.completePendingSteps();
 		Boolean panNumber = driver.findElement(By.xpath(prop.getProperty(Constants.PAN))).isEnabled();		
 		Assert.assertTrue(panNumber);
@@ -198,7 +201,7 @@ public class CustRegFieldValidation extends Commons{
 
 	@Then("verify job type dropdown button")
 	public void verify_job_type_dropdown_button() {
-		
+
 		CustRegDataValidation.completePendingSteps();
 		Boolean jobType = driver.findElement(By.xpath(prop.getProperty(Constants.JOB_TYPE))).isEnabled();		
 		Assert.assertTrue(jobType);
@@ -207,7 +210,7 @@ public class CustRegFieldValidation extends Commons{
 
 	@Then("verify total work experience dropdown button")
 	public void verify_total_work_experience_dropdown_button() {
-		
+
 		CustRegDataValidation.completePendingSteps();
 		Boolean totalWorkExp = driver.findElement(By.xpath(prop.getProperty(Constants.TOTAL_WORK_EXP))).isEnabled();		
 		Assert.assertTrue(totalWorkExp);
@@ -216,7 +219,7 @@ public class CustRegFieldValidation extends Commons{
 
 	@Then("verify work experience in current company dropdown button")
 	public void verify_work_experience_in_current_company_dropdown_button() {
-		
+
 		CustRegDataValidation.completePendingSteps();
 		Boolean currentCompanyExp = driver.findElement(By.xpath(prop.getProperty(Constants.CURRENT_WORK_EXP))).isEnabled();		
 		Assert.assertTrue(currentCompanyExp);
@@ -225,7 +228,7 @@ public class CustRegFieldValidation extends Commons{
 
 	@Then("verify office email text field")
 	public void verify_office_email_text_field() {
-		
+
 		CustRegDataValidation.completePendingSteps();
 		Boolean officeEmail = driver.findElement(By.xpath(prop.getProperty(Constants.OFFICE_EMAIL))).isEnabled();		
 		Assert.assertTrue(officeEmail);
@@ -241,7 +244,7 @@ public class CustRegFieldValidation extends Commons{
 	}
 	@Then("verify salary mode dropdown button")
 	public void verify_salary_mode_dropdown_button() {
-		
+
 		CustRegDataValidation.completePendingSteps();
 		Boolean salaryMode = driver.findElement(By.xpath(prop.getProperty(Constants.SALARY_MODE))).isEnabled();		
 		Assert.assertTrue(salaryMode);
@@ -249,13 +252,71 @@ public class CustRegFieldValidation extends Commons{
 	}
 	@Then("verify bank name dropdown button")
 	public void verify_bank_name_dropdown_button() {
-		
+
 		CustRegDataValidation.completePendingSteps();
 		Boolean bankName = driver.findElement(By.xpath(prop.getProperty(Constants.BANK_NAME))).isEnabled();		
 		Assert.assertTrue(bankName);
 
 	}
 
+	//test cases for verification and submission field validations
+	
+	@Given("user launched the webpage and completed all steps")
+	public void user_launched_the_webpage_and_completed_all_steps() {
+		
+		Commons.browserInitialization();
+		RegistrationPage.completeStepOne();
+		RegistrationPage.complteStepTwo();  
+		RegistrationPage.completeStepThree();
+	}
+
+	@Then("verify phone number text field in verification page")
+	public void verify_phone_number_text_field_in_verification_page() {
+		
+		Assert.assertTrue(FieldValidationPage.validateFields(Constants.MOBILE_NO));
+	}
+	@Then("verify otp text field")
+	public void verify_otp_text_field() {
+		
+		Assert.assertTrue(FieldValidationPage.validateFields(Constants.OTP));
+	}
+
+
+	@Then("verify promo code text field")
+	public void verify_promo_code_text_field() {
+		Assert.assertTrue(FieldValidationPage.validateFields(Constants.PROMO_CODE));
+	}
+
+	@Then("verify send otp button")
+	public void verify_send_otp_button() {
+
+		Assert.assertTrue(FieldValidationPage.validateFields(Constants.SEND_OTP));
+	}
+
+	@Then("verify apply code button")
+	public void verify_apply_code_button() {
+		
+		Assert.assertTrue(FieldValidationPage.validateFields(Constants.APPLY_CODE));
+	}
+
+	@Then("verify userConsent checkbox")
+	public void verify_user_consent_checkbox() {
+		
+		Assert.assertFalse(FieldValidationPage.validateCheckBox(Constants.TERMS_AND_CONDITIONS_CHECK_BOX));
+	}
+
+	@Then("verify whatsApp notification checkbox")
+	public void verify_whats_app_notification_checkbox() {
+		
+		Assert.assertTrue(FieldValidationPage.validateCheckBox(Constants.WHATSAPP_CHECK_BOX));
+	}
+
+	@Then("verify check limit CTA button")
+	public void verify_check_limit_cta_button() {
+		
+		Assert.assertTrue(FieldValidationPage.validateFields(Constants.CHECK_LIMIT_BTN));
+
+	}
 
 	@Then("close the page")
 	public void close_the_page() {

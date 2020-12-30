@@ -12,14 +12,14 @@ Scenario: verify step one page without providing details
 	
 Scenario: verify continue option by providing valid details in step one 
 	Given user launched webpage 
-	And user entered all mandatory details in step one 
+	Then user entered all mandatory details in step one 
 		|firstname| middlename | lastname | dob | gender | city | creditHistory | phoneNumber |
 		| john | abraham | roy | 20/08/1993 | Male | Bangalore | I have an active credit card | 7666666800 |
 	Then quit the page 
 	
 Scenario: verify step one reg details by providing invalid firstname 
 	Given user launched webpage 
-	And user entered invalid firstname 
+	Then user entered invalid firstname 
 	#	Fetching dynamic data from feature file using data table with maps mechanism| 
 		|firstname| middlename | lastname | dob | gender | city | creditHistory | phoneNumber |
 		| 1382djfd | Raju | Devathi | 20/08/1993 | Male | Bangalore | I have an active credit card |7666666800|
@@ -28,21 +28,21 @@ Scenario: verify step one reg details by providing invalid firstname
 	
 Scenario: verify step one reg details by providing invalid middlename 
 	Given  user launched webpage 
-	And  user entered invalid middlename 
+	Then  user entered invalid middlename 
 		|firstname| middlename | lastname | dob | gender | city | creditHistory | phoneNumber |
 		| john | abrah@#m | roy | 20/08/1993 | Male | Bangalore | I have an active credit card | 7666666800 |
 	Then  quit the page 
 	
 Scenario: verify step one reg details by providing invalid lastname 
 	Given  user launched webpage 
-	And  user entered invalid lastname 
+	Then  user entered invalid lastname 
 		|firstname| middlename | lastname | dob | gender | city | creditHistory | phoneNumber |
 		| john | abraham | r@#12oy | 20/08/1993 | Male | Bangalore | I have an active credit card | 7666666800 |
 	Then  quit the page 
 	
 Scenario: verify step one reg details by providing invalid dob 
 	Given  user launched webpage 
-	And  user entered invalid dob 
+	Then  user entered invalid dob 
 		|firstname| middlename | lastname | dob | gender | city | creditHistory | phoneNumber |
 		| john | abraham | roy | 40/40/4993 | Male | Bangalore | I have an active credit card | 7666666800 |
 	Then  quit the page 
@@ -50,7 +50,7 @@ Scenario: verify step one reg details by providing invalid dob
 Scenario: 
 	verify step one reg details by providing dob less than min age criteria 
 	Given  user launched webpage 
-	And  user entered dob less than min age criteria 
+	Then  user entered dob less than min age criteria 
 		|firstname| middlename | lastname | dob | gender | city | creditHistory | phoneNumber |
 		| john | abraham | roy | 20/08/1999 | Male | Bangalore | I have an active credit card | 7666666800 |
 	Then  quit the page 
@@ -58,14 +58,14 @@ Scenario:
 Scenario: 
 	verify step one reg details by providing dob more than max age criteria 
 	Given  user launched webpage 
-	And  user entered dob more than max age criteria 
+	Then  user entered dob more than max age criteria 
 		|firstname| middlename | lastname | dob | gender | city | creditHistory | phoneNumber |
 		| john | abraham | roy | 20/08/1945 | Male | Bangalore | I have an active credit card | 7666666800 |
 	Then  quit the page 
 	
 Scenario: verify auto complete city list in step one page 
 	Given  user launched webpage 
-	And  check auto complete city list when user enters one letter in step one page 
+	Then  check auto complete city list when user enters one letter in step one page 
 		| city |
 		| A |
 		| Nas |
@@ -73,21 +73,21 @@ Scenario: verify auto complete city list in step one page
 	
 Scenario: verify step one reg details by providing invalid city name 
 	Given  user launched webpage 
-	And  user entered invalid city name 
+	Then  user entered invalid city name 
 		|firstname| middlename | lastname | dob | gender | city | creditHistory | phoneNumber |
 		| john | abraham | roy | 20/08/1993 | Male | Rajamundry | I have an active credit card | 7666666800 |
 	Then  quit the page 
 	
 Scenario: verify step one reg details by providing invalid phonenumber 
 	Given  user launched webpage 
-	And  user entered invalid phonenumber 
+	Then  user entered invalid phonenumber 
 		|firstname| middlename | lastname | dob | gender | city | creditHistory | phoneNumber |
 		| john | abraham | roy | 20/08/1993 | Male | Bangalore | I have an active credit card | 7A666@6800 |
 	Then  quit the page 
 	
 Scenario: verify step one reg details by providing number lessthan ten digits 
 	Given  user launched webpage 
-	And  user entered phone with less than ten digits 
+	Then  user entered phone with less than ten digits 
 		|firstname| middlename | lastname | dob | gender | city | creditHistory | phoneNumber |
 		| john | abraham | roy | 20/08/1993 | Male | Bangalore | I have an active credit card | 76666668 |
 	Then  quit the page 
@@ -112,7 +112,7 @@ Scenario: verify step two page without passing any details
 	
 Scenario: verify step two page by providing valid details 
 	Given  user launched webpage 
-	And  user given valid details in step two page 
+	Then  user given valid details in step two page 
 		| residenceType | years in residence | years in city | address1 | address2 | pincode |
 		| Rented with Family | 1 - 3 years | 1 - 3 years | #4rth floor,Moneytap | sigma soft, whitefield | 560043 |
 	Then  quit the page 
@@ -120,14 +120,14 @@ Scenario: verify step two page by providing valid details
 Scenario: 
 	verify if customer provides age of city greater than age of residence in step two page 
 	Given  user launched webpage 
-	And   customer provides age of city greater than age of residence 
+	Then  customer provides age of city greater than age of residence 
 		| residenceType | years in residence | years in city | address1 | address2 | pincode |
 		| Rented with Family | 1 - 3 years | Less than 1 year | abcfder,asdef, | sigma soft, whitefield | 560043 |
 	Then  quit the page 
 	
 Scenario: verify step two page by providing address1 with less than 3 chars 
 	Given  user launched webpage 
-	And  user entered first adrress line with less than minimum chars 
+	Then  user entered first adrress line with less than minimum chars 
 		| residenceType | years in residence | years in city | address1 | address2 | pincode |
 		| Rented with Family | 1 - 3 years | 1 - 3 years | ab | sigma soft, whitefield | 560043 |
 	Then  quit the page 
@@ -135,7 +135,7 @@ Scenario: verify step two page by providing address1 with less than 3 chars
 Scenario: 
 	verify step two page by providing address1 with less than 3 chars and includes special chars 
 	Given  user launched webpage 
-	And  user entered first adrress line with less than minimum chars includes special chars 
+	Then  user entered first adrress line with less than minimum chars includes special chars 
 		| residenceType | years in residence | years in city | address1 | address2 | pincode |
 		| Rented with Family | 1 - 3 years | 1 - 3 years | @4 | sigma soft, whitefield | 560043 |
 	Then  quit the page 
@@ -150,56 +150,56 @@ Scenario: verify step two page by providing address1 with three repeated chars
 Scenario: 
 	verify step two page by providing address1 with unsupporrted special chars 
 	Given user launched webpage 
-	And  user entered first adrress line with unsupported special chars 
+	Then  user entered first adrress line with unsupported special chars 
 		| residenceType | years in residence | years in city | address1 | address2 | pincode |
 		| Rented with Family | 1 - 3 years | 1 - 3 years | (4rth floor), | sigma soft, whitefield | 560043 |
 	Then  quit the page 
 
 Scenario: verify step two page by providing address2 with less than 3 chars 
 	Given user launched webpage 
-	And  user entered second adrress line with less than minimum chars 
+	Then  user entered second adrress line with less than minimum chars 
 		| residenceType | years in residence | years in city | address1 | address2 | pincode |
 		| Rented with Family | 1 - 3 years | 1 - 3 years | 4rth floor,Moneytap | si | 560043 |
 	Then  quit the page 
 
 Scenario: verify step two page by providing address2 with less than 3 chars which includes special chars
 	Given user launched webpage 
-	And  user entered second adrress line with less than minimum chars includes special chars 
+	Then  user entered second adrress line with less than minimum chars includes special chars 
 		| residenceType | years in residence | years in city | address1 | address2 | pincode |
 		| Rented with Family | 1 - 3 years | 1 - 3 years | 4rth floor,Moneytap | s! | 560043 |
 	Then  quit the page 
 	
 Scenario: verify step two page by providing address2 with three repeated chars 
 	Given  user launched webpage 
-	And  user entered second adrress line with three repeated chars 
+	Then  user entered second adrress line with three repeated chars 
 		| residenceType | years in residence | years in city | address1 | address2 | pincode |
 		| Rented with Family | 1 - 3 years | 1 - 3 years | 4rth floor,Moneytap | efff,rddd,wsss,| 560043 |
 	Then  quit the page 
 	
 Scenario: verify step two page by providing address2 with unsupported special chars 
 	Given user launched webpage 
-	And  user entered second adrress line with unsupported special chars 
+	Then  user entered second adrress line with unsupported special chars 
 		| residenceType | years in residence | years in city | address1 | address2 | pincode |
 		| Rented with Family | 1 - 3 years | 1 - 3 years | 4rth floor,Moneytap | %$()sigma, soft, tech | 560043 |
 	Then  quit the page 
 	
 Scenario: verify step two page by providing invalid pincode 
 	Given user launched webpage 
-	And  user entered invalid pincode which is not relavent to given city
+	Then  user entered invalid pincode which is not relavent to given city
 		| residenceType | years in residence | years in city | address1 | address2 | pincode |
 		| Rented with Family | 1 - 3 years | 1 - 3 years | 4rth floor,Moneytap | sigma soft, whitefield | 100013 |
 	Then  quit the page 
 	
 Scenario: verify step two page by providing alphanumeric values in pincode 
 	Given user launched webpage 
-	And  user entered alphanumeric and special letters in pincode 
+	Then  user entered alphanumeric and special letters in pincode 
 		| residenceType | years in residence | years in city | address1 | address2 | pincode |
 		| Rented with Family | 1 - 3 years | 1 - 3 years | 4rth floor,Moneytap | sigma soft, whitefield | 56qw@_e3 |
 	Then  quit the page 
 	
 Scenario: verify step two page by providing pincode with less than 6 digits 
 	Given  user launched webpage 
-	And  user entered pincode with less than six digits 
+	Then  user entered pincode with less than six digits 
 		| residenceType | years in residence | years in city | address1 | address2 | pincode |
 		| Rented with Family | 1 - 3 years | 1 - 3 years | 4rth floor,Moneytap | sigma soft, whitefield | 5603 |
 	Then  quit the page 
@@ -380,7 +380,6 @@ Scenario: verify submission page by providing mobile num with special chars
 	| @3fe_2@! |1234 |  | 
 	Then  quit the page 
 
-
 Scenario: verify submission page by providing invalid otp
 	Given  user launched webpage and completed all three steps 
 	Then  verify submission page by providing invalid otp
@@ -465,7 +464,7 @@ Scenario: verify apply code option without providing promo code
 	Given user launched webpage and completed all three steps
 	Then  verify apply code option without providing promo code
 	Then  quit the page 
-@smoke
+
 Scenario: verify user consent weblink
 	Given user launched webpage and completed all three steps
 	Then  verify user consent weblink
@@ -480,23 +479,27 @@ Scenario: verify privacy policy link
 	Given user launched webpage and completed all three steps
 	Then  verify privacy policy link
 	Then  quit the page 
+	
+Scenario: verify submission page without selecting whatsup notifiation option
+	Given user launched webpage and completed all three steps
+	Then  verify submission page without selecting whatsup notifiation option
+	|promoCode|
+	||
+	Then  quit the page 
 
-#Scenario: verify submission page without selecting whatsup notifiation option
-#	Given user launched webpage and completed all three steps
-#	Then  verify submission page without selecting whatsup notifiation option
-#	|promoCode|
-#	||
-#	Then  quit the page 
-
-#Scenario: verify submission page by selecting whatsup notifiation option
-#	Given user launched webpage and completed all three steps
-#	Then  verify submission page by selecting whatsup notifiation option
-#	|promoCode|
-#	||
-#	Then  quit the page 
+Scenario: verify submission page by selecting whatsup notifiation option
+	Given user launched webpage and completed all three steps
+	Then  verify submission page by selecting whatsup notifiation option
+	|promoCode|
+	||
+	Then  quit the page 
 
 Scenario: verify otp sent notification when user clicks on send otp option
 	Given user launched webpage and completed all three steps
 	Then  verify otp sent notification when user clicks on send otp option
 	Then  quit the page 
-	
+@smoke	
+Scenario: verify resend otp in 30sec option
+	Given user launched webpage and completed all three steps
+	Then  verify resend otp in 30sec option
+	Then  quit the page

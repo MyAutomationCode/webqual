@@ -54,10 +54,16 @@ public class DataHelper extends Commons{
 	public static LinkedHashMap getDbData(String value) throws ClassNotFoundException, SQLException {
 
 		RegistrationPage.checkBoxSelection(Constants.SEND_OTP);	
-		String dbQeury = Connections.Dev_Selectquery(value);
+		String dbQeury = Connections.Dev_SelectQueryPan(value);
 		LinkedHashMap DBdata = Connections.Dev_DB_executequery(dbQeury);
 		return DBdata;
 
-
+	}
+	public static void deleteDbData() throws ClassNotFoundException, SQLException {
+		Connections.Dev_deletePan(RegistrationPage.panNumber);
+		LinkedHashMap customerId = Connections.Dev_SelectQueryCust(RegistrationPage.phoneNumber);
+		Connections.Dev_updateCust(RegistrationPage.phoneNumber,customerId.get("id"));
+		
+		
 	}
 }

@@ -3,6 +3,8 @@ package com.wq.common;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -45,6 +47,7 @@ public class Commons {
 		}
 	}
 
+	
 	public static void closeBrowser() {
 		driver.close();
 	}
@@ -52,9 +55,7 @@ public class Commons {
 		driver.navigate().refresh();
 	}
 	public static void waitTime() {
-		
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+	}
 
-	}
-		
-	}
+}

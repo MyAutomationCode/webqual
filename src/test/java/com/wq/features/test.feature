@@ -136,7 +136,7 @@ Scenario: verify apply code option without providing promo code
 	Given user launched webpage and completed all three steps
 	Then  verify apply code option without providing promo code
 	Then  quit the page 
-@smoke
+
 Scenario: verify user consent weblink
 	Given user launched webpage and completed all three steps
 	Then  verify user consent weblink

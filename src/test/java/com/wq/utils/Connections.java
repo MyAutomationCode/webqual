@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.LinkedHashMap;
 import java.util.Properties;
+import java.util.Random;
 
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.Session;
@@ -15,11 +16,14 @@ import com.jcraft.jsch.Session;
 public class Connections {
 
 
-		static Connection db = null;
-		static Connection devdb = null;
-		static Statement stmt = null;
-		static ResultSet rs = null;
-		static Session session;
+		public static Connection db = null;
+		public static Connection devdb = null;
+		public	static Statement stmt = null;
+		public static ResultSet rs = null;
+		public static Session session;
+		static int row;
+	//	static Random random = new Random();
+		//static int num = random.nextInt(900);
 
 		public static void Dev_createSSHTunnelToDev() throws ClassNotFoundException, SQLException {
 			String ssh_user = "moneytap";
@@ -33,7 +37,7 @@ public class Connections {
 				jsch.addIdentity("./src/test/resources/privateKey.ppk");
 
 				session = jsch.getSession(ssh_user, host, port);
-				int lport = 15532;
+				int lport = 15531;
 				int rport = 5432;
 
 				Properties config = new Properties();
@@ -55,7 +59,7 @@ public class Connections {
 		public static String Dev_connectToDevDb() {
 
 			final String DB_HOST = "localhost";
-			final String DB_PORT = "15532";
+			final String DB_PORT = "15531";
 			final String DB_USER = "techadminacct";
 			final String DB_PASSWD = "cashin2oo8$";
 			final String DB_NAME = "cashindb";
@@ -64,7 +68,9 @@ public class Connections {
 			
 			try {
 				Class.forName("org.postgresql.Driver");
+				System.out.println("I'm at connect to Dev db");
 				devdb = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);
+				System.out.println(devdb);
 			} catch (Exception ex) {
 				System.out.println(ex);
 			}
@@ -83,28 +89,54 @@ public class Connections {
 			}
 		}
 
-		public static String Dev_Selectquery(String value) {
+		public static String Dev_SelectQueryPan(String value) {
 			String query = "select otp from otp where phone ='" + value + "' and purpose = 'SIGNUP' and status = 'SENT'";
 			System.out.println(query);
 			return query;
 		}
-/*
-		public static String Dev_wipeoffquery(String ID) {
-			String query = "select * from cleanuprecord('customer'," + ID + ",'id','')";
+		
+		public static LinkedHashMap Dev_SelectQueryCust(String phoneNum) throws ClassNotFoundException, SQLException {
+			String query = "select id from customer where phone ='" + phoneNum + "'";
 			System.out.println(query);
-			return query;
+			return(Dev_DB_executequery(query));
 		}
-*/
+		
+		public static String Dev_deletePan(String pan) throws ClassNotFoundException, SQLException {
+			String deleteQuery = "delete from pancard where pannumber ='" + pan + "'";
+			System.out.println(deleteQuery);
+			Dev_createSSHTunnelToDev();
+			stmt = devdb.createStatement();
+			int rows = stmt.executeUpdate(deleteQuery);
+			stmt.close();
+			Dev_Close_connection();
+			System.out.println("deleted the data");
+			return deleteQuery;
+		}
+		
+		public static String Dev_updateCust(String phone, Object customerId) throws SQLException, ClassNotFoundException {
+			
+			String query = "update customer set phone ='" + phone + "." + customerId + ".deleted'" + " where phone ='" + phone + "';";
+			System.out.println(query);
+			Dev_createSSHTunnelToDev();
+			stmt = devdb.createStatement();
+			int rows = stmt.executeUpdate(query);
+			stmt.close();
+			Dev_Close_connection();
+			System.out.println("deleted the data");
+			return query;
+			
+		}
+				
 		@SuppressWarnings({ "rawtypes" })
 		public static LinkedHashMap Dev_DB_executequery(String query) throws SQLException, ClassNotFoundException {
 			LinkedHashMap<String, String> hm = new LinkedHashMap<String, String>();
 			try {
+			
 				Dev_createSSHTunnelToDev();
 				stmt = devdb.createStatement();
 				rs = stmt.executeQuery(query);
 				stmt.close();
 				Dev_Close_connection();
-
 				ResultSetMetaData md = rs.getMetaData();
 				int columns = md.getColumnCount();
 

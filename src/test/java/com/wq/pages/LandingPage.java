@@ -10,7 +10,7 @@ import com.wq.common.Commons;
 
 public class LandingPage extends Commons{
 	
-	public static WebDriver driver = new ChromeDriver();
+//	public static WebDriver driver = new ChromeDriver();
 	public static String validateTitle() {
 		
 		 return driver.getTitle();

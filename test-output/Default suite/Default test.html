@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Dec 29 23:13:15 IST 2020</td>
+<td>Started on:</td><td>Wed Dec 30 16:19:42 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>16 seconds (16755 ms)</td>
+<tr><td>Total time:</td><td>15 seconds (15759 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,28 +75,24 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify user consent weblink", "Optional[Customer registration page data validations]"</td>
-<td><div><pre>java.lang.AssertionError: expected [Read about our user consent for data usage] but found []
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify resend otp in 30sec option", "Optional[Customer registration page data validations]"</td>
+<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-	at org.testng.Assert.assertEquals(Assert.java:122)
-	at org.testng.Assert.assertEquals(Assert.java:629)
-	at org.testng.Assert.assertEquals(Assert.java:639)
-	at com.wq.stepdefinations.CustRegDataValidation.verify_user_consent_weblink(CustRegDataValidation.java:776)
-	at ?.verify user consent weblink(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/test.feature:142)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2083969860", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2083969860'><pre>java.lang.AssertionError: expected [Read about our user consent for data usage] but found []
+	at org.testng.Assert.assertFalse(Assert.java:67)
+	at org.testng.Assert.assertFalse(Assert.java:77)
+	at com.wq.stepdefinations.CustRegDataValidation.verify_resend_otp_in_30sec_option(CustRegDataValidation.java:921)
+	at ?.verify resend otp in 30sec option(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:504)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1107779742", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1107779742'><pre>java.lang.AssertionError: expected [false] but found [true]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-	at org.testng.Assert.assertEquals(Assert.java:122)
-	at org.testng.Assert.assertEquals(Assert.java:629)
-	at org.testng.Assert.assertEquals(Assert.java:639)
-	at com.wq.stepdefinations.CustRegDataValidation.verify_user_consent_weblink(CustRegDataValidation.java:776)
-	at ?.verify user consent weblink(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/test.feature:142)
+	at org.testng.Assert.assertFalse(Assert.java:67)
+	at org.testng.Assert.assertFalse(Assert.java:77)
+	at com.wq.stepdefinations.CustRegDataValidation.verify_resend_otp_in_30sec_option(CustRegDataValidation.java:921)
+	at ?.verify resend otp in 30sec option(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:504)
 </pre></div></td>
-<td>16</td>
+<td>15</td>
 <td>com.wq.runner.RunnerService@7690781</td></tr>
 </table><p>
 </body>

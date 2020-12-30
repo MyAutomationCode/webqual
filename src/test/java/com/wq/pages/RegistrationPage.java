@@ -21,11 +21,14 @@ import io.cucumber.java.en.Given;
 public class RegistrationPage extends Commons{
 
 	Constants c = new Constants();
+	
+	//Reusing the same data for final submission test cases
 	public static String phoneNumber = "7000000800";
+	public static String panNumber = "CKOPW4009F";
 
 
-
-	//Passing Customer info 
+	//Passing Customer info for step-1 reg page
+	
 	public static void passCustStepOneInfo(String firstname, String middlename, String lastname, String dob,String gender,
 			String city,String chValue, String phoneNumber) {
 
@@ -42,6 +45,9 @@ public class RegistrationPage extends Commons{
 		driver.findElement(By.xpath(prop.getProperty(Constants.CONTINUE_BUTTON))).click();
 
 	}
+	
+	//Passing Customer info for step-2 reg page
+
 	public static void passCustStepTwoInfo(String residenceType, String residenceAge, String cityAge,String address1,
 			String address2, String pincode) {
 
@@ -58,6 +64,9 @@ public class RegistrationPage extends Commons{
 		driver.findElement(By.xpath(prop.getProperty(Constants.CONTINUE_BUTTON))).click();
 
 	}
+	
+	//Passing Customer info for step-3 reg page
+
 	public static void passCustStepThreeInfo(String companyName, String companyType, String designation, String panNumber, 
 			String jobType, String totalWorkExp, String currentCompanyExp, String officeEmail, String salary, 
 			String salaryMode, String bankName) {
@@ -82,15 +91,18 @@ public class RegistrationPage extends Commons{
 		bankNameOptions.selectByVisibleText(bankName);
 		driver.findElement(By.xpath(prop.getProperty(Constants.CONTINUE_BUTTON))).click();
 	}
-
+	
+    //Validating next page title
 	public static String validateNextPageTitle(String verifyCustRegStepTitle) throws InterruptedException {
 
-		Thread.sleep(6000);
+		Thread.sleep(2000);
 		driver.navigate().refresh();
 		String stageVerification = driver.findElement(By.xpath(prop.getProperty(verifyCustRegStepTitle))).getText();
 		return stageVerification;
 
 	}
+	
+	//Error validation method
 	public static String errorMsgValidation(String errorValue)  {		
 
 		WebDriverWait wait = new WebDriverWait(driver,10);
@@ -99,24 +111,32 @@ public class RegistrationPage extends Commons{
 		return errorMsg;
 	}
 
+	
+	//This method calls for particular city field and given the records
 	public static List<WebElement> autoCompleteCityList(String value) {
 
 		driver.findElement(By.xpath(prop.getProperty(Constants.CITY_OF_RESIDENCE))).sendKeys(value);
 		List<WebElement> autoCompleteList = driver.findElements(By.xpath(prop.getProperty(Constants.AUTO_COMPLETE_CITY_LIST)));
 		return autoCompleteList;
 	}
+	
+	//This method calls for particular companyName field and given the records
 	public static List<WebElement> autoCompleteCompanyList(String value) {
 
 		driver.findElement(By.xpath(prop.getProperty(Constants.COMPANY_NAME))).sendKeys(value);
 		List<WebElement> autoCompleteList = driver.findElements(By.xpath(prop.getProperty(Constants.AUTO_COMPLETE_COMPANY_LIST)));
 		return autoCompleteList;
 	}
+	
+	//This method calls for particular Designation field and given the records
 	public static List<WebElement> autoCompleteDesignationList(String value) {
 
 		driver.findElement(By.xpath(prop.getProperty(Constants.DESIGNATION))).sendKeys(value);
 		List<WebElement> autoCompleteList = driver.findElements(By.xpath(prop.getProperty(Constants.AUTO_COMPLETE_DESIGNATION_LIST)));
 		return autoCompleteList;
 	}
+	
+	//This method calls while executing the file step
 	public static void FinalSubmissionPage(String phone, String otp, String promoCode) {
 
 		driver.findElement(By.xpath(prop.getProperty(Constants.MOBILE_NO))).sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE));
@@ -129,11 +149,18 @@ public class RegistrationPage extends Commons{
 		driver.findElement(By.xpath(prop.getProperty(Constants.CHECK_LIMIT_BTN))).click();
 
 	}
+	
+	//This method will call when we want to perform unique actions for some field validations
 	public static void checkBoxSelection(String value) {
+	
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(prop.getProperty(value)))));
 		driver.findElement(By.xpath(prop.getProperty(value))).click();
+		
 	}
 
 
+	
 	//Generic methods used to complete step-1 and step-2 when test scripts are running for step-2 and step-3 cust reg pages respectively
 	public static void completeStepOne() {
 
@@ -146,7 +173,7 @@ public class RegistrationPage extends Commons{
 	}
 
 	public static void completeStepThree() {
-		RegistrationPage.passCustStepThreeInfo("MUDRA", "Multinational", "DESIGN ENGINEER", "CKOPW4009F", "Salaried", "More than 3 years", "More than 3 years", "abcd@moneytap.com", 
+		RegistrationPage.passCustStepThreeInfo("MUDRA", "Multinational", "DESIGN ENGINEER", panNumber, "Salaried", "More than 3 years", "More than 3 years", "abcd@moneytap.com", 
 				"56000", "Netbanking", "ICICI Bank");
 
 	}

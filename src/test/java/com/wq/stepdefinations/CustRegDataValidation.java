@@ -11,6 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import com.wq.common.Commons;
+import com.wq.pages.FieldValidationPage;
 import com.wq.pages.LandingPage;
 import com.wq.pages.RegistrationPage;
 import com.wq.utils.Connections;
@@ -34,9 +35,10 @@ public class CustRegDataValidation extends Commons {
 		Commons.browserInitialization();
 	}
 
+
 	//test cases for customer registration step-1 page
 
-	@And("user entered all mandatory details in step one")
+	@Then("user entered all mandatory details in step one")
 	public static void user_entered_all_mandatory_details_in_step_one(DataTable regData) throws InterruptedException{
 
 		for (Map<String, String> data : regData.asMaps()){
@@ -48,7 +50,8 @@ public class CustRegDataValidation extends Commons {
 		}
 	}
 
-	@And("user entered invalid firstname")
+
+	@Then("user entered invalid firstname")
 	public void user_entered_invalid_firstname(DataTable regData) throws IOException {
 
 		//fetching dynamic data from feature file using data table with maps mechanism
@@ -79,7 +82,7 @@ public class CustRegDataValidation extends Commons {
 		 */		 
 	}
 
-	@And("user entered invalid middlename")
+	@Then("user entered invalid middlename")
 	public void user_entered_invalid_middlename(DataTable regData) {
 		for (Map<String, String> data : regData.asMaps()){
 
@@ -88,7 +91,9 @@ public class CustRegDataValidation extends Commons {
 			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.MIDDLENAME_ERROR_MSG), "Name can contain only letters and spaces. Please check to continue");
 		}
 	}
-	@And("user entered invalid lastname")
+
+
+	@Then("user entered invalid lastname")
 	public void user_entered_invalid_lastname(DataTable regData) {
 
 		for (Map<String, String> data : regData.asMaps()){
@@ -98,7 +103,7 @@ public class CustRegDataValidation extends Commons {
 		}
 	}
 
-	@And("user entered invalid dob")
+	@Then("user entered invalid dob")
 	public void user_entered_invalid_dob(DataTable regData) {
 
 		for (Map<String, String> data : regData.asMaps()){
@@ -107,6 +112,7 @@ public class CustRegDataValidation extends Commons {
 			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.DOB_ERROR_MSG), "To apply, age must be between 23 to 65 years");
 		}
 	}
+
 	@Then("user entered dob less than min age criteria")
 	public void user_entered_dob_less_than_min_age_criteria(DataTable regData) {
 
@@ -116,6 +122,8 @@ public class CustRegDataValidation extends Commons {
 			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.DOB_ERROR_MSG), "To apply, age must be between 23 to 65 years");
 		}
 	}
+
+
 	@Then("user entered dob more than max age criteria")
 	public void user_entered_dob_more_than_max_age_criteria(DataTable regData) {
 
@@ -125,6 +133,8 @@ public class CustRegDataValidation extends Commons {
 			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.DOB_ERROR_MSG), "To apply, age must be between 23 to 65 years");		
 		}
 	}
+
+
 	@Then("check auto complete city list when user enters one letter in step one page")
 	public void check_auto_complete_city_list_when_user_enters_one_letter_in_step_one_page(DataTable regData) {
 
@@ -135,6 +145,7 @@ public class CustRegDataValidation extends Commons {
 		}	
 	}
 
+
 	@Then("user entered invalid city name")
 	public void user_entered_invalid_city_name(DataTable regData) {
 
@@ -144,6 +155,8 @@ public class CustRegDataValidation extends Commons {
 			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.CITY_ERROR_MSG), "Sorry, we’re currently available only in the given cities");		
 		}
 	}
+
+
 	@Then("user entered city not in list")
 	public void user_entered_city_not_in_list(DataTable regData) {
 
@@ -153,6 +166,8 @@ public class CustRegDataValidation extends Commons {
 			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.CITY_ERROR_MSG), "Sorry, we’re currently available only in the given cities");	
 		}
 	}
+
+
 	@Then("user entered invalid phonenumber")
 	public void user_entered_invalid_phonenumber(DataTable regData) {
 
@@ -162,6 +177,8 @@ public class CustRegDataValidation extends Commons {
 			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.PHONE_ERROR_MSG), "The Phone field should be of minimum 10 characters.");		
 		}
 	}
+
+
 	@Then("user entered phone with less than ten digits")
 	public void user_entered_phone_with_less_than_ten_digits(DataTable regData) {
 
@@ -169,7 +186,9 @@ public class CustRegDataValidation extends Commons {
 			RegistrationPage.passCustStepOneInfo(data.get("firstname"), data.get("middlename"),data.get("lastname"), data.get("dob"), 
 					data.get("gender"), data.get("city"),data.get("creditHistory"), data.get("phoneNumber"));
 			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.PHONE_ERROR_MSG), "The Phone field should be of minimum 10 characters.");
-		}	}
+		}	
+	}
+
 
 	@Then("user entered phone which is already reigstered in step one page")
 	public void user_entered_phone_which_is_already_reigstered_in_step_one_page(DataTable regData) {
@@ -184,6 +203,7 @@ public class CustRegDataValidation extends Commons {
 			//	Assert.assertEquals(prop.getProperty(Constants.CUSTOMER_REG_URL), expected);
 		}
 	}
+
 
 	@Then("click on continue button without providing values in step one page")
 	public void click_on_continue_button_without_providing_values_in_step_one_page(DataTable regData) {
@@ -224,6 +244,8 @@ public class CustRegDataValidation extends Commons {
 			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.PINCDOE_ERROR_MSG), "Pincode is a required field");
 		}
 	}
+
+
 	@Then("user given valid details in step two page")
 	public static void user_given_valid_details_in_step_two_page(DataTable regData) throws InterruptedException {
 
@@ -233,7 +255,9 @@ public class CustRegDataValidation extends Commons {
 					data.get("address2"), data.get("pincode"));	
 			Assert.assertEquals(RegistrationPage.validateNextPageTitle(Constants.STEP_THREE_TITLE), "Work and Income Details");
 
-		}}
+		}
+	}
+
 
 	@Then("customer provides age of city greater than age of residence")
 	public void customer_provides_age_of_city_greater_than_age_of_residence(DataTable regData) {
@@ -248,6 +272,7 @@ public class CustRegDataValidation extends Commons {
 		}	
 	}
 
+
 	@Then("user entered first adrress line with less than minimum chars")
 	public void user_entered_first_adrress_line_with_less_than_minimum_chars(DataTable regData) {
 
@@ -257,7 +282,10 @@ public class CustRegDataValidation extends Commons {
 					data.get("address2"), data.get("pincode"));
 			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.RES_ADD_LINE_ONE_ERROR_MSG), "Address field cannot have less than 3 characters");
 
-		}	}
+		}		
+	}
+
+
 	@Then("user entered first adrress line with less than minimum chars includes special chars")
 	public void user_entered_first_adrress_line_with_less_than_minimum_chars_includes_special_chars(DataTable regData) {
 
@@ -268,6 +296,8 @@ public class CustRegDataValidation extends Commons {
 			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.RES_ADD_LINE_ONE_ERROR_MSG), "Address field can have only these special characters [./,-]");
 		}
 	}
+
+
 	@Then("user entered first adrress line with three repeated chars")
 	public void user_entered_first_adrress_line_with_three_repeated_chars(DataTable regData) {
 
@@ -278,6 +308,8 @@ public class CustRegDataValidation extends Commons {
 			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.RES_ADD_LINE_ONE_ERROR_MSG), "Address field does not allow three repeated characters.");
 		}
 	}
+
+
 	@Then("user entered first adrress line with unsupported special chars")
 	public void user_entered_first_adrress_line_with_unsupported_special_chars(DataTable regData) {
 
@@ -288,6 +320,8 @@ public class CustRegDataValidation extends Commons {
 			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.RES_ADD_LINE_ONE_ERROR_MSG), "Address field can have only these special characters [./,-]");
 		}
 	}
+
+
 	@Then("user entered second adrress line with less than minimum chars")
 	public void user_entered_second_adrress_line_with_less_than_minimum_chars(DataTable regData) {
 
@@ -298,6 +332,8 @@ public class CustRegDataValidation extends Commons {
 			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.RES_ADD_LINE_TWO_ERROR_MSG), "Address field cannot have less than 3 characters");
 		}
 	}
+
+
 	@Then("user entered second adrress line with less than minimum chars includes special chars")
 	public void user_entered_second_adrress_line_with_less_than_minimum_chars_includes_special_chars(DataTable regData) {
 
@@ -308,6 +344,8 @@ public class CustRegDataValidation extends Commons {
 			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.RES_ADD_LINE_TWO_ERROR_MSG), "Address field can have only these special characters [./,-]");
 		}
 	}
+
+
 	@Then("user entered second adrress line with three repeated chars")
 	public void user_entered_second_adrress_line_with_three_repeated_chars(DataTable regData) {
 
@@ -318,6 +356,8 @@ public class CustRegDataValidation extends Commons {
 			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.RES_ADD_LINE_TWO_ERROR_MSG), "Address field does not allow three repeated characters.");
 		}
 	}
+
+
 	@Then("user entered second adrress line with unsupported special chars")
 	public void user_entered_second_adrress_line_with_unsupported_special_chars(DataTable regData) {
 
@@ -328,6 +368,8 @@ public class CustRegDataValidation extends Commons {
 			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.RES_ADD_LINE_TWO_ERROR_MSG), "Address field can have only these special characters [./,-]");
 		}
 	}
+
+
 	@Then("user entered invalid pincode which is not relavent to given city")
 	public void user_entered_invalid_pincode_which_is_not_relavent_to_given_city (DataTable regData) {
 
@@ -338,6 +380,8 @@ public class CustRegDataValidation extends Commons {
 			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.PINCDOE_ERROR_MSG), "Your chosen city and given pincode don’t match. Please check to continue");
 		}
 	}
+
+
 	@Then("user entered alphanumeric and special letters in pincode")
 	public void user_entered_alphanumeric_and_special_letters_in_pincode(DataTable regData) {
 
@@ -349,6 +393,8 @@ public class CustRegDataValidation extends Commons {
 					"Pincode must be 6 digits only. Please check to continue");
 		}
 	}
+
+
 	@Then("user entered pincode with less than six digits")
 	public void user_entered_pincode_with_less_than_six_digits(DataTable regData) {
 
@@ -376,6 +422,7 @@ public class CustRegDataValidation extends Commons {
 
 	}
 
+
 	@Then("click on continue button without providing any details in step three page")
 	public void click_on_continue_button_without_providing_any_details_in_step_three_page(DataTable regData) {
 
@@ -401,6 +448,7 @@ public class CustRegDataValidation extends Commons {
 		}
 	}
 
+
 	@Then("check auto complete company list when user enters one letter in step three page")
 	public void check_auto_complete_company_list_when_user_enters_one_letter_in_step_three_page(DataTable regData) {
 
@@ -412,6 +460,7 @@ public class CustRegDataValidation extends Commons {
 			RegistrationPage.refreshBrowser();
 		}
 	}
+
 
 	@Then("verify company name text field by providing specialChars in step three page")
 	public void verify_company_name_text_field_by_providing_specialChars_in_step_three_page(DataTable regData) {
@@ -425,6 +474,7 @@ public class CustRegDataValidation extends Commons {
 		}
 	}
 
+
 	@Then("check auto complete designation list when user enters one letter in step three page")
 	public void check_auto_complete_designation_list_when_user_enters_one_letter_in_step_three_page(DataTable regData) {
 
@@ -436,6 +486,7 @@ public class CustRegDataValidation extends Commons {
 			RegistrationPage.refreshBrowser();
 		}
 	}
+
 
 	@Then("verify designation list text field by providing invalid name in step three page")
 	public void verify_designation_list_text_field_by_providing_invalid_name_in_step_three_page(DataTable regData) {
@@ -449,6 +500,7 @@ public class CustRegDataValidation extends Commons {
 		}
 	}
 
+
 	@Then("verify pan number field by providing invalid number in step three page")
 	public void verify_pan_number_field_by_providing_invalid_number_in_step_three_page(DataTable regData) {
 
@@ -460,6 +512,7 @@ public class CustRegDataValidation extends Commons {
 			RegistrationPage.refreshBrowser();
 		}
 	}
+
 
 	@Then("verify pan number field by providing all alphabets in step three page")
 	public void verify_pan_number_field_by_providing_all_alphabets_in_step_three_page(DataTable regData) {
@@ -473,6 +526,7 @@ public class CustRegDataValidation extends Commons {
 		}
 	}
 
+
 	@Then("verify pan number field by providing number in case sensitive in step three page")
 	public void verify_pan_number_field_by_providing_number_in_case_sensitive_in_step_three_page(DataTable regData) throws InterruptedException {
 
@@ -484,6 +538,7 @@ public class CustRegDataValidation extends Commons {
 			RegistrationPage.refreshBrowser();
 		}
 	}
+
 
 	@Then("verify pannumber field by providing number with invalid sequence in step three page")
 	public void verify_pannumber_field_by_providing_number_with_invalid_sequence_in_step_three_page(DataTable regData) {
@@ -497,6 +552,7 @@ public class CustRegDataValidation extends Commons {
 		}
 	}
 
+
 	@Then("verify pannumber field by providing number with less than required letters in step three page")
 	public void verify_pannumber_field_by_providing_number_with_less_than_required_letters_in_step_three_page(DataTable regData) {
 
@@ -508,6 +564,7 @@ public class CustRegDataValidation extends Commons {
 			RegistrationPage.refreshBrowser();
 		}	
 	}
+
 
 	@Then("user provides current company experience greater than total work experience")
 	public void user_provides_current_company_experience_greater_than_total_work_experience(DataTable regData) {
@@ -522,6 +579,7 @@ public class CustRegDataValidation extends Commons {
 		}
 	}
 
+
 	@Then("user provides invalid email")
 	public void user_provides_invalid_email(DataTable regData) {
 
@@ -533,6 +591,7 @@ public class CustRegDataValidation extends Commons {
 			RegistrationPage.refreshBrowser();
 		}	
 	}
+
 
 	@Then("user provides invalid emailId at starting of the name")
 	public void user_provides_invalid_email_id_at_starting_of_the_name(DataTable regData) {
@@ -546,6 +605,8 @@ public class CustRegDataValidation extends Commons {
 
 		}
 	}
+
+
 	@Then("user provides salary less than 15k")
 	public void user_provides_salary_less_than_15k(DataTable regData) {
 
@@ -557,6 +618,7 @@ public class CustRegDataValidation extends Commons {
 			RegistrationPage.refreshBrowser();
 		}
 	}
+
 
 	@Then("user provides salary greater than 10Lakhs")
 	public void user_provides_salary_greater_than_10Lakhs(DataTable regData) {
@@ -582,6 +644,7 @@ public class CustRegDataValidation extends Commons {
 		RegistrationPage.completeStepThree();
 	}
 
+
 	@Then("verify submission page by providing valid details")
 	public void verify_submission_page_by_providing_valid_details(DataTable regData) throws SQLException, ClassNotFoundException, InterruptedException {
 
@@ -592,8 +655,10 @@ public class CustRegDataValidation extends Commons {
 			Assert.assertEquals(RegistrationPage.validateNextPageTitle(Constants.FINAL_SUBMISSION_LOADER), "Waiting for credit response");
 			Thread.sleep(3000);
 			RegistrationPage.refreshBrowser();
+			DataHelper.deleteDbData();
 		}
 	}
+
 
 	@Then("verify submission page witout providng any details")
 	public void verify_submission_page_witout_providng_any_details(DataTable regData) throws InterruptedException {
@@ -605,8 +670,9 @@ public class CustRegDataValidation extends Commons {
 			Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.TERMS_AND_CONDITIONS_ERROR_MSG), "Please accept the given ‘User consent’ form to complete registration");
 			RegistrationPage.refreshBrowser();
 		}	
-
 	}
+
+
 	@Then("verify submission page when server is down")
 
 	public void verify_submission_page_when_server_is_down(DataTable dataTable) {
@@ -623,6 +689,8 @@ public class CustRegDataValidation extends Commons {
 		}
 
 	}
+
+
 	@Then("verify submission page by providing mobile num with less than ten digits")
 	public void verify_submission_page_by_providing_mobile_num_with_less_than_ten_digits(DataTable regData) throws InterruptedException {
 
@@ -632,6 +700,8 @@ public class CustRegDataValidation extends Commons {
 			RegistrationPage.refreshBrowser();
 		}
 	}
+
+
 	@Then("verify submission page by providing mobile num with alphanumeric values")
 	public void verify_submission_page_by_providing_mobile_num_with_alphanumeric_values(io.cucumber.datatable.DataTable regData) throws InterruptedException {
 
@@ -641,6 +711,7 @@ public class CustRegDataValidation extends Commons {
 			RegistrationPage.refreshBrowser();
 		}
 	}	
+
 
 	@Then("verify submission page by providing mobile num with special chars")
 	public void verify_submission_page_by_providing_mobile_num_with_special_chars(io.cucumber.datatable.DataTable regData) throws InterruptedException {
@@ -652,6 +723,7 @@ public class CustRegDataValidation extends Commons {
 		}
 	}	
 
+
 	@Then("verify submission page by providing invalid otp")
 	public void verify_submission_page_by_providing_invalid_otp(DataTable regData) throws InterruptedException {
 
@@ -661,8 +733,8 @@ public class CustRegDataValidation extends Commons {
 			Thread.sleep(3000);
 			RegistrationPage.refreshBrowser();
 		}
-
 	}
+
 
 	@Then("verify submission page by providing otp with alphabet values")
 	public void verify_submission_page_by_providing_otp_with_alphabet_values(DataTable regData) throws InterruptedException {
@@ -675,6 +747,7 @@ public class CustRegDataValidation extends Commons {
 		}
 	}
 
+
 	@Then("verify submission page by providing otp with less than required digits")
 	public void verify_submission_page_by_providing_otp_with_less_than_required_digits(io.cucumber.datatable.DataTable regData) throws InterruptedException {
 
@@ -686,6 +759,7 @@ public class CustRegDataValidation extends Commons {
 		}
 	}	
 
+
 	@Then("verify submission page by providing valid mobile num with wrong otp")
 	public void verify_submission_page_by_providing_valid_mobile_num_with_wrong_otp(io.cucumber.datatable.DataTable regData) throws InterruptedException {
 
@@ -696,6 +770,8 @@ public class CustRegDataValidation extends Commons {
 			RegistrationPage.refreshBrowser();
 		}
 	}
+
+
 	@Then("verify submission page by providing valid mobile num without otp")
 	public void verify_submission_page_by_providing_valid_mobile_num_without_otp(io.cucumber.datatable.DataTable regData) throws InterruptedException {
 
@@ -707,6 +783,7 @@ public class CustRegDataValidation extends Commons {
 		}
 	}
 
+
 	@Then("verify submission page without mobile num with valid otp")
 	public void verify_submission_page_without_mobile_num_with_valid_otp(io.cucumber.datatable.DataTable regData) throws InterruptedException {
 
@@ -717,6 +794,7 @@ public class CustRegDataValidation extends Commons {
 			RegistrationPage.refreshBrowser();
 		}	
 	}
+
 
 	@Then("verify submission page by providing different mobile num and otp")
 	public void verify_submission_page_by_providing_different_mobile_num_and_otp(io.cucumber.datatable.DataTable regData) throws InterruptedException, ClassNotFoundException, SQLException {
@@ -730,6 +808,7 @@ public class CustRegDataValidation extends Commons {
 		}
 	}
 
+
 	@Then("verify submission page by providing expired otp")
 	public void verify_submission_page_by_providing_expired_otp(DataTable regData) {
 
@@ -740,6 +819,8 @@ public class CustRegDataValidation extends Commons {
 		}
 
 	}
+
+
 	@Then("verify apply code option by providing valid promo code")
 	public void verify_apply_code_option_by_providing_valid_promo_code(DataTable regData) {
 
@@ -750,6 +831,7 @@ public class CustRegDataValidation extends Commons {
 			RegistrationPage.refreshBrowser();	
 		}
 	}
+
 
 	@Then("verify apply code option by providing wrong promo code")
 	public void verify_apply_code_option_by_providing_wrong_promo_code(DataTable regData) {
@@ -762,6 +844,7 @@ public class CustRegDataValidation extends Commons {
 		}
 	}
 
+
 	@Then("verify apply code option without providing promo code")
 	public void verify_apply_code_option_without_providing_promo_code() {
 
@@ -769,58 +852,73 @@ public class CustRegDataValidation extends Commons {
 		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.PROMO_CODE_ERROR_MSG), "Please enter a valid invite code");		
 	}
 
+
 	@Then("verify user consent weblink")
-	public void verify_user_consent_weblink() {
+	public void verify_user_consent_weblink() throws InterruptedException {
 
 		RegistrationPage.checkBoxSelection(Constants.USER_CONSENT);
 		Assert.assertEquals(LandingPage.validateTitle(), "Read about our user consent for data usage");
-
 	}
+
 
 	@Then("verify terms and conditions link")
 	public void verify_terms_and_conditions_link() {
 
 		RegistrationPage.checkBoxSelection(Constants.TERMS_AND_CONDITIONS);
 		Assert.assertEquals(LandingPage.validateTitle(), "Terms and Conditions");
-
 	}
+
 
 	@Then("verify privacy policy link")
 	public void verify_privacy_policy_link() {
 
 		RegistrationPage.checkBoxSelection(Constants.PRIVACY_POLICY);
 		Assert.assertEquals(LandingPage.validateTitle(), "Learn about our Privacy_policy and data protection");
-
 	}
+
 
 	@Then("verify submission page without selecting whatsup notifiation option")
 	public void verify_submission_page_without_selecting_whatsup_notifiation_option(DataTable regData) throws ClassNotFoundException, SQLException, InterruptedException {
 
 		for(Map<String, String> data: regData.asMaps()) {
 			LinkedHashMap<String, String> map = DataHelper.getDbData(RegistrationPage.phoneNumber);
-			RegistrationPage.FinalSubmissionPage(RegistrationPage.phoneNumber,(map.get("otp")),(data.get("promoCode")));
-			RegistrationPage.checkBoxSelection(prop.getProperty(Constants.WHATSAPP_CHECK_BOX));
+			RegistrationPage.FinalSubmissionPage(RegistrationPage.phoneNumber,(map.get("otp")),Strings.nullToEmpty(data.get("promoCode")));
+			//	RegistrationPage.checkBoxSelection(Constants.WHATSAPP_CHECK_BOX);
 			Assert.assertEquals(RegistrationPage.validateNextPageTitle(Constants.FINAL_SUBMISSION_LOADER), "Waiting for credit response");		
+			Thread.sleep(3000);
 			RegistrationPage.refreshBrowser();
+			DataHelper.deleteDbData();
 		}
 	}
+
 
 	@Then("verify submission page by selecting whatsup notifiation option")
-	public void verify_submission_page_by_selecting_whatsup_notifiation_option(DataTable regData) throws InterruptedException {
+	public void verify_submission_page_by_selecting_whatsup_notifiation_option(DataTable regData) throws InterruptedException, ClassNotFoundException, SQLException {
 
 		for(Map<String, String> data: regData.asMaps()) {
-			RegistrationPage.FinalSubmissionPage(RegistrationPage.phoneNumber,(data.get("otp")),(data.get("promoCode")));
-			RegistrationPage.checkBoxSelection(prop.getProperty(Constants.TERMS_AND_CONDITIONS_CHECK_BOX));	
+			LinkedHashMap<String, String> map = DataHelper.getDbData(RegistrationPage.phoneNumber);
+			RegistrationPage.FinalSubmissionPage(RegistrationPage.phoneNumber,(map.get("otp")),Strings.nullToEmpty(data.get("promoCode")));
 			Assert.assertEquals(RegistrationPage.validateNextPageTitle(Constants.FINAL_SUBMISSION_LOADER), "Waiting for credit response");
+			Thread.sleep(3000);
 			RegistrationPage.refreshBrowser();
+			DataHelper.deleteDbData();
 		}
 	}
 
+	
 	@Then("verify otp sent notification when user clicks on send otp option")
 	public void verify_otp_sent_notification_when_user_clicks_on_send_otp_option() {
 
 		RegistrationPage.checkBoxSelection(Constants.SEND_OTP);		
 		Assert.assertEquals(RegistrationPage.errorMsgValidation(Constants.NOTIFICATION_SUCCESS_MSG),"Please enter the OTP sent to your given number");
+	}
+	
+	@Then("verify resend otp in 30sec option")
+	public void verify_resend_otp_in_30sec_option() throws InterruptedException {
+
+		RegistrationPage.checkBoxSelection(Constants.SEND_OTP);
+		Assert.assertTrue(FieldValidationPage.validateFields((Constants.RESEND_OTP_TIMER)));
+		
 	}
 
 	@Then("quit the page")
@@ -833,7 +931,6 @@ public class CustRegDataValidation extends Commons {
 	//These methods will help to call when test scripts has to execute step-2 and and step-3 reg cases
 
 	public static void completePendingSteps() {
-
 
 		RegistrationPage.completeStepOne();
 		RegistrationPage.complteStepTwo();
