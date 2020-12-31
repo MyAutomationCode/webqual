@@ -5,6 +5,20 @@ public class Constants {
 
 	public static final String CUSTOMER_REG_URL = "registrationUrl";
 	public static final String LOGIN_PAGE_URL = "loginPageUrl";
+	public static final String OFFERS_HEADING="offersHeading";
+	public static final String FIRST_OFFER_TITLE="firstOfferTitle";
+	public static final String FIRST_OFFER_INFO="firstOfferInfo";
+	public static final String SECOND_OFFER_TITLE="secondOfferTitle";
+	public static final String SECOND_OFFER_INFO="secondOfferInfo";
+	public static final String THIRD_OFFER_TITLE="thirdOfferTitle";
+	public static final String THIRD_OFFER_INFO="thirdOfferInfo";
+	public static final String FOURTH_OFFER_TITLE="fourthOfferTitle";
+	public static final String FOURTH_OFFER_INFO="fourthOfferInfo";
+	public static final String FIFTH_OFFER_TITLE="fifthOfferTitle";
+	public static final String FIFTH_OFFER_INFO="fifthOfferInfo";
+	public static final String LOGIN_BTN="loginButton";
+	public static final String STEP_ONE_TITLE="custRegStepOneTitle";
+
 
 	//constants for step 1 customer registration page
 

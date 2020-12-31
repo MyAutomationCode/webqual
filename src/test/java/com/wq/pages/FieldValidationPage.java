@@ -9,7 +9,10 @@ import com.wq.common.Commons;
 public class FieldValidationPage extends Commons{
 
 	public static Boolean validateFields(String value) {
-
+		
+		Commons.waitTime();
+	//	WebDriverWait wait = new WebDriverWait(driver,10);
+		//wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(prop.getProperty(value)))));
 		Boolean result = driver.findElement(By.xpath(prop.getProperty(value))).isEnabled();
 		return result;
 

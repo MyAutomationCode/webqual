@@ -5,9 +5,9 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(features="./src/test/java/com/wq/features", //path of the feature files
 				glue={"com.wq.stepdefinations"}, //path of the step definition files
-				dryRun = true, //verify all mappings between feature files and step-definitions when flag is true without executing test scripts.
+				dryRun = false, //verify all mappings between feature files and step-definitions when flag is true without executing test scripts.
 				monochrome=true, //give output in readable format
-				//tags= "@testFieldValidations",
-				tags="@smoke",
-				plugin = { "json:target/cucumber.json" }) 
+			//	tags= "@custRegDataValidation",
+			//	tags="@smoke",
+				plugin = { "pretty", "json:target/cucumber.json" }) 
 public class RunnerService extends AbstractTestNGCucumberTests {}

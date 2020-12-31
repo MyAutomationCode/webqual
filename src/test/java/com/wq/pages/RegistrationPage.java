@@ -159,7 +159,6 @@ public class RegistrationPage extends Commons{
 		
 	}
 
-
 	
 	//Generic methods used to complete step-1 and step-2 when test scripts are running for step-2 and step-3 cust reg pages respectively
 	public static void completeStepOne() {

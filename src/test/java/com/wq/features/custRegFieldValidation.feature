@@ -3,7 +3,6 @@ Feature: Customer registration page field validations
 
 #test cases for step one customer registration page
 
-
 Scenario: Verify firstname text field 
 	Given user launched the moneytap webqual page 
 	Then verify firstname text field 
@@ -51,6 +50,7 @@ Scenario: verify residence type drowndown option in step two page
 	Then verify residence type dropdown option 
 	Then close the page	
 
+
 Scenario: verify years in current residence drowndown option in step two page
 	Given user launched the moneytap webqual page 
 	Then verify years in current residence drowndown option
@@ -60,6 +60,7 @@ Scenario: verify years in current city drowndown option in step two page
 	Given user launched the moneytap webqual page 
 	Then verify years in current city drowndown option
 	Then close the page	
+
 
 Scenario: verify address1 text field in step two page
 	Given user launched the moneytap webqual page 
@@ -152,42 +153,42 @@ Scenario: verify bank name dropdown button
 #verification and submission field validation cases
 
 Scenario: verify phone number text field 
-	Given user launched the moneytap webqual page 
-	Then verify phone number text field
+	Given user launched the webpage and completed all steps
+	Then verify phone number text field in verification page
 	Then close the page 
 
 Scenario: verify otp text field 
-	Given user launched the moneytap webqual page 
+	Given user launched the webpage and completed all steps
 	Then verify otp text field
 	Then close the page
 
 Scenario: verify promo code text field 
-	Given user launched the moneytap webqual page 
+	Given user launched the webpage and completed all steps 
 	Then verify promo code text field
 	Then close the page
 
 Scenario: verify send otp button 
-	Given user launched the moneytap webqual page 
+	Given user launched the webpage and completed all steps 
 	Then verify send otp button
 	Then close the page
 
 Scenario: verify apply code button 
-	Given user launched the moneytap webqual page 
+	Given user launched the webpage and completed all steps 
 	Then verify apply code button
 	Then close the page
 
 Scenario: verify userConsent checkbox
-	Given user launched the moneytap webqual page 
+	Given user launched the webpage and completed all steps
 	Then verify userConsent checkbox
 	Then close the page
 
 Scenario: verify whatsApp notification checkbox
-	Given user launched the moneytap webqual page 
+	Given user launched the webpage and completed all steps
 	Then verify whatsApp notification checkbox
 	Then close the page
 
 Scenario: verify check limit CTA button 
-	Given user launched the moneytap webqual page 
+	Given user launched the webpage and completed all steps 
 	Then verify check limit CTA button
 	Then close the page
 	

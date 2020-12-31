@@ -38,16 +38,17 @@ public class Commons {
 
 		if(browserName.equals("chrome")) {			
 			System.setProperty("webdriver.chrome.driver", prop.getProperty("chromeLocation"));
-			//chromeOptions.addArguments("headless");
-			//driver = new ChromeDriver(chromeOptions);
-			driver = new ChromeDriver();
+			chromeOptions.addArguments("headless");
+			chromeOptions.addArguments("--window-size=1920,1080");
+			driver = new ChromeDriver(chromeOptions);
+			//driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.get(prop.getProperty(Constants.CUSTOMER_REG_URL));
 			//driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		}
 	}
 
-	
+
 	public static void closeBrowser() {
 		driver.close();
 	}
@@ -55,7 +56,7 @@ public class Commons {
 		driver.navigate().refresh();
 	}
 	public static void waitTime() {
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 	}
 
 }

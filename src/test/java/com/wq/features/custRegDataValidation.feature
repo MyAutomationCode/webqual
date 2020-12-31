@@ -2,7 +2,7 @@
 Feature: Customer registration page data validations 
 
 # test cases for step one customer registration page
-@smoke
+
 Scenario: verify step one page without providing details 
 	Given user launched webpage 
 	Then click on continue button without providing values in step one page 
@@ -114,7 +114,7 @@ Scenario: verify step two page by providing valid details
 	Given  user launched webpage 
 	Then  user given valid details in step two page 
 		| residenceType | years in residence | years in city | address1 | address2 | pincode |
-		| Rented with Family | 1 - 3 years | 1 - 3 years | #4rth floor,Moneytap | sigma soft, whitefield | 560043 |
+		| Rented with Family | 1 - 3 years | 1 - 3 years | 4rth floor,Moneytap | sigma soft, whitefield | 560043 |
 	Then  quit the page 
 	
 Scenario: 
@@ -333,6 +333,7 @@ Scenario: verify salary text field by providing greater than 10Lakhs
 	
 # test cases for verification and submission flow
 
+@smoke
 Scenario: verify submission page by providing valid details
 	Given  user launched webpage and completed all three steps
 	Then  verify submission page by providing valid details
@@ -479,21 +480,21 @@ Scenario: verify privacy policy link
 	Given user launched webpage and completed all three steps
 	Then  verify privacy policy link
 	Then  quit the page 
-	
+@smoke	
 Scenario: verify submission page without selecting whatsup notifiation option
 	Given user launched webpage and completed all three steps
 	Then  verify submission page without selecting whatsup notifiation option
 	|promoCode|
 	||
 	Then  quit the page 
-
+@smoke
 Scenario: verify submission page by selecting whatsup notifiation option
 	Given user launched webpage and completed all three steps
 	Then  verify submission page by selecting whatsup notifiation option
 	|promoCode|
 	||
 	Then  quit the page 
-
+@smoke
 Scenario: verify otp sent notification when user clicks on send otp option
 	Given user launched webpage and completed all three steps
 	Then  verify otp sent notification when user clicks on send otp option

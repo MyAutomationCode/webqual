@@ -6,6 +6,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -32,6 +33,7 @@ public class CustRegDataValidation extends Commons {
 
 	@Given("user launched webpage")
 	public void user_launched_webpage() {	
+		
 		Commons.browserInitialization();
 	}
 
