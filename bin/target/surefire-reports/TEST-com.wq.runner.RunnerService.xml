@@ -1,0 +1,1352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.wq.runner.RunnerService" time="1,120.591" tests="66" errors="0" skipped="0" failures="9">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="webdriver.chrome.driver" value="./src/test/resources/chromedriver.exe"/>
+    <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Work\workspace\Automation\eclipse\Moneytap-WQ\target\test-classes;C:\Work\workspace\Automation\eclipse\Moneytap-WQ\target\classes;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\cucumber-java\6.9.1\cucumber-java-6.9.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\cucumber-core\6.9.1\cucumber-core-6.9.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\cucumber-gherkin\6.9.1\cucumber-gherkin-6.9.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\cucumber-gherkin-messages\6.9.1\cucumber-gherkin-messages-6.9.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\messages\13.2.1\messages-13.2.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\tag-expressions\3.0.0\tag-expressions-3.0.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\cucumber-expressions\10.3.0\cucumber-expressions-10.3.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\cucumber-plugin\6.9.1\cucumber-plugin-6.9.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\docstring\6.9.1\docstring-6.9.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\html-formatter\9.0.0\html-formatter-9.0.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\create-meta\2.0.4\create-meta-2.0.4.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\jcraft\jsch\0.1.55\jsch-0.1.55.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\cucumber-junit\6.9.1\cucumber-junit-6.9.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\junit\junit\4.13.1\junit-4.13.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\cucumber-testng\6.9.1\cucumber-testng-6.9.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\datatable\3.5.0\datatable-3.5.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\cucumber-jvm-deps\1.0.6\cucumber-jvm-deps-1.0.6.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\testng\testng\7.3.0\testng-7.3.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\ant\ant\1.10.3\ant-1.10.3.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\ant\ant-launcher\1.10.3\ant-launcher-1.10.3.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\google\inject\guice\4.2.2\guice-4.2.2-no_aop.jar;C:\Windows\system32\config\systemprofile\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\yaml\snakeyaml\1.21\snakeyaml-1.21.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\poi\poi\4.1.2\poi-4.1.2.jar;C:\Windows\system32\config\systemprofile\.m2\repository\commons-codec\commons-codec\1.13\commons-codec-1.13.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\zaxxer\SparseBitSet\1.2\SparseBitSet-1.2.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\poi\poi-ooxml\4.1.2\poi-ooxml-4.1.2.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\poi\poi-ooxml-schemas\4.1.2\poi-ooxml-schemas-4.1.2.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\xmlbeans\xmlbeans\3.1.0\xmlbeans-3.1.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-compress\1.19\commons-compress-1.19.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\github\virtuald\curvesapi\1.06\curvesapi-1.06.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\postgresql\postgresql\42.2.18\postgresql-42.2.18.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\checkerframework\checker-qual\3.5.0\checker-qual-3.5.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\net\masterthought\cucumber-reporting\5.4.0\cucumber-reporting-5.4.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.1\jackson-databind-2.10.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.1\jackson-annotations-2.10.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.1\jackson-core-2.10.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.10.1\jackson-datatype-jsr310-2.10.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\velocity\velocity-engine-core\2.1\velocity-engine-core-2.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\slf4j\slf4j-api\1.7.26\slf4j-api-1.7.26.jar;C:\Windows\system32\config\systemprofile\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Windows\system32\config\systemprofile\.m2\repository\joda-time\joda-time\2.10.5\joda-time-2.10.5.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-lang3\3.9\commons-lang3-3.9.jar;C:\Windows\system32\config\systemprofile\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\codehaus\plexus\plexus-utils\3.3.0\plexus-utils-3.3.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\jsoup\jsoup\1.12.1\jsoup-1.12.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\googlecode\owasp-java-html-sanitizer\owasp-java-html-sanitizer\20191001.1\owasp-java-html-sanitizer-20191001.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\commons-configuration\commons-configuration\1.10\commons-configuration-1.10.jar;C:\Windows\system32\config\systemprofile\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Windows\system32\config\systemprofile\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="32"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files (x86)\Java\jdk1.8.0_271\jre\bin"/>
+    <property name="sun.java.command" value="C:\Windows\Temp\surefire8808574620392834825\surefirebooter8742268086050413378.jar C:\Windows\Temp\surefire8808574620392834825 2020-12-31T12-10-38_485-jvmRun1 surefire3292786733266836587tmp surefire_0746031793361037750tmp"/>
+    <property name="surefire.test.class.path" value="C:\Work\workspace\Automation\eclipse\Moneytap-WQ\target\test-classes;C:\Work\workspace\Automation\eclipse\Moneytap-WQ\target\classes;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\cucumber-java\6.9.1\cucumber-java-6.9.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\cucumber-core\6.9.1\cucumber-core-6.9.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\cucumber-gherkin\6.9.1\cucumber-gherkin-6.9.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\cucumber-gherkin-messages\6.9.1\cucumber-gherkin-messages-6.9.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\messages\13.2.1\messages-13.2.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\tag-expressions\3.0.0\tag-expressions-3.0.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\cucumber-expressions\10.3.0\cucumber-expressions-10.3.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\cucumber-plugin\6.9.1\cucumber-plugin-6.9.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\docstring\6.9.1\docstring-6.9.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\html-formatter\9.0.0\html-formatter-9.0.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\create-meta\2.0.4\create-meta-2.0.4.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\jcraft\jsch\0.1.55\jsch-0.1.55.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\cucumber-junit\6.9.1\cucumber-junit-6.9.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\junit\junit\4.13.1\junit-4.13.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\cucumber-testng\6.9.1\cucumber-testng-6.9.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\datatable\3.5.0\datatable-3.5.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\io\cucumber\cucumber-jvm-deps\1.0.6\cucumber-jvm-deps-1.0.6.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\testng\testng\7.3.0\testng-7.3.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\ant\ant\1.10.3\ant-1.10.3.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\ant\ant-launcher\1.10.3\ant-launcher-1.10.3.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\google\inject\guice\4.2.2\guice-4.2.2-no_aop.jar;C:\Windows\system32\config\systemprofile\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\yaml\snakeyaml\1.21\snakeyaml-1.21.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Windows\system32\config\systemprofile\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\poi\poi\4.1.2\poi-4.1.2.jar;C:\Windows\system32\config\systemprofile\.m2\repository\commons-codec\commons-codec\1.13\commons-codec-1.13.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\zaxxer\SparseBitSet\1.2\SparseBitSet-1.2.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\poi\poi-ooxml\4.1.2\poi-ooxml-4.1.2.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\poi\poi-ooxml-schemas\4.1.2\poi-ooxml-schemas-4.1.2.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\xmlbeans\xmlbeans\3.1.0\xmlbeans-3.1.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-compress\1.19\commons-compress-1.19.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\github\virtuald\curvesapi\1.06\curvesapi-1.06.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\postgresql\postgresql\42.2.18\postgresql-42.2.18.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\checkerframework\checker-qual\3.5.0\checker-qual-3.5.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\net\masterthought\cucumber-reporting\5.4.0\cucumber-reporting-5.4.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.1\jackson-databind-2.10.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.1\jackson-annotations-2.10.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.1\jackson-core-2.10.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.10.1\jackson-datatype-jsr310-2.10.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\velocity\velocity-engine-core\2.1\velocity-engine-core-2.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\slf4j\slf4j-api\1.7.26\slf4j-api-1.7.26.jar;C:\Windows\system32\config\systemprofile\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Windows\system32\config\systemprofile\.m2\repository\joda-time\joda-time\2.10.5\joda-time-2.10.5.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\apache\commons\commons-lang3\3.9\commons-lang3-3.9.jar;C:\Windows\system32\config\systemprofile\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\codehaus\plexus\plexus-utils\3.3.0\plexus-utils-3.3.0.jar;C:\Windows\system32\config\systemprofile\.m2\repository\org\jsoup\jsoup\1.12.1\jsoup-1.12.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\com\googlecode\owasp-java-html-sanitizer\owasp-java-html-sanitizer\20191001.1\owasp-java-html-sanitizer-20191001.1.jar;C:\Windows\system32\config\systemprofile\.m2\repository\commons-configuration\commons-configuration\1.10\commons-configuration-1.10.jar;C:\Windows\system32\config\systemprofile\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Windows\system32\config\systemprofile\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Windows\system32\config\systemprofile"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Program Files (x86)\Java\jdk1.8.0_271\jre"/>
+    <property name="basedir" value="C:\Work\workspace\Automation\eclipse\Moneytap-WQ"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Windows\Temp\surefire8808574620392834825\surefirebooter8742268086050413378.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files (x86)\Java\jdk1.8.0_271\jre\lib\resources.jar;C:\Program Files (x86)\Java\jdk1.8.0_271\jre\lib\rt.jar;C:\Program Files (x86)\Java\jdk1.8.0_271\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jdk1.8.0_271\jre\lib\jsse.jar;C:\Program Files (x86)\Java\jdk1.8.0_271\jre\lib\jce.jar;C:\Program Files (x86)\Java\jdk1.8.0_271\jre\lib\charsets.jar;C:\Program Files (x86)\Java\jdk1.8.0_271\jre\lib\jfr.jar;C:\Program Files (x86)\Java\jdk1.8.0_271\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot Client Compiler"/>
+    <property name="java.runtime.version" value="1.8.0_271-b09"/>
+    <property name="user.name" value="DESKTOP-6V5GP4V$"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files (x86)\Java\jdk1.8.0_271\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) Client VM"/>
+    <property name="localRepository" value="C:\Windows\system32\config\systemprofile\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Windows\TEMP\"/>
+    <property name="java.version" value="1.8.0_271"/>
+    <property name="user.dir" value="C:\Work\workspace\Automation\eclipse\Moneytap-WQ"/>
+    <property name="os.arch" value="x86"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files (x86)\Java\jdk1.8.0_271\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\Maven_3.5.0/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\Amazon\AWSCLIV2\;C:\Program Files (x86)\Java\jdk1.8.0_271\bin;C:\Work\workspace\softwares\apache-maven-3.6.3\bin;C:\Program Files\Git\cmd;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.271-b09"/>
+    <property name="java.ext.dirs" value="C:\Program Files (x86)\Java\jdk1.8.0_271\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="runScenario[&quot;verify step one page without providing details&quot;, &quot;Optional[Customer registration page data validations]&quot;](1)" classname="com.wq.runner.RunnerService" time="23.084">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify step one page without providing details                  # src/test/java/com/wq/features/custRegDataValidation.feature:6
+  Given user launched webpage                                             # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then click on continue button without providing values in step one page # com.wq.stepdefinations.CustRegDataValidation.click_on_continue_button_without_providing_values_in_step_one_page(io.cucumber.datatable.DataTable)
+  Then quit the page                                                      # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 34785
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:10:46 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify continue option by providing valid details in step one&quot;, &quot;Optional[Customer registration page data validations]&quot;](2)" classname="com.wq.runner.RunnerService" time="16.154">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify continue option by providing valid details in step one # src/test/java/com/wq/features/custRegDataValidation.feature:13
+  Given user launched webpage                                           # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user entered all mandatory details in step one                   # com.wq.stepdefinations.CustRegDataValidation.user_entered_all_mandatory_details_in_step_one(io.cucumber.datatable.DataTable)
+  Then quit the page                                                    # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 47934
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:11:08 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify step one reg details by providing invalid firstname&quot;, &quot;Optional[Customer registration page data validations]&quot;](3)" classname="com.wq.runner.RunnerService" time="17.108">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify step one reg details by providing invalid firstname # src/test/java/com/wq/features/custRegDataValidation.feature:20
+  Given user launched webpage                                        # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user entered invalid firstname                                # com.wq.stepdefinations.CustRegDataValidation.user_entered_invalid_firstname(io.cucumber.datatable.DataTable)
+  Then quit the page                                                 # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 15600
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:11:24 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify step one reg details by providing invalid middlename&quot;, &quot;Optional[Customer registration page data validations]&quot;](4)" classname="com.wq.runner.RunnerService" time="11.645">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify step one reg details by providing invalid middlename # src/test/java/com/wq/features/custRegDataValidation.feature:29
+  Given user launched webpage                                         # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user entered invalid middlename                                # com.wq.stepdefinations.CustRegDataValidation.user_entered_invalid_middlename(io.cucumber.datatable.DataTable)
+  Then quit the page                                                  # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 22982
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:11:41 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify step one reg details by providing invalid lastname&quot;, &quot;Optional[Customer registration page data validations]&quot;](5)" classname="com.wq.runner.RunnerService" time="12.665">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify step one reg details by providing invalid lastname # src/test/java/com/wq/features/custRegDataValidation.feature:36
+  Given user launched webpage                                       # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user entered invalid lastname                                # com.wq.stepdefinations.CustRegDataValidation.user_entered_invalid_lastname(io.cucumber.datatable.DataTable)
+  Then quit the page                                                # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 2455
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:11:53 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify step one reg details by providing invalid dob&quot;, &quot;Optional[Customer registration page data validations]&quot;](6)" classname="com.wq.runner.RunnerService" time="12.136">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify step one reg details by providing invalid dob # src/test/java/com/wq/features/custRegDataValidation.feature:43
+  Given user launched webpage                                  # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user entered invalid dob                                # com.wq.stepdefinations.CustRegDataValidation.user_entered_invalid_dob(io.cucumber.datatable.DataTable)
+  Then quit the page                                           # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 16649
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:12:05 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;&quot;, &quot;Optional[Customer registration page data validations]&quot;](7)" classname="com.wq.runner.RunnerService" time="13.82">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario:                                          # src/test/java/com/wq/features/custRegDataValidation.feature:50
+  Given user launched webpage                      # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user entered dob less than min age criteria # com.wq.stepdefinations.CustRegDataValidation.user_entered_dob_less_than_min_age_criteria(io.cucumber.datatable.DataTable)
+  Then quit the page                               # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 21045
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:12:17 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;&quot;, &quot;Optional[Customer registration page data validations]&quot;](8)" classname="com.wq.runner.RunnerService" time="12.583">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario:                                          # src/test/java/com/wq/features/custRegDataValidation.feature:58
+  Given user launched webpage                      # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user entered dob more than max age criteria # com.wq.stepdefinations.CustRegDataValidation.user_entered_dob_more_than_max_age_criteria(io.cucumber.datatable.DataTable)
+  Then quit the page                               # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 6010
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:12:31 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify auto complete city list in step one page&quot;, &quot;Optional[Customer registration page data validations]&quot;](9)" classname="com.wq.runner.RunnerService" time="12.091">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify auto complete city list in step one page                         # src/test/java/com/wq/features/custRegDataValidation.feature:66
+  Given user launched webpage                                                     # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then check auto complete city list when user enters one letter in step one page # com.wq.stepdefinations.CustRegDataValidation.check_auto_complete_city_list_when_user_enters_one_letter_in_step_one_page(io.cucumber.datatable.DataTable)
+  Then quit the page                                                              # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 12475
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:12:44 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify step one reg details by providing invalid city name&quot;, &quot;Optional[Customer registration page data validations]&quot;](10)" classname="com.wq.runner.RunnerService" time="11.571">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify step one reg details by providing invalid city name # src/test/java/com/wq/features/custRegDataValidation.feature:74
+  Given user launched webpage                                        # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user entered invalid city name                                # com.wq.stepdefinations.CustRegDataValidation.user_entered_invalid_city_name(io.cucumber.datatable.DataTable)
+  Then quit the page                                                 # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 25355
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:12:56 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify step one reg details by providing invalid phonenumber&quot;, &quot;Optional[Customer registration page data validations]&quot;](11)" classname="com.wq.runner.RunnerService" time="11.499">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify step one reg details by providing invalid phonenumber # src/test/java/com/wq/features/custRegDataValidation.feature:81
+  Given user launched webpage                                          # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user entered invalid phonenumber                                # com.wq.stepdefinations.CustRegDataValidation.user_entered_invalid_phonenumber(io.cucumber.datatable.DataTable)
+  Then quit the page                                                   # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 15029
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:13:07 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify step one reg details by providing number lessthan ten digits&quot;, &quot;Optional[Customer registration page data validations]&quot;](12)" classname="com.wq.runner.RunnerService" time="11.715">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify step one reg details by providing number lessthan ten digits # src/test/java/com/wq/features/custRegDataValidation.feature:88
+  Given user launched webpage                                                 # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user entered phone with less than ten digits                           # com.wq.stepdefinations.CustRegDataValidation.user_entered_phone_with_less_than_ten_digits(io.cucumber.datatable.DataTable)
+  Then quit the page                                                          # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 1977
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:13:19 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify step two page without passing any details&quot;, &quot;Optional[Customer registration page data validations]&quot;](13)" classname="com.wq.runner.RunnerService" time="13.481">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify step two page without passing any details                 # src/test/java/com/wq/features/custRegDataValidation.feature:106
+  Given user launched webpage                                              # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then click on continue button without providing details in step two page # com.wq.stepdefinations.CustRegDataValidation.click_on_continue_button_without_providing_details_in_step_two_page(io.cucumber.datatable.DataTable)
+  Then quit the page                                                       # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 47356
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:13:31 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify step two page by providing valid details&quot;, &quot;Optional[Customer registration page data validations]&quot;](14)" classname="com.wq.runner.RunnerService" time="18.061">
+    <failure message="expected [Work and Income Details] but found [Current Residence Details]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [Work and Income Details] but found [Current Residence Details]
+]]></failure>
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify step two page by providing valid details # src/test/java/com/wq/features/custRegDataValidation.feature:113
+  Given user launched webpage                             # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user given valid details in step two page          # com.wq.stepdefinations.CustRegDataValidation.user_given_valid_details_in_step_two_page(io.cucumber.datatable.DataTable)
+      java.lang.AssertionError: expected [Work and Income Details] but found [Current Residence Details]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.wq.stepdefinations.CustRegDataValidation.user_given_valid_details_in_step_two_page(CustRegDataValidation.java:256)
+	at âœ½.user given valid details in step two page(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:115)
+
+  Then quit the page                                      # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 28581
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:13:44 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;&quot;, &quot;Optional[Customer registration page data validations]&quot;](15)" classname="com.wq.runner.RunnerService" time="17.846">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario:                                                          # src/test/java/com/wq/features/custRegDataValidation.feature:120
+  Given user launched webpage                                      # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then customer provides age of city greater than age of residence # com.wq.stepdefinations.CustRegDataValidation.customer_provides_age_of_city_greater_than_age_of_residence(io.cucumber.datatable.DataTable)
+  Then quit the page                                               # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 10053
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:14:02 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify step two page by providing address1 with less than 3 chars&quot;, &quot;Optional[Customer registration page data validations]&quot;](16)" classname="com.wq.runner.RunnerService" time="14.036">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify step two page by providing address1 with less than 3 chars # src/test/java/com/wq/features/custRegDataValidation.feature:128
+  Given user launched webpage                                               # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user entered first adrress line with less than minimum chars         # com.wq.stepdefinations.CustRegDataValidation.user_entered_first_adrress_line_with_less_than_minimum_chars(io.cucumber.datatable.DataTable)
+  Then quit the page                                                        # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 36024
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:14:20 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;&quot;, &quot;Optional[Customer registration page data validations]&quot;](17)" classname="com.wq.runner.RunnerService" time="14.485">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario:                                                                                  # src/test/java/com/wq/features/custRegDataValidation.feature:135
+  Given user launched webpage                                                              # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user entered first adrress line with less than minimum chars includes special chars # com.wq.stepdefinations.CustRegDataValidation.user_entered_first_adrress_line_with_less_than_minimum_chars_includes_special_chars(io.cucumber.datatable.DataTable)
+  Then quit the page                                                                       # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 29214
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:14:34 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify step two page by providing address1 with three repeated chars&quot;, &quot;Optional[Customer registration page data validations]&quot;](18)" classname="com.wq.runner.RunnerService" time="14.835">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify step two page by providing address1 with three repeated chars # src/test/java/com/wq/features/custRegDataValidation.feature:143
+  Given user launched webpage                                                  # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  And user entered first adrress line with three repeated chars                # com.wq.stepdefinations.CustRegDataValidation.user_entered_first_adrress_line_with_three_repeated_chars(io.cucumber.datatable.DataTable)
+  Then quit the page                                                           # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 11479
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:14:48 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;&quot;, &quot;Optional[Customer registration page data validations]&quot;](19)" classname="com.wq.runner.RunnerService" time="13.718">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario:                                                             # src/test/java/com/wq/features/custRegDataValidation.feature:150
+  Given user launched webpage                                         # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user entered first adrress line with unsupported special chars # com.wq.stepdefinations.CustRegDataValidation.user_entered_first_adrress_line_with_unsupported_special_chars(io.cucumber.datatable.DataTable)
+  Then quit the page                                                  # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 24325
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:15:03 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify step two page by providing address2 with less than 3 chars&quot;, &quot;Optional[Customer registration page data validations]&quot;](20)" classname="com.wq.runner.RunnerService" time="12.037">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify step two page by providing address2 with less than 3 chars # src/test/java/com/wq/features/custRegDataValidation.feature:158
+  Given user launched webpage                                               # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user entered second adrress line with less than minimum chars        # com.wq.stepdefinations.CustRegDataValidation.user_entered_second_adrress_line_with_less_than_minimum_chars(io.cucumber.datatable.DataTable)
+  Then quit the page                                                        # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 40351
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:15:17 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify step two page by providing address2 with less than 3 chars which includes special chars&quot;, &quot;Optional[Customer registration page data validations]&quot;](21)" classname="com.wq.runner.RunnerService" time="11.152">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify step two page by providing address2 with less than 3 chars which includes special chars # src/test/java/com/wq/features/custRegDataValidation.feature:165
+  Given user launched webpage                                                                            # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user entered second adrress line with less than minimum chars includes special chars              # com.wq.stepdefinations.CustRegDataValidation.user_entered_second_adrress_line_with_less_than_minimum_chars_includes_special_chars(io.cucumber.datatable.DataTable)
+  Then quit the page                                                                                     # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 45644
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:15:29 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify step two page by providing address2 with three repeated chars&quot;, &quot;Optional[Customer registration page data validations]&quot;](22)" classname="com.wq.runner.RunnerService" time="10.558">
+    <failure message="expected [Address field does not allow three repeated characters.] but found [Address Line 1 does not allow three repeated characters.]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [Address field does not allow three repeated characters.] but found [Address Line 1 does not allow three repeated characters.]
+]]></failure>
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify step two page by providing address2 with three repeated chars # src/test/java/com/wq/features/custRegDataValidation.feature:172
+  Given user launched webpage                                                  # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user entered second adrress line with three repeated chars              # com.wq.stepdefinations.CustRegDataValidation.user_entered_second_adrress_line_with_three_repeated_chars(io.cucumber.datatable.DataTable)
+      java.lang.AssertionError: expected [Address field does not allow three repeated characters.] but found [Address Line 1 does not allow three repeated characters.]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.wq.stepdefinations.CustRegDataValidation.user_entered_second_adrress_line_with_three_repeated_chars(CustRegDataValidation.java:356)
+	at âœ½.user entered second adrress line with three repeated chars(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:174)
+
+  Then quit the page                                                           # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 40140
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:15:40 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify step two page by providing address2 with unsupported special chars&quot;, &quot;Optional[Customer registration page data validations]&quot;](23)" classname="com.wq.runner.RunnerService" time="13.658">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify step two page by providing address2 with unsupported special chars # src/test/java/com/wq/features/custRegDataValidation.feature:179
+  Given user launched webpage                                                       # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user entered second adrress line with unsupported special chars              # com.wq.stepdefinations.CustRegDataValidation.user_entered_second_adrress_line_with_unsupported_special_chars(io.cucumber.datatable.DataTable)
+  Then quit the page                                                                # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 9028
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:15:51 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify step two page by providing invalid pincode&quot;, &quot;Optional[Customer registration page data validations]&quot;](24)" classname="com.wq.runner.RunnerService" time="14.022">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify step two page by providing invalid pincode             # src/test/java/com/wq/features/custRegDataValidation.feature:186
+  Given user launched webpage                                           # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user entered invalid pincode which is not relavent to given city # com.wq.stepdefinations.CustRegDataValidation.user_entered_invalid_pincode_which_is_not_relavent_to_given_city(io.cucumber.datatable.DataTable)
+  Then quit the page                                                    # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 28842
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:16:05 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify step two page by providing alphanumeric values in pincode&quot;, &quot;Optional[Customer registration page data validations]&quot;](25)" classname="com.wq.runner.RunnerService" time="16.034">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify step two page by providing alphanumeric values in pincode # src/test/java/com/wq/features/custRegDataValidation.feature:193
+  Given user launched webpage                                              # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user entered alphanumeric and special letters in pincode            # com.wq.stepdefinations.CustRegDataValidation.user_entered_alphanumeric_and_special_letters_in_pincode(io.cucumber.datatable.DataTable)
+  Then quit the page                                                       # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 20195
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:16:19 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify step two page by providing pincode with less than 6 digits&quot;, &quot;Optional[Customer registration page data validations]&quot;](26)" classname="com.wq.runner.RunnerService" time="14.899">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify step two page by providing pincode with less than 6 digits # src/test/java/com/wq/features/custRegDataValidation.feature:200
+  Given user launched webpage                                               # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user entered pincode with less than six digits                       # com.wq.stepdefinations.CustRegDataValidation.user_entered_pincode_with_less_than_six_digits(io.cucumber.datatable.DataTable)
+  Then quit the page                                                        # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 16757
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:16:35 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify step three reg details by providing valid details&quot;, &quot;Optional[Customer registration page data validations]&quot;](27)" classname="com.wq.runner.RunnerService" time="22.967">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify step three reg details by providing valid details               # src/test/java/com/wq/features/custRegDataValidation.feature:209
+  Given user launched webpage                                                    # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user provided all valid details and clicks on continue in step three page # com.wq.stepdefinations.CustRegDataValidation.user_provided_all_valid_details_and_clicks_on_continue_in_step_three_page(io.cucumber.datatable.DataTable)
+  Then quit the page                                                             # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 20458
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:16:50 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify step three reg details without providing details&quot;, &quot;Optional[Customer registration page data validations]&quot;](28)" classname="com.wq.runner.RunnerService" time="17.029">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify step three reg details without providing details                # src/test/java/com/wq/features/custRegDataValidation.feature:216
+  Given user launched webpage                                                    # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then click on continue button without providing any details in step three page # com.wq.stepdefinations.CustRegDataValidation.click_on_continue_button_without_providing_any_details_in_step_three_page(io.cucumber.datatable.DataTable)
+  Then quit the page                                                             # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 21524
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:17:12 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify auto complete company list in step three page&quot;, &quot;Optional[Customer registration page data validations]&quot;](29)" classname="com.wq.runner.RunnerService" time="18.959">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify auto complete company list in step three page                         # src/test/java/com/wq/features/custRegDataValidation.feature:224
+  Given user launched webpage                                                          # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+falsefalsefalse  Then check auto complete company list when user enters one letter in step three page # com.wq.stepdefinations.CustRegDataValidation.check_auto_complete_company_list_when_user_enters_one_letter_in_step_three_page(io.cucumber.datatable.DataTable)
+  Then quit the page                                                                   # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 15852
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:17:29 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;&quot;, &quot;Optional[Customer registration page data validations]&quot;](30)" classname="com.wq.runner.RunnerService" time="18.78">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario:                                                                          # src/test/java/com/wq/features/custRegDataValidation.feature:233
+  Given user launched webpage                                                      # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then verify company name text field by providing specialChars in step three page # com.wq.stepdefinations.CustRegDataValidation.verify_company_name_text_field_by_providing_specialChars_in_step_three_page(io.cucumber.datatable.DataTable)
+  Then quit the page                                                               # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 38666
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:17:48 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify auto complete designation list in step three page&quot;, &quot;Optional[Customer registration page data validations]&quot;](31)" classname="com.wq.runner.RunnerService" time="21.907">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify auto complete designation list in step three page                         # src/test/java/com/wq/features/custRegDataValidation.feature:241
+  Given user launched webpage                                                              # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+falsefalsefalse  Then check auto complete designation list when user enters one letter in step three page # com.wq.stepdefinations.CustRegDataValidation.check_auto_complete_designation_list_when_user_enters_one_letter_in_step_three_page(io.cucumber.datatable.DataTable)
+  Then quit the page                                                                       # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 7692
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:18:07 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;&quot;, &quot;Optional[Customer registration page data validations]&quot;](32)" classname="com.wq.runner.RunnerService" time="17.213">
+    <failure message="expected [Designation cannot have special characters. Please check to continue] but found [Designation cannot have numbers or special characters. Please check to continue]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [Designation cannot have special characters. Please check to continue] but found [Designation cannot have numbers or special characters. Please check to continue]
+]]></failure>
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario:                                                                              # src/test/java/com/wq/features/custRegDataValidation.feature:250
+  Given user launched webpage                                                          # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then verify designation list text field by providing invalid name in step three page # com.wq.stepdefinations.CustRegDataValidation.verify_designation_list_text_field_by_providing_invalid_name_in_step_three_page(io.cucumber.datatable.DataTable)
+      java.lang.AssertionError: expected [Designation cannot have special characters. Please check to continue] but found [Designation cannot have numbers or special characters. Please check to continue]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.wq.stepdefinations.CustRegDataValidation.verify_designation_list_text_field_by_providing_invalid_name_in_step_three_page(CustRegDataValidation.java:498)
+	at âœ½.verify designation list text field by providing invalid name in step three page(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:253)
+
+  Then quit the page                                                                   # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 19054
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:18:29 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify with invalid pan in step three page&quot;, &quot;Optional[Customer registration page data validations]&quot;](33)" classname="com.wq.runner.RunnerService" time="18.423">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify with invalid pan in step three page                          # src/test/java/com/wq/features/custRegDataValidation.feature:258
+  Given user launched webpage                                                 # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then verify pan number field by providing invalid number in step three page # com.wq.stepdefinations.CustRegDataValidation.verify_pan_number_field_by_providing_invalid_number_in_step_three_page(io.cucumber.datatable.DataTable)
+  Then quit the page                                                          # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 19093
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:18:46 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify pannumber field by providing all alphabets&quot;, &quot;Optional[Customer registration page data validations]&quot;](34)" classname="com.wq.runner.RunnerService" time="17.263">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify pannumber field by providing all alphabets                  # src/test/java/com/wq/features/custRegDataValidation.feature:265
+  Given user launched webpage                                                # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then verify pan number field by providing all alphabets in step three page # com.wq.stepdefinations.CustRegDataValidation.verify_pan_number_field_by_providing_all_alphabets_in_step_three_page(io.cucumber.datatable.DataTable)
+  Then quit the page                                                         # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 39737
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:19:05 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;&quot;, &quot;Optional[Customer registration page data validations]&quot;](35)" classname="com.wq.runner.RunnerService" time="23.114">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario:                                                                               # src/test/java/com/wq/features/custRegDataValidation.feature:272
+  Given user launched webpage                                                           # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then verify pan number field by providing number in case sensitive in step three page # com.wq.stepdefinations.CustRegDataValidation.verify_pan_number_field_by_providing_number_in_case_sensitive_in_step_three_page(io.cucumber.datatable.DataTable)
+  Then quit the page                                                                    # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 30779
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:19:22 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;&quot;, &quot;Optional[Customer registration page data validations]&quot;](36)" classname="com.wq.runner.RunnerService" time="18.897">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario:                                                                                  # src/test/java/com/wq/features/custRegDataValidation.feature:280
+  Given user launched webpage                                                              # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then verify pannumber field by providing number with invalid sequence in step three page # com.wq.stepdefinations.CustRegDataValidation.verify_pannumber_field_by_providing_number_with_invalid_sequence_in_step_three_page(io.cucumber.datatable.DataTable)
+  Then quit the page                                                                       # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 24699
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:19:45 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;&quot;, &quot;Optional[Customer registration page data validations]&quot;](37)" classname="com.wq.runner.RunnerService" time="20.008">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario:                                                                                            # src/test/java/com/wq/features/custRegDataValidation.feature:288
+  Given user launched webpage                                                                        # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then verify pannumber field by providing number with less than required letters in step three page # com.wq.stepdefinations.CustRegDataValidation.verify_pannumber_field_by_providing_number_with_less_than_required_letters_in_step_three_page(io.cucumber.datatable.DataTable)
+  Then quit the page                                                                                 # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 26729
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:20:04 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;&quot;, &quot;Optional[Customer registration page data validations]&quot;](38)" classname="com.wq.runner.RunnerService" time="21.593">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario:                                                                          # src/test/java/com/wq/features/custRegDataValidation.feature:296
+  Given user launched webpage                                                      # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user provides current company experience greater than total work experience # com.wq.stepdefinations.CustRegDataValidation.user_provides_current_company_experience_greater_than_total_work_experience(io.cucumber.datatable.DataTable)
+  Then quit the page                                                               # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 20588
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:20:24 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify email text field with invalid format&quot;, &quot;Optional[Customer registration page data validations]&quot;](39)" classname="com.wq.runner.RunnerService" time="17.243">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify email text field with invalid format # src/test/java/com/wq/features/custRegDataValidation.feature:304
+  Given user launched webpage                         # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user provides invalid email                    # com.wq.stepdefinations.CustRegDataValidation.user_provides_invalid_email(io.cucumber.datatable.DataTable)
+  Then quit the page                                  # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 5527
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:20:45 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify email text field with invalid emailId at starting of the id&quot;, &quot;Optional[Customer registration page data validations]&quot;](40)" classname="com.wq.runner.RunnerService" time="17.661">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify email text field with invalid emailId at starting of the id # src/test/java/com/wq/features/custRegDataValidation.feature:311
+  Given user launched webpage                                                # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user provides invalid emailId at starting of the name                 # com.wq.stepdefinations.CustRegDataValidation.user_provides_invalid_email_id_at_starting_of_the_name(io.cucumber.datatable.DataTable)
+  Then quit the page                                                         # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 28579
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:21:03 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify salary text field by providing less than 15k&quot;, &quot;Optional[Customer registration page data validations]&quot;](41)" classname="com.wq.runner.RunnerService" time="17.472">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify salary text field by providing less than 15k # src/test/java/com/wq/features/custRegDataValidation.feature:318
+  Given user launched webpage                                 # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user provides salary less than 15k                     # com.wq.stepdefinations.CustRegDataValidation.user_provides_salary_less_than_15k(io.cucumber.datatable.DataTable)
+  Then quit the page                                          # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 47324
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:21:20 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify salary text field by providing greater than 10Lakhs&quot;, &quot;Optional[Customer registration page data validations]&quot;](42)" classname="com.wq.runner.RunnerService" time="19.411">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify salary text field by providing greater than 10Lakhs # src/test/java/com/wq/features/custRegDataValidation.feature:326
+  Given user launched webpage                                        # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()
+  Then user provides salary greater than 10Lakhs                     # com.wq.stepdefinations.CustRegDataValidation.user_provides_salary_greater_than_10Lakhs(io.cucumber.datatable.DataTable)
+  Then quit the page                                                 # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 11605
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:21:38 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify submission page by providing valid details&quot;, &quot;Optional[Customer registration page data validations]&quot;](43)" classname="com.wq.runner.RunnerService" time="17.739">
+    <failure message="element not interactable: element has zero size&#10;  (Session info: headless chrome=87.0.4280.88)&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;DESKTOP-6V5GP4V&apos;, ip: &apos;192.168.0.181&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:49808}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 69879354e0f4c5d357b928a7f5b160f7" type="org.openqa.selenium.ElementNotInteractableException"><![CDATA[org.openqa.selenium.ElementNotInteractableException: 
+element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:49808}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 69879354e0f4c5d357b928a7f5b160f7
+]]></failure>
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify submission page by providing valid details # src/test/java/com/wq/features/custRegDataValidation.feature:336
+  Given user launched webpage and completed all three steps # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()
+  Then verify submission page by providing valid details    # com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_valid_details(io.cucumber.datatable.DataTable)
+      org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:49808}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 69879354e0f4c5d357b928a7f5b160f7
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.wq.pages.RegistrationPage.checkBoxSelection(RegistrationPage.java:158)
+	at com.wq.utils.DataHelper.getDbData(DataHelper.java:56)
+	at com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_valid_details(CustRegDataValidation.java:653)
+	at âœ½.verify submission page by providing valid details(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:338)
+
+  Then quit the page                                        # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 3206
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:21:57 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify submission page without providng any details&quot;, &quot;Optional[Customer registration page data validations]&quot;](44)" classname="com.wq.runner.RunnerService" time="20.876">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify submission page without providng any details # src/test/java/com/wq/features/custRegDataValidation.feature:344
+  Given user launched webpage and completed all three steps   # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()
+  Then verify submission page witout providng any details     # com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_witout_providng_any_details(io.cucumber.datatable.DataTable)
+  Then quit the page                                          # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 5873
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:22:15 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify submission page by removing the pre-filled mobile number&quot;, &quot;Optional[Customer registration page data validations]&quot;](45)" classname="com.wq.runner.RunnerService" time="21.885">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify submission page by removing the pre-filled mobile number # src/test/java/com/wq/features/custRegDataValidation.feature:352
+  Given user launched webpage and completed all three steps               # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()
+  Then verify submission page by removing the pre-filled mobile number    # com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_removing_the_pre_filled_mobile_number(io.cucumber.datatable.DataTable)
+  Then quit the page                                                      # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 15643
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:22:36 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify submission page by providing mobile num with less than ten digits&quot;, &quot;Optional[Customer registration page data validations]&quot;](46)" classname="com.wq.runner.RunnerService" time="16.673">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify submission page by providing mobile num with less than ten digits # src/test/java/com/wq/features/custRegDataValidation.feature:360
+  Given user launched webpage and completed all three steps                        # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()
+  Then verify submission page by providing mobile num with less than ten digits    # com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_mobile_num_with_less_than_ten_digits(io.cucumber.datatable.DataTable)
+  Then quit the page                                                               # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 8296
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:22:58 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify submission page by providing mobile num with alphanumeric values&quot;, &quot;Optional[Customer registration page data validations]&quot;](47)" classname="com.wq.runner.RunnerService" time="18.442">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify submission page by providing mobile num with alphanumeric values # src/test/java/com/wq/features/custRegDataValidation.feature:368
+  Given user launched webpage and completed all three steps                       # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()
+  Then verify submission page by providing mobile num with alphanumeric values    # com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_mobile_num_with_alphanumeric_values(io.cucumber.datatable.DataTable)
+  Then quit the page                                                              # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 22287
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:23:14 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify submission page by providing mobile num with special chars&quot;, &quot;Optional[Customer registration page data validations]&quot;](48)" classname="com.wq.runner.RunnerService" time="18.04">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify submission page by providing mobile num with special chars # src/test/java/com/wq/features/custRegDataValidation.feature:376
+  Given user launched webpage and completed all three steps                 # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()
+  Then verify submission page by providing mobile num with special chars    # com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_mobile_num_with_special_chars(io.cucumber.datatable.DataTable)
+  Then quit the page                                                        # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 33791
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:23:33 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify submission page by providing invalid otp&quot;, &quot;Optional[Customer registration page data validations]&quot;](49)" classname="com.wq.runner.RunnerService" time="22.251">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify submission page by providing invalid otp   # src/test/java/com/wq/features/custRegDataValidation.feature:383
+  Given user launched webpage and completed all three steps # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()
+  Then verify submission page by providing invalid otp      # com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_invalid_otp(io.cucumber.datatable.DataTable)
+  Then quit the page                                        # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 17610
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:23:51 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify submission page by providing otp with alphabet values&quot;, &quot;Optional[Customer registration page data validations]&quot;](50)" classname="com.wq.runner.RunnerService" time="19.909">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify submission page by providing otp with alphabet values # src/test/java/com/wq/features/custRegDataValidation.feature:391
+  Given user launched webpage and completed all three steps            # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()
+  Then verify submission page by providing otp with alphabet values    # com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_otp_with_alphabet_values(io.cucumber.datatable.DataTable)
+  Then quit the page                                                   # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 19541
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:24:13 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify submission page by providing otp with less than required digits&quot;, &quot;Optional[Customer registration page data validations]&quot;](51)" classname="com.wq.runner.RunnerService" time="22.954">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify submission page by providing otp with less than required digits # src/test/java/com/wq/features/custRegDataValidation.feature:399
+  Given user launched webpage and completed all three steps                      # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()
+  Then verify submission page by providing otp with less than required digits    # com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_otp_with_less_than_required_digits(io.cucumber.datatable.DataTable)
+  Then quit the page                                                             # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 36807
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:24:33 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify submission page by providing valid mobile num with wrong otp&quot;, &quot;Optional[Customer registration page data validations]&quot;](52)" classname="com.wq.runner.RunnerService" time="24.644">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify submission page by providing valid mobile num with wrong otp # src/test/java/com/wq/features/custRegDataValidation.feature:406
+  Given user launched webpage and completed all three steps                   # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()
+  Then verify submission page by providing valid mobile num with wrong otp    # com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_valid_mobile_num_with_wrong_otp(io.cucumber.datatable.DataTable)
+  Then quit the page                                                          # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 44191
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:24:56 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify submission page by providing valid mobile num without otp&quot;, &quot;Optional[Customer registration page data validations]&quot;](53)" classname="com.wq.runner.RunnerService" time="23.388">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify submission page by providing valid mobile num without otp # src/test/java/com/wq/features/custRegDataValidation.feature:413
+  Given user launched webpage and completed all three steps                # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()
+  Then verify submission page by providing valid mobile num without otp    # com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_valid_mobile_num_without_otp(io.cucumber.datatable.DataTable)
+  Then quit the page                                                       # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 44192
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:25:21 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify submission page without mobile num with valid otp&quot;, &quot;Optional[Customer registration page data validations]&quot;](54)" classname="com.wq.runner.RunnerService" time="22.486">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify submission page without mobile num with valid otp # src/test/java/com/wq/features/custRegDataValidation.feature:420
+  Given user launched webpage and completed all three steps        # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()
+  Then verify submission page without mobile num with valid otp    # com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_without_mobile_num_with_valid_otp(io.cucumber.datatable.DataTable)
+  Then quit the page                                               # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 36453
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:25:44 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify submission page by providing different mobile num and otp&quot;, &quot;Optional[Customer registration page data validations]&quot;](55)" classname="com.wq.runner.RunnerService" time="14.469">
+    <failure message="element not interactable: element has zero size&#10;  (Session info: headless chrome=87.0.4280.88)&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;DESKTOP-6V5GP4V&apos;, ip: &apos;192.168.0.181&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir3...}, goog:chromeOptions: {debuggerAddress: localhost:50254}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: a8e0117ab3d8b07454152027de060074" type="org.openqa.selenium.ElementNotInteractableException"><![CDATA[org.openqa.selenium.ElementNotInteractableException: 
+element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir3...}, goog:chromeOptions: {debuggerAddress: localhost:50254}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: a8e0117ab3d8b07454152027de060074
+]]></failure>
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify submission page by providing different mobile num and otp # src/test/java/com/wq/features/custRegDataValidation.feature:427
+  Given user launched webpage and completed all three steps                # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()
+  Then verify submission page by providing different mobile num and otp    # com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_different_mobile_num_and_otp(io.cucumber.datatable.DataTable)
+      org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir3...}, goog:chromeOptions: {debuggerAddress: localhost:50254}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: a8e0117ab3d8b07454152027de060074
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.wq.pages.RegistrationPage.checkBoxSelection(RegistrationPage.java:158)
+	at com.wq.utils.DataHelper.getDbData(DataHelper.java:56)
+	at com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_different_mobile_num_and_otp(CustRegDataValidation.java:803)
+	at âœ½.verify submission page by providing different mobile num and otp(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:429)
+
+  Then quit the page                                                       # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 40289
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:26:07 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify submission page by providing expired otp&quot;, &quot;Optional[Customer registration page data validations]&quot;](56)" classname="com.wq.runner.RunnerService" time="18.565">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify submission page by providing expired otp   # src/test/java/com/wq/features/custRegDataValidation.feature:441
+  Given user launched webpage and completed all three steps # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()
+  Then verify submission page by providing expired otp      # com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_expired_otp(io.cucumber.datatable.DataTable)
+  Then quit the page                                        # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 6475
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:26:21 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify apply code option by providing wrong promo code&quot;, &quot;Optional[Customer registration page data validations]&quot;](57)" classname="com.wq.runner.RunnerService" time="18.374">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify apply code option by providing wrong promo code # src/test/java/com/wq/features/custRegDataValidation.feature:449
+  Given user launched webpage and completed all three steps      # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()
+  Then verify apply code option by providing wrong promo code    # com.wq.stepdefinations.CustRegDataValidation.verify_apply_code_option_by_providing_wrong_promo_code(io.cucumber.datatable.DataTable)
+  Then quit the page                                             # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 26201
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:26:40 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify apply code option by providing valid promo code&quot;, &quot;Optional[Customer registration page data validations]&quot;](58)" classname="com.wq.runner.RunnerService" time="17.483">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify apply code option by providing valid promo code # src/test/java/com/wq/features/custRegDataValidation.feature:456
+  Given user launched webpage and completed all three steps      # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()
+  Then verify apply code option by providing valid promo code    # com.wq.stepdefinations.CustRegDataValidation.verify_apply_code_option_by_providing_valid_promo_code(io.cucumber.datatable.DataTable)
+  Then quit the page                                             # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 41796
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:26:58 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify apply code option without providing promo code&quot;, &quot;Optional[Customer registration page data validations]&quot;](59)" classname="com.wq.runner.RunnerService" time="14.674">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify apply code option without providing promo code # src/test/java/com/wq/features/custRegDataValidation.feature:463
+  Given user launched webpage and completed all three steps     # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()
+  Then verify apply code option without providing promo code    # com.wq.stepdefinations.CustRegDataValidation.verify_apply_code_option_without_providing_promo_code()
+  Then quit the page                                            # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 33247
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:27:16 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify user consent weblink&quot;, &quot;Optional[Customer registration page data validations]&quot;](60)" classname="com.wq.runner.RunnerService" time="17.323">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify user consent weblink                       # src/test/java/com/wq/features/custRegDataValidation.feature:468
+  Given user launched webpage and completed all three steps # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()
+  Then verify user consent weblink                          # com.wq.stepdefinations.CustRegDataValidation.verify_user_consent_weblink()
+  Then quit the page                                        # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 34277
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:27:30 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify terms and conditions link&quot;, &quot;Optional[Customer registration page data validations]&quot;](61)" classname="com.wq.runner.RunnerService" time="18.296">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify terms and conditions link                  # src/test/java/com/wq/features/custRegDataValidation.feature:473
+  Given user launched webpage and completed all three steps # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()
+  Then verify terms and conditions link                     # com.wq.stepdefinations.CustRegDataValidation.verify_terms_and_conditions_link()
+  Then quit the page                                        # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 16350
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:27:48 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify privacy policy link&quot;, &quot;Optional[Customer registration page data validations]&quot;](62)" classname="com.wq.runner.RunnerService" time="18.21">
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify privacy policy link                        # src/test/java/com/wq/features/custRegDataValidation.feature:478
+  Given user launched webpage and completed all three steps # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()
+  Then verify privacy policy link                           # com.wq.stepdefinations.CustRegDataValidation.verify_privacy_policy_link()
+  Then quit the page                                        # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 12583
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:28:06 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify submission page without selecting whatsup notifiation option&quot;, &quot;Optional[Customer registration page data validations]&quot;](63)" classname="com.wq.runner.RunnerService" time="15.062">
+    <failure message="element not interactable: element has zero size&#10;  (Session info: headless chrome=87.0.4280.88)&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;DESKTOP-6V5GP4V&apos;, ip: &apos;192.168.0.181&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50570}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 0930c2699901b8e8d6a78e770564aad1" type="org.openqa.selenium.ElementNotInteractableException"><![CDATA[org.openqa.selenium.ElementNotInteractableException: 
+element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50570}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 0930c2699901b8e8d6a78e770564aad1
+]]></failure>
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify submission page without selecting whatsup notifiation option # src/test/java/com/wq/features/custRegDataValidation.feature:483
+  Given user launched webpage and completed all three steps                   # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()
+  Then verify submission page without selecting whatsup notifiation option    # com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_without_selecting_whatsup_notifiation_option(io.cucumber.datatable.DataTable)
+      org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50570}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 0930c2699901b8e8d6a78e770564aad1
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.wq.pages.RegistrationPage.checkBoxSelection(RegistrationPage.java:158)
+	at com.wq.utils.DataHelper.getDbData(DataHelper.java:56)
+	at com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_without_selecting_whatsup_notifiation_option(CustRegDataValidation.java:884)
+	at âœ½.verify submission page without selecting whatsup notifiation option(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:485)
+
+  Then quit the page                                                          # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 15336
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:28:24 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify submission page by selecting whatsup notifiation option&quot;, &quot;Optional[Customer registration page data validations]&quot;](64)" classname="com.wq.runner.RunnerService" time="14.793">
+    <failure message="element not interactable: element has zero size&#10;  (Session info: headless chrome=87.0.4280.88)&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;DESKTOP-6V5GP4V&apos;, ip: &apos;192.168.0.181&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50606}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 179fdc3ac6a351d166eb95312e224e6d" type="org.openqa.selenium.ElementNotInteractableException"><![CDATA[org.openqa.selenium.ElementNotInteractableException: 
+element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50606}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 179fdc3ac6a351d166eb95312e224e6d
+]]></failure>
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify submission page by selecting whatsup notifiation option # src/test/java/com/wq/features/custRegDataValidation.feature:490
+  Given user launched webpage and completed all three steps              # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()
+  Then verify submission page by selecting whatsup notifiation option    # com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_selecting_whatsup_notifiation_option(io.cucumber.datatable.DataTable)
+      org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50606}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 179fdc3ac6a351d166eb95312e224e6d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.wq.pages.RegistrationPage.checkBoxSelection(RegistrationPage.java:158)
+	at com.wq.utils.DataHelper.getDbData(DataHelper.java:56)
+	at com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_selecting_whatsup_notifiation_option(CustRegDataValidation.java:899)
+	at âœ½.verify submission page by selecting whatsup notifiation option(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:492)
+
+  Then quit the page                                                     # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 13207
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:28:39 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify otp sent notification when user clicks on send otp option&quot;, &quot;Optional[Customer registration page data validations]&quot;](65)" classname="com.wq.runner.RunnerService" time="14.141">
+    <failure message="element not interactable: element has zero size&#10;  (Session info: headless chrome=87.0.4280.88)&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;DESKTOP-6V5GP4V&apos;, ip: &apos;192.168.0.181&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50642}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 9e329f7899267e5c1c40a301e9186077" type="org.openqa.selenium.ElementNotInteractableException"><![CDATA[org.openqa.selenium.ElementNotInteractableException: 
+element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50642}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 9e329f7899267e5c1c40a301e9186077
+]]></failure>
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify otp sent notification when user clicks on send otp option # src/test/java/com/wq/features/custRegDataValidation.feature:497
+  Given user launched webpage and completed all three steps                # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()
+  Then verify otp sent notification when user clicks on send otp option    # com.wq.stepdefinations.CustRegDataValidation.verify_otp_sent_notification_when_user_clicks_on_send_otp_option()
+      org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50642}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 9e329f7899267e5c1c40a301e9186077
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.wq.pages.RegistrationPage.checkBoxSelection(RegistrationPage.java:158)
+	at com.wq.stepdefinations.CustRegDataValidation.verify_otp_sent_notification_when_user_clicks_on_send_otp_option(CustRegDataValidation.java:912)
+	at âœ½.verify otp sent notification when user clicks on send otp option(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:499)
+
+  Then quit the page                                                       # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 5572
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:28:54 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;verify resend otp in 30sec option&quot;, &quot;Optional[Customer registration page data validations]&quot;](66)" classname="com.wq.runner.RunnerService" time="14.558">
+    <failure message="element not interactable: element has zero size&#10;  (Session info: headless chrome=87.0.4280.88)&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;DESKTOP-6V5GP4V&apos;, ip: &apos;192.168.0.181&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50680}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 869fa19083ba1f5cf30efa46ef5e02d6" type="org.openqa.selenium.ElementNotInteractableException"><![CDATA[org.openqa.selenium.ElementNotInteractableException: 
+element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50680}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 869fa19083ba1f5cf30efa46ef5e02d6
+]]></failure>
+    <system-out><![CDATA[
+@custRegDataValidation
+Scenario: verify resend otp in 30sec option                 # src/test/java/com/wq/features/custRegDataValidation.feature:502
+  Given user launched webpage and completed all three steps # com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()
+  Then verify resend otp in 30sec option                    # com.wq.stepdefinations.CustRegDataValidation.verify_resend_otp_in_30sec_option()
+      org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50680}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 869fa19083ba1f5cf30efa46ef5e02d6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.wq.pages.RegistrationPage.checkBoxSelection(RegistrationPage.java:158)
+	at com.wq.stepdefinations.CustRegDataValidation.verify_resend_otp_in_30sec_option(CustRegDataValidation.java:919)
+	at âœ½.verify resend otp in 30sec option(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:504)
+
+  Then quit the page                                        # com.wq.stepdefinations.CustRegDataValidation.quit_the_page()
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 20417
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 31, 2020 12:29:08 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+</testsuite>

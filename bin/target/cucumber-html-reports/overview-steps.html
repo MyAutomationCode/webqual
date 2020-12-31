@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber Report</td>
+        <td>1</td>
+      <td>31 Dec 2020, 12:29</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.check_auto_complete_city_list_when_user_enters_one_letter_in_step_one_page(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="2342000000">2.342</td>
+              <td class="duration" data-value="2342000000">2.342</td>
+              <td class="duration" data-value="2342000000">2.342</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.check_auto_complete_company_list_when_user_enters_one_letter_in_step_three_page(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="10579000000">10.579</td>
+              <td class="duration" data-value="10579000000">10.579</td>
+              <td class="duration" data-value="10579000000">10.579</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.check_auto_complete_designation_list_when_user_enters_one_letter_in_step_three_page(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="12421000000">12.421</td>
+              <td class="duration" data-value="12421000000">12.421</td>
+              <td class="duration" data-value="12421000000">12.421</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.click_on_continue_button_without_providing_any_details_in_step_three_page(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="8585000000">8.585</td>
+              <td class="duration" data-value="8585000000">8.585</td>
+              <td class="duration" data-value="8585000000">8.585</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.click_on_continue_button_without_providing_details_in_step_two_page(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="3776000000">3.776</td>
+              <td class="duration" data-value="3776000000">3.776</td>
+              <td class="duration" data-value="3776000000">3.776</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.click_on_continue_button_without_providing_values_in_step_one_page(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="3388000000">3.388</td>
+              <td class="duration" data-value="3388000000">3.388</td>
+              <td class="duration" data-value="3388000000">3.388</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.customer_provides_age_of_city_greater_than_age_of_residence(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="6584000000">6.584</td>
+              <td class="duration" data-value="6584000000">6.584</td>
+              <td class="duration" data-value="6584000000">6.584</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.quit_the_page()</td>
+              <td>66</td>
+              <td class="duration" data-value="30878787">0.030</td>
+              <td class="duration" data-value="30878787">0.056</td>
+              <td class="duration" data-value="2038000000">2.038</td>
+              <td class="failed">86.36%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_entered_all_mandatory_details_in_step_one(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="6498000000">6.498</td>
+              <td class="duration" data-value="6498000000">6.498</td>
+              <td class="duration" data-value="6498000000">6.498</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_entered_alphanumeric_and_special_letters_in_pincode(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="4529000000">4.529</td>
+              <td class="duration" data-value="4529000000">4.529</td>
+              <td class="duration" data-value="4529000000">4.529</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_entered_dob_less_than_min_age_criteria(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="2550000000">2.550</td>
+              <td class="duration" data-value="2550000000">2.550</td>
+              <td class="duration" data-value="2550000000">2.550</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_entered_dob_more_than_max_age_criteria(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="2281000000">2.281</td>
+              <td class="duration" data-value="2281000000">2.281</td>
+              <td class="duration" data-value="2281000000">2.281</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_entered_first_adrress_line_with_less_than_minimum_chars(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="3279000000">3.279</td>
+              <td class="duration" data-value="3279000000">3.279</td>
+              <td class="duration" data-value="3279000000">3.279</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_entered_first_adrress_line_with_less_than_minimum_chars_includes_special_chars(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="5014000000">5.014</td>
+              <td class="duration" data-value="5014000000">5.014</td>
+              <td class="duration" data-value="5014000000">5.014</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_entered_first_adrress_line_with_three_repeated_chars(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="3649000000">3.649</td>
+              <td class="duration" data-value="3649000000">3.649</td>
+              <td class="duration" data-value="3649000000">3.649</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_entered_first_adrress_line_with_unsupported_special_chars(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="3416000000">3.416</td>
+              <td class="duration" data-value="3416000000">3.416</td>
+              <td class="duration" data-value="3416000000">3.416</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_entered_invalid_city_name(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="2239000000">2.239</td>
+              <td class="duration" data-value="2239000000">2.239</td>
+              <td class="duration" data-value="2239000000">2.239</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_entered_invalid_dob(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="1665000000">1.665</td>
+              <td class="duration" data-value="1665000000">1.665</td>
+              <td class="duration" data-value="1665000000">1.665</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_entered_invalid_firstname(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="7678000000">7.678</td>
+              <td class="duration" data-value="7678000000">7.678</td>
+              <td class="duration" data-value="7678000000">7.678</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_entered_invalid_lastname(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="2800000000">2.800</td>
+              <td class="duration" data-value="2800000000">2.800</td>
+              <td class="duration" data-value="2800000000">2.800</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_entered_invalid_middlename(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="1766000000">1.766</td>
+              <td class="duration" data-value="1766000000">1.766</td>
+              <td class="duration" data-value="1766000000">1.766</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_entered_invalid_phonenumber(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="1844000000">1.844</td>
+              <td class="duration" data-value="1844000000">1.844</td>
+              <td class="duration" data-value="1844000000">1.844</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_entered_invalid_pincode_which_is_not_relavent_to_given_city(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="4554000000">4.554</td>
+              <td class="duration" data-value="4554000000">4.554</td>
+              <td class="duration" data-value="4554000000">4.554</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_entered_phone_with_less_than_ten_digits(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="2391000000">2.391</td>
+              <td class="duration" data-value="2391000000">2.391</td>
+              <td class="duration" data-value="2391000000">2.391</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_entered_pincode_with_less_than_six_digits(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="5013000000">5.013</td>
+              <td class="duration" data-value="5013000000">5.013</td>
+              <td class="duration" data-value="5013000000">5.013</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_entered_second_adrress_line_with_less_than_minimum_chars(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="3167000000">3.167</td>
+              <td class="duration" data-value="3167000000">3.167</td>
+              <td class="duration" data-value="3167000000">3.167</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_entered_second_adrress_line_with_less_than_minimum_chars_includes_special_chars(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="2788000000">2.788</td>
+              <td class="duration" data-value="2788000000">2.788</td>
+              <td class="duration" data-value="2788000000">2.788</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_entered_second_adrress_line_with_three_repeated_chars(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="2589000000">2.589</td>
+              <td class="duration" data-value="2589000000">2.589</td>
+              <td class="duration" data-value="2589000000">2.589</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_entered_second_adrress_line_with_unsupported_special_chars(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="3991000000">3.991</td>
+              <td class="duration" data-value="3991000000">3.991</td>
+              <td class="duration" data-value="3991000000">3.991</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_given_valid_details_in_step_two_page(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="8575000000">8.575</td>
+              <td class="duration" data-value="8575000000">8.575</td>
+              <td class="duration" data-value="8575000000">8.575</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()</td>
+              <td>42</td>
+              <td class="duration" data-value="9772690476">9.772</td>
+              <td class="duration" data-value="9772690476">19.299</td>
+              <td class="duration" data-value="410453000000">6:50.453</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage_and_completed_all_three_steps()</td>
+              <td>24</td>
+              <td class="duration" data-value="15305500000">15.305</td>
+              <td class="duration" data-value="15305500000">18.223</td>
+              <td class="duration" data-value="367332000000">6:7.332</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_provided_all_valid_details_and_clicks_on_continue_in_step_three_page(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="13521000000">13.521</td>
+              <td class="duration" data-value="13521000000">13.521</td>
+              <td class="duration" data-value="13521000000">13.521</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_provides_current_company_experience_greater_than_total_work_experience(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="11913000000">11.913</td>
+              <td class="duration" data-value="11913000000">11.913</td>
+              <td class="duration" data-value="11913000000">11.913</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_provides_invalid_email(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="8836000000">8.836</td>
+              <td class="duration" data-value="8836000000">8.836</td>
+              <td class="duration" data-value="8836000000">8.836</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_provides_invalid_email_id_at_starting_of_the_name(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="7725000000">7.725</td>
+              <td class="duration" data-value="7725000000">7.725</td>
+              <td class="duration" data-value="7725000000">7.725</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_provides_salary_greater_than_10Lakhs(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="10152000000">10.152</td>
+              <td class="duration" data-value="10152000000">10.152</td>
+              <td class="duration" data-value="10152000000">10.152</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.user_provides_salary_less_than_15k(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="9214000000">9.214</td>
+              <td class="duration" data-value="9214000000">9.214</td>
+              <td class="duration" data-value="9214000000">9.214</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_apply_code_option_by_providing_valid_promo_code(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="3493000000">3.493</td>
+              <td class="duration" data-value="3493000000">3.493</td>
+              <td class="duration" data-value="3493000000">3.493</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_apply_code_option_by_providing_wrong_promo_code(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="3097000000">3.097</td>
+              <td class="duration" data-value="3097000000">3.097</td>
+              <td class="duration" data-value="3097000000">3.097</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_apply_code_option_without_providing_promo_code()</td>
+              <td>1</td>
+              <td class="duration" data-value="376000000">0.376</td>
+              <td class="duration" data-value="376000000">0.376</td>
+              <td class="duration" data-value="376000000">0.376</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_company_name_text_field_by_providing_specialChars_in_step_three_page(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="9801000000">9.801</td>
+              <td class="duration" data-value="9801000000">9.801</td>
+              <td class="duration" data-value="9801000000">9.801</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_designation_list_text_field_by_providing_invalid_name_in_step_three_page(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="7402000000">7.402</td>
+              <td class="duration" data-value="7402000000">7.402</td>
+              <td class="duration" data-value="7402000000">7.402</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_otp_sent_notification_when_user_clicks_on_send_otp_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="189000000">0.189</td>
+              <td class="duration" data-value="189000000">0.189</td>
+              <td class="duration" data-value="189000000">0.189</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_pan_number_field_by_providing_all_alphabets_in_step_three_page(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="8053000000">8.053</td>
+              <td class="duration" data-value="8053000000">8.053</td>
+              <td class="duration" data-value="8053000000">8.053</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_pan_number_field_by_providing_invalid_number_in_step_three_page(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="8655000000">8.655</td>
+              <td class="duration" data-value="8655000000">8.655</td>
+              <td class="duration" data-value="8655000000">8.655</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_pan_number_field_by_providing_number_in_case_sensitive_in_step_three_page(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="13627000000">13.627</td>
+              <td class="duration" data-value="13627000000">13.627</td>
+              <td class="duration" data-value="13627000000">13.627</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_pannumber_field_by_providing_number_with_invalid_sequence_in_step_three_page(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="9398000000">9.398</td>
+              <td class="duration" data-value="9398000000">9.398</td>
+              <td class="duration" data-value="9398000000">9.398</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_pannumber_field_by_providing_number_with_less_than_required_letters_in_step_three_page(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="10145000000">10.145</td>
+              <td class="duration" data-value="10145000000">10.145</td>
+              <td class="duration" data-value="10145000000">10.145</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_privacy_policy_link()</td>
+              <td>1</td>
+              <td class="duration" data-value="3417000000">3.417</td>
+              <td class="duration" data-value="3417000000">3.417</td>
+              <td class="duration" data-value="3417000000">3.417</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_resend_otp_in_30sec_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="265000000">0.265</td>
+              <td class="duration" data-value="265000000">0.265</td>
+              <td class="duration" data-value="265000000">0.265</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_different_mobile_num_and_otp(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="228000000">0.228</td>
+              <td class="duration" data-value="228000000">0.228</td>
+              <td class="duration" data-value="228000000">0.228</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_expired_otp(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="3711000000">3.711</td>
+              <td class="duration" data-value="3711000000">3.711</td>
+              <td class="duration" data-value="3711000000">3.711</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_invalid_otp(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="7016000000">7.016</td>
+              <td class="duration" data-value="7016000000">7.016</td>
+              <td class="duration" data-value="7016000000">7.016</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_mobile_num_with_alphanumeric_values(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="3495000000">3.495</td>
+              <td class="duration" data-value="3495000000">3.495</td>
+              <td class="duration" data-value="3495000000">3.495</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_mobile_num_with_less_than_ten_digits(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="1678000000">1.678</td>
+              <td class="duration" data-value="1678000000">1.678</td>
+              <td class="duration" data-value="1678000000">1.678</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_mobile_num_with_special_chars(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="2554000000">2.554</td>
+              <td class="duration" data-value="2554000000">2.554</td>
+              <td class="duration" data-value="2554000000">2.554</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_otp_with_alphabet_values(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="5356000000">5.356</td>
+              <td class="duration" data-value="5356000000">5.356</td>
+              <td class="duration" data-value="5356000000">5.356</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_otp_with_less_than_required_digits(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="8337000000">8.337</td>
+              <td class="duration" data-value="8337000000">8.337</td>
+              <td class="duration" data-value="8337000000">8.337</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_valid_details(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="211000000">0.211</td>
+              <td class="duration" data-value="211000000">0.211</td>
+              <td class="duration" data-value="211000000">0.211</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_valid_mobile_num_with_wrong_otp(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="7476000000">7.476</td>
+              <td class="duration" data-value="7476000000">7.476</td>
+              <td class="duration" data-value="7476000000">7.476</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_valid_mobile_num_without_otp(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="5813000000">5.813</td>
+              <td class="duration" data-value="5813000000">5.813</td>
+              <td class="duration" data-value="5813000000">5.813</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_removing_the_pre_filled_mobile_number(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="3553000000">3.553</td>
+              <td class="duration" data-value="3553000000">3.553</td>
+              <td class="duration" data-value="3553000000">3.553</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_selecting_whatsup_notifiation_option(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="258000000">0.258</td>
+              <td class="duration" data-value="258000000">0.258</td>
+              <td class="duration" data-value="258000000">0.258</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_without_mobile_num_with_valid_otp(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="4891000000">4.891</td>
+              <td class="duration" data-value="4891000000">4.891</td>
+              <td class="duration" data-value="4891000000">4.891</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_without_selecting_whatsup_notifiation_option(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="231000000">0.231</td>
+              <td class="duration" data-value="231000000">0.231</td>
+              <td class="duration" data-value="231000000">0.231</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_witout_providng_any_details(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="3380000000">3.380</td>
+              <td class="duration" data-value="3380000000">3.380</td>
+              <td class="duration" data-value="3380000000">3.380</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_terms_and_conditions_link()</td>
+              <td>1</td>
+              <td class="duration" data-value="3326000000">3.326</td>
+              <td class="duration" data-value="3326000000">3.326</td>
+              <td class="duration" data-value="3326000000">3.326</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.wq.stepdefinations.CustRegDataValidation.verify_user_consent_weblink()</td>
+              <td>1</td>
+              <td class="duration" data-value="3442000000">3.442</td>
+              <td class="duration" data-value="3442000000">3.442</td>
+              <td class="duration" data-value="3442000000">3.442</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>69</td>
+            <td>198</td>
+            <td class="duration">5.626</td>
+            <td class="duration">6:50.453</td>
+            <td class="duration">18:34.009</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+com\wq\stepdefinations\LandingPageValidations.class
+com\wq\runner\RunnerService.class
+com\wq\pages\LandingPage.class
+com\wq\stepdefinations\CustRegDataValidation.class
+com\wq\stepdefinations\CustRegFieldValidation.class
+com\wq\utils\Connections.class
+com\wq\pages\RegistrationPage.class
+com\wq\common\Commons.class
+com\wq\utils\DataHelper.class
+com\wq\pages\FieldValidationPage.class
+com\wq\utils\Constants.class
+com\wq\utils\TestConnection.class

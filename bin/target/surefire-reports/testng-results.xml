@@ -1,0 +1,1351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="9" ignored="0" total="66" passed="57">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="1119570" started-at="2020-12-31T12:10:40 IST" finished-at="2020-12-31T12:29:20 IST">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Surefire test" duration-ms="1119570" started-at="2020-12-31T12:10:40 IST" finished-at="2020-12-31T12:29:20 IST">
+      <class name="com.wq.runner.RunnerService">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="setUpClass" is-config="true" duration-ms="1145" started-at="2020-12-31T12:10:40 IST" finished-at="2020-12-31T12:10:41 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="23038" started-at="2020-12-31T12:10:41 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:11:04 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify step one page without providing details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="16157" started-at="2020-12-31T12:11:04 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:11:20 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify continue option by providing valid details in step one"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="17132" started-at="2020-12-31T12:11:20 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:11:38 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify step one reg details by providing invalid firstname"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="11643" started-at="2020-12-31T12:11:38 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:11:49 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify step one reg details by providing invalid middlename"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="12661" started-at="2020-12-31T12:11:49 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:12:02 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify step one reg details by providing invalid lastname"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="12143" started-at="2020-12-31T12:12:02 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:12:14 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify step one reg details by providing invalid dob"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="13809" started-at="2020-12-31T12:12:14 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:12:28 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="12592" started-at="2020-12-31T12:12:28 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:12:40 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="12090" started-at="2020-12-31T12:12:40 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:12:53 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify auto complete city list in step one page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="11573" started-at="2020-12-31T12:12:53 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:13:04 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify step one reg details by providing invalid city name"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="11498" started-at="2020-12-31T12:13:04 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:13:16 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify step one reg details by providing invalid phonenumber"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="11714" started-at="2020-12-31T12:13:16 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:13:27 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify step one reg details by providing number lessthan ten digits"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="13470" started-at="2020-12-31T12:13:27 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:13:41 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify step two page without passing any details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="18058" started-at="2020-12-31T12:13:41 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:13:59 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify step two page by providing valid details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Work and Income Details] but found [Current Residence Details]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Work and Income Details] but found [Current Residence Details]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at com.wq.stepdefinations.CustRegDataValidation.user_given_valid_details_in_step_two_page(CustRegDataValidation.java:256)
+at ✽.user given valid details in step two page(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:115)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="17847" started-at="2020-12-31T12:13:59 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:14:17 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="14034" started-at="2020-12-31T12:14:17 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:14:31 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify step two page by providing address1 with less than 3 chars"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="14479" started-at="2020-12-31T12:14:31 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:14:45 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="14838" started-at="2020-12-31T12:14:45 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:15:00 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify step two page by providing address1 with three repeated chars"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="13714" started-at="2020-12-31T12:15:00 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:15:14 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="12040" started-at="2020-12-31T12:15:14 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:15:26 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify step two page by providing address2 with less than 3 chars"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="11150" started-at="2020-12-31T12:15:26 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:15:37 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify step two page by providing address2 with less than 3 chars which includes special chars"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="10559" started-at="2020-12-31T12:15:37 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:15:48 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify step two page by providing address2 with three repeated chars"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Address field does not allow three repeated characters.] but found [Address Line 1 does not allow three repeated characters.]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Address field does not allow three repeated characters.] but found [Address Line 1 does not allow three repeated characters.]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at com.wq.stepdefinations.CustRegDataValidation.user_entered_second_adrress_line_with_three_repeated_chars(CustRegDataValidation.java:356)
+at ✽.user entered second adrress line with three repeated chars(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:174)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="13652" started-at="2020-12-31T12:15:48 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:16:01 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify step two page by providing address2 with unsupported special chars"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="14015" started-at="2020-12-31T12:16:01 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:16:15 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify step two page by providing invalid pincode"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="16035" started-at="2020-12-31T12:16:15 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:16:31 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify step two page by providing alphanumeric values in pincode"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="14899" started-at="2020-12-31T12:16:31 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:16:46 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify step two page by providing pincode with less than 6 digits"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="22966" started-at="2020-12-31T12:16:46 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:17:09 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify step three reg details by providing valid details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="17031" started-at="2020-12-31T12:17:09 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:17:26 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify step three reg details without providing details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="18958" started-at="2020-12-31T12:17:26 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:17:45 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify auto complete company list in step three page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="18770" started-at="2020-12-31T12:17:45 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:18:04 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="21915" started-at="2020-12-31T12:18:04 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:18:26 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify auto complete designation list in step three page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="17213" started-at="2020-12-31T12:18:26 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:18:43 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Designation cannot have special characters. Please check to continue] but found [Designation cannot have numbers or special characters. Please check to continue]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Designation cannot have special characters. Please check to continue] but found [Designation cannot have numbers or special characters. Please check to continue]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at com.wq.stepdefinations.CustRegDataValidation.verify_designation_list_text_field_by_providing_invalid_name_in_step_three_page(CustRegDataValidation.java:498)
+at ✽.verify designation list text field by providing invalid name in step three page(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:253)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="18419" started-at="2020-12-31T12:18:43 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:19:01 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify with invalid pan in step three page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="17263" started-at="2020-12-31T12:19:01 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:19:19 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify pannumber field by providing all alphabets"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="23108" started-at="2020-12-31T12:19:19 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:19:42 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="18900" started-at="2020-12-31T12:19:42 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:20:01 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="20008" started-at="2020-12-31T12:20:01 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:20:21 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="21589" started-at="2020-12-31T12:20:21 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:20:42 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="17244" started-at="2020-12-31T12:20:42 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:21:00 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify email text field with invalid format"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="17661" started-at="2020-12-31T12:21:00 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:21:17 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify email text field with invalid emailId at starting of the id"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="17461" started-at="2020-12-31T12:21:17 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:21:35 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify salary text field by providing less than 15k"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="19415" started-at="2020-12-31T12:21:35 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:21:54 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify salary text field by providing greater than 10Lakhs"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="17742" started-at="2020-12-31T12:21:54 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:22:12 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify submission page by providing valid details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:49808}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 69879354e0f4c5d357b928a7f5b160f7]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:49808}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 69879354e0f4c5d357b928a7f5b160f7
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at com.wq.pages.RegistrationPage.checkBoxSelection(RegistrationPage.java:158)
+at com.wq.utils.DataHelper.getDbData(DataHelper.java:56)
+at com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_valid_details(CustRegDataValidation.java:653)
+at ✽.verify submission page by providing valid details(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:338)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="20871" started-at="2020-12-31T12:22:12 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:22:33 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify submission page without providng any details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="21885" started-at="2020-12-31T12:22:33 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:22:55 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify submission page by removing the pre-filled mobile number"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="16673" started-at="2020-12-31T12:22:55 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:23:11 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify submission page by providing mobile num with less than ten digits"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="18439" started-at="2020-12-31T12:23:11 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:23:30 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify submission page by providing mobile num with alphanumeric values"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="18041" started-at="2020-12-31T12:23:30 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:23:48 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify submission page by providing mobile num with special chars"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="22253" started-at="2020-12-31T12:23:48 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:24:10 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify submission page by providing invalid otp"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="19904" started-at="2020-12-31T12:24:10 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:24:30 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify submission page by providing otp with alphabet values"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="22955" started-at="2020-12-31T12:24:30 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:24:53 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify submission page by providing otp with less than required digits"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="24636" started-at="2020-12-31T12:24:53 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:25:18 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify submission page by providing valid mobile num with wrong otp"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="23391" started-at="2020-12-31T12:25:18 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:25:41 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify submission page by providing valid mobile num without otp"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="22485" started-at="2020-12-31T12:25:41 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:26:03 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify submission page without mobile num with valid otp"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="14471" started-at="2020-12-31T12:26:03 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:26:18 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify submission page by providing different mobile num and otp"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir3...}, goog:chromeOptions: {debuggerAddress: localhost:50254}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: a8e0117ab3d8b07454152027de060074]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir3...}, goog:chromeOptions: {debuggerAddress: localhost:50254}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: a8e0117ab3d8b07454152027de060074
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at com.wq.pages.RegistrationPage.checkBoxSelection(RegistrationPage.java:158)
+at com.wq.utils.DataHelper.getDbData(DataHelper.java:56)
+at com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_different_mobile_num_and_otp(CustRegDataValidation.java:803)
+at ✽.verify submission page by providing different mobile num and otp(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:429)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="18562" started-at="2020-12-31T12:26:18 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:26:36 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify submission page by providing expired otp"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="18361" started-at="2020-12-31T12:26:36 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:26:55 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify apply code option by providing wrong promo code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="17495" started-at="2020-12-31T12:26:55 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:27:12 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify apply code option by providing valid promo code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="14671" started-at="2020-12-31T12:27:12 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:27:27 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify apply code option without providing promo code"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="17320" started-at="2020-12-31T12:27:27 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:27:44 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify user consent weblink"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="18297" started-at="2020-12-31T12:27:44 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:28:03 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify terms and conditions link"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="18209" started-at="2020-12-31T12:28:03 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:28:21 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify privacy policy link"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="15059" started-at="2020-12-31T12:28:21 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:28:36 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify submission page without selecting whatsup notifiation option"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50570}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 0930c2699901b8e8d6a78e770564aad1]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50570}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 0930c2699901b8e8d6a78e770564aad1
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at com.wq.pages.RegistrationPage.checkBoxSelection(RegistrationPage.java:158)
+at com.wq.utils.DataHelper.getDbData(DataHelper.java:56)
+at com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_without_selecting_whatsup_notifiation_option(CustRegDataValidation.java:884)
+at ✽.verify submission page without selecting whatsup notifiation option(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:485)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="14795" started-at="2020-12-31T12:28:36 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:28:51 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify submission page by selecting whatsup notifiation option"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50606}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 179fdc3ac6a351d166eb95312e224e6d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50606}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 179fdc3ac6a351d166eb95312e224e6d
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at com.wq.pages.RegistrationPage.checkBoxSelection(RegistrationPage.java:158)
+at com.wq.utils.DataHelper.getDbData(DataHelper.java:56)
+at com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_selecting_whatsup_notifiation_option(CustRegDataValidation.java:899)
+at ✽.verify submission page by selecting whatsup notifiation option(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:492)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="14139" started-at="2020-12-31T12:28:51 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:29:05 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify otp sent notification when user clicks on send otp option"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50642}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 9e329f7899267e5c1c40a301e9186077]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50642}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 9e329f7899267e5c1c40a301e9186077
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at com.wq.pages.RegistrationPage.checkBoxSelection(RegistrationPage.java:158)
+at com.wq.stepdefinations.CustRegDataValidation.verify_otp_sent_notification_when_user_clicks_on_send_otp_option(CustRegDataValidation.java:912)
+at ✽.verify otp sent notification when user clicks on send otp option(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:499)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="runScenario" duration-ms="14556" started-at="2020-12-31T12:29:05 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-12-31T12:29:19 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify resend otp in 30sec option"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Customer registration page data validations]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50680}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 869fa19083ba1f5cf30efa46ef5e02d6]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50680}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 869fa19083ba1f5cf30efa46ef5e02d6
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at com.wq.pages.RegistrationPage.checkBoxSelection(RegistrationPage.java:158)
+at com.wq.stepdefinations.CustRegDataValidation.verify_resend_otp_in_30sec_option(CustRegDataValidation.java:919)
+at ✽.verify resend otp in 30sec option(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:504)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.wq.runner.RunnerService@1e2203c]" name="tearDownClass" is-config="true" duration-ms="294" started-at="2020-12-31T12:29:19 IST" finished-at="2020-12-31T12:29:20 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.wq.runner.RunnerService -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

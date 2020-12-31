@@ -1,0 +1,191 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2020-12-31T08:09:11.214Z",
+        "line": 6,
+        "name": "verify step one page without providing details",
+        "description": "",
+        "id": "customer-registration-page-data-validations;verify-step-one-page-without-providing-details",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user launched webpage",
+            "match": {
+              "location": "com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "click on continue button without providing values in step one page",
+            "match": {
+              "location": "com.wq.stepdefinations.CustRegDataValidation.click_on_continue_button_without_providing_values_in_step_one_page(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "firstname",
+                  "middlename",
+                  "lastname",
+                  "dob",
+                  "gender",
+                  "city",
+                  "creditHistory",
+                  "phoneNumber"
+                ]
+              },
+              {
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "",
+                  "Select gender",
+                  "",
+                  "-- Select --",
+                  ""
+                ]
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "quit the page",
+            "match": {
+              "location": "com.wq.stepdefinations.CustRegDataValidation.quit_the_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@custRegDataValidation"
+          },
+          {
+            "name": "@smoke"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-12-31T08:09:11.291Z",
+        "line": 20,
+        "name": "verify step one reg details by providing invalid firstname",
+        "description": "",
+        "id": "customer-registration-page-data-validations;verify-step-one-reg-details-by-providing-invalid-firstname",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user launched webpage",
+            "match": {
+              "location": "com.wq.stepdefinations.CustRegDataValidation.user_launched_webpage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user entered invalid firstname",
+            "match": {
+              "location": "com.wq.stepdefinations.CustRegDataValidation.user_entered_invalid_firstname(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "firstname",
+                  "middlename",
+                  "lastname",
+                  "dob",
+                  "gender",
+                  "city",
+                  "creditHistory",
+                  "phoneNumber"
+                ]
+              },
+              {
+                "cells": [
+                  "1382djfd",
+                  "Raju",
+                  "Devathi",
+                  "20/08/1993",
+                  "Male",
+                  "Bangalore",
+                  "I have an active credit card",
+                  "7666666800"
+                ]
+              },
+              {
+                "cells": [
+                  "1dj@.)fd",
+                  "Raju",
+                  "Devathi",
+                  "20/08/1993",
+                  "Male",
+                  "Bangalore",
+                  "I have an active credit card",
+                  "7666666800"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "quit the page",
+            "match": {
+              "location": "com.wq.stepdefinations.CustRegDataValidation.quit_the_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@custRegDataValidation"
+          },
+          {
+            "name": "@smoke"
+          }
+        ]
+      }
+    ],
+    "name": "Customer registration page data validations",
+    "description": "",
+    "id": "customer-registration-page-data-validations",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/com/wq/features/custRegDataValidation.feature",
+    "tags": [
+      {
+        "name": "@custRegDataValidation",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

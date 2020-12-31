@@ -2,7 +2,7 @@
 Feature: Customer registration page data validations 
 
 # test cases for step one customer registration page
-
+@smoke
 Scenario: verify step one page without providing details 
 	Given user launched webpage 
 	Then click on continue button without providing values in step one page 
@@ -498,7 +498,7 @@ Scenario: verify otp sent notification when user clicks on send otp option
 	Given user launched webpage and completed all three steps
 	Then  verify otp sent notification when user clicks on send otp option
 	Then  quit the page 
-@smoke	
+	
 Scenario: verify resend otp in 30sec option
 	Given user launched webpage and completed all three steps
 	Then  verify resend otp in 30sec option

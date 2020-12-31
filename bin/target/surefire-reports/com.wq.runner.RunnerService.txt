@@ -1,0 +1,73 @@
+-------------------------------------------------------------------------------
+Test set: com.wq.runner.RunnerService
+-------------------------------------------------------------------------------
+Tests run: 66, Failures: 9, Errors: 0, Skipped: 0, Time elapsed: 1,120.591 s <<< FAILURE! - in com.wq.runner.RunnerService
+com.wq.runner.RunnerService.runScenario["verify step two page by providing valid details", "Optional[Customer registration page data validations]"](14)  Time elapsed: 18.061 s  <<< FAILURE!
+java.lang.AssertionError: expected [Work and Income Details] but found [Current Residence Details]
+
+com.wq.runner.RunnerService.runScenario["verify step two page by providing address2 with three repeated chars", "Optional[Customer registration page data validations]"](22)  Time elapsed: 10.558 s  <<< FAILURE!
+java.lang.AssertionError: expected [Address field does not allow three repeated characters.] but found [Address Line 1 does not allow three repeated characters.]
+
+com.wq.runner.RunnerService.runScenario["", "Optional[Customer registration page data validations]"](32)  Time elapsed: 17.213 s  <<< FAILURE!
+java.lang.AssertionError: expected [Designation cannot have special characters. Please check to continue] but found [Designation cannot have numbers or special characters. Please check to continue]
+
+com.wq.runner.RunnerService.runScenario["verify submission page by providing valid details", "Optional[Customer registration page data validations]"](43)  Time elapsed: 17.739 s  <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:49808}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 69879354e0f4c5d357b928a7f5b160f7
+
+com.wq.runner.RunnerService.runScenario["verify submission page by providing different mobile num and otp", "Optional[Customer registration page data validations]"](55)  Time elapsed: 14.469 s  <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir3...}, goog:chromeOptions: {debuggerAddress: localhost:50254}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: a8e0117ab3d8b07454152027de060074
+
+com.wq.runner.RunnerService.runScenario["verify submission page without selecting whatsup notifiation option", "Optional[Customer registration page data validations]"](63)  Time elapsed: 15.062 s  <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50570}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 0930c2699901b8e8d6a78e770564aad1
+
+com.wq.runner.RunnerService.runScenario["verify submission page by selecting whatsup notifiation option", "Optional[Customer registration page data validations]"](64)  Time elapsed: 14.793 s  <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50606}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 179fdc3ac6a351d166eb95312e224e6d
+
+com.wq.runner.RunnerService.runScenario["verify otp sent notification when user clicks on send otp option", "Optional[Customer registration page data validations]"](65)  Time elapsed: 14.141 s  <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50642}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 9e329f7899267e5c1c40a301e9186077
+
+com.wq.runner.RunnerService.runScenario["verify resend otp in 30sec option", "Optional[Customer registration page data validations]"](66)  Time elapsed: 14.558 s  <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-6V5GP4V', ip: '192.168.0.181', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50680}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 869fa19083ba1f5cf30efa46ef5e02d6
+

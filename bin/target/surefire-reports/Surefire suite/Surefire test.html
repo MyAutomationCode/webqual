@@ -1,0 +1,710 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>57/9/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Dec 31 12:10:40 IST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>1119 seconds (1119570 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page by providing valid details", "Optional[Customer registration page data validations]"</td>
+<td><div><pre>java.lang.AssertionError: expected [Work and Income Details] but found [Current Residence Details]
+	at com.wq.stepdefinations.CustRegDataValidation.user_given_valid_details_in_step_two_page(CustRegDataValidation.java:256)
+	at ?.user given valid details in step two page(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:115)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace28761426", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace28761426'><pre>java.lang.AssertionError: expected [Work and Income Details] but found [Current Residence Details]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.wq.stepdefinations.CustRegDataValidation.user_given_valid_details_in_step_two_page(CustRegDataValidation.java:256)
+	at ?.user given valid details in step two page(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:115)
+</pre></div></td>
+<td>18</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page by providing address2 with three repeated chars", "Optional[Customer registration page data validations]"</td>
+<td><div><pre>java.lang.AssertionError: expected [Address field does not allow three repeated characters.] but found [Address Line 1 does not allow three repeated characters.]
+	at com.wq.stepdefinations.CustRegDataValidation.user_entered_second_adrress_line_with_three_repeated_chars(CustRegDataValidation.java:356)
+	at ?.user entered second adrress line with three repeated chars(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:174)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace8355916", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace8355916'><pre>java.lang.AssertionError: expected [Address field does not allow three repeated characters.] but found [Address Line 1 does not allow three repeated characters.]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.wq.stepdefinations.CustRegDataValidation.user_entered_second_adrress_line_with_three_repeated_chars(CustRegDataValidation.java:356)
+	at ?.user entered second adrress line with three repeated chars(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:174)
+</pre></div></td>
+<td>10</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[Customer registration page data validations]"</td>
+<td><div><pre>java.lang.AssertionError: expected [Designation cannot have special characters. Please check to continue] but found [Designation cannot have numbers or special characters. Please check to continue]
+	at com.wq.stepdefinations.CustRegDataValidation.verify_designation_list_text_field_by_providing_invalid_name_in_step_three_page(CustRegDataValidation.java:498)
+	at ?.verify designation list text field by providing invalid name in step three page(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:253)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace3171687", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace3171687'><pre>java.lang.AssertionError: expected [Designation cannot have special characters. Please check to continue] but found [Designation cannot have numbers or special characters. Please check to continue]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.wq.stepdefinations.CustRegDataValidation.verify_designation_list_text_field_by_providing_invalid_name_in_step_three_page(CustRegDataValidation.java:498)
+	at ?.verify designation list text field by providing invalid name in step three page(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:253)
+</pre></div></td>
+<td>17</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify submission page by providing valid details", "Optional[Customer registration page data validations]"</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-6V5GP4V&apos;, ip: &apos;192.168.0.181&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:49808}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 69879354e0f4c5d357b928a7f5b160f7
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.wq.pages.RegistrationPage.checkBoxSelection(RegistrationPage.java:158)
+	at com.wq.utils.DataHelper.getDbData(DataHelper.java:56)
+	at com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_valid_details(CustRegDataValidation.java:653)
+	at ?.verify submission page by providing valid details(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:338)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace18487328", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace18487328'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-6V5GP4V&apos;, ip: &apos;192.168.0.181&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:49808}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 69879354e0f4c5d357b928a7f5b160f7
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.wq.pages.RegistrationPage.checkBoxSelection(RegistrationPage.java:158)
+	at com.wq.utils.DataHelper.getDbData(DataHelper.java:56)
+	at com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_valid_details(CustRegDataValidation.java:653)
+	at ?.verify submission page by providing valid details(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:338)
+</pre></div></td>
+<td>17</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify submission page by providing different mobile num and otp", "Optional[Customer registration page data validations]"</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-6V5GP4V&apos;, ip: &apos;192.168.0.181&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir3...}, goog:chromeOptions: {debuggerAddress: localhost:50254}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: a8e0117ab3d8b07454152027de060074
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.wq.pages.RegistrationPage.checkBoxSelection(RegistrationPage.java:158)
+	at com.wq.utils.DataHelper.getDbData(DataHelper.java:56)
+	at com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_different_mobile_num_and_otp(CustRegDataValidation.java:803)
+	at ?.verify submission page by providing different mobile num and otp(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:429)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace16295369", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace16295369'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-6V5GP4V&apos;, ip: &apos;192.168.0.181&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir3...}, goog:chromeOptions: {debuggerAddress: localhost:50254}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: a8e0117ab3d8b07454152027de060074
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.wq.pages.RegistrationPage.checkBoxSelection(RegistrationPage.java:158)
+	at com.wq.utils.DataHelper.getDbData(DataHelper.java:56)
+	at com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_providing_different_mobile_num_and_otp(CustRegDataValidation.java:803)
+	at ?.verify submission page by providing different mobile num and otp(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:429)
+</pre></div></td>
+<td>14</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify submission page without selecting whatsup notifiation option", "Optional[Customer registration page data validations]"</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-6V5GP4V&apos;, ip: &apos;192.168.0.181&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50570}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 0930c2699901b8e8d6a78e770564aad1
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.wq.pages.RegistrationPage.checkBoxSelection(RegistrationPage.java:158)
+	at com.wq.utils.DataHelper.getDbData(DataHelper.java:56)
+	at com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_without_selecting_whatsup_notifiation_option(CustRegDataValidation.java:884)
+	at ?.verify submission page without selecting whatsup notifiation option(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:485)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace20433628", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace20433628'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-6V5GP4V&apos;, ip: &apos;192.168.0.181&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50570}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 0930c2699901b8e8d6a78e770564aad1
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.wq.pages.RegistrationPage.checkBoxSelection(RegistrationPage.java:158)
+	at com.wq.utils.DataHelper.getDbData(DataHelper.java:56)
+	at com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_without_selecting_whatsup_notifiation_option(CustRegDataValidation.java:884)
+	at ?.verify submission page without selecting whatsup notifiation option(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:485)
+</pre></div></td>
+<td>15</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify submission page by selecting whatsup notifiation option", "Optional[Customer registration page data validations]"</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-6V5GP4V&apos;, ip: &apos;192.168.0.181&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50606}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 179fdc3ac6a351d166eb95312e224e6d
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.wq.pages.RegistrationPage.checkBoxSelection(RegistrationPage.java:158)
+	at com.wq.utils.DataHelper.getDbData(DataHelper.java:56)
+	at com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_selecting_whatsup_notifiation_option(CustRegDataValidation.java:899)
+	at ?.verify submission page by selecting whatsup notifiation option(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:492)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace25795767", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace25795767'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-6V5GP4V&apos;, ip: &apos;192.168.0.181&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50606}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 179fdc3ac6a351d166eb95312e224e6d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.wq.pages.RegistrationPage.checkBoxSelection(RegistrationPage.java:158)
+	at com.wq.utils.DataHelper.getDbData(DataHelper.java:56)
+	at com.wq.stepdefinations.CustRegDataValidation.verify_submission_page_by_selecting_whatsup_notifiation_option(CustRegDataValidation.java:899)
+	at ?.verify submission page by selecting whatsup notifiation option(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:492)
+</pre></div></td>
+<td>14</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify otp sent notification when user clicks on send otp option", "Optional[Customer registration page data validations]"</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-6V5GP4V&apos;, ip: &apos;192.168.0.181&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50642}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 9e329f7899267e5c1c40a301e9186077
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.wq.pages.RegistrationPage.checkBoxSelection(RegistrationPage.java:158)
+	at com.wq.stepdefinations.CustRegDataValidation.verify_otp_sent_notification_when_user_clicks_on_send_otp_option(CustRegDataValidation.java:912)
+	at ?.verify otp sent notification when user clicks on send otp option(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:499)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace5253935", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace5253935'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-6V5GP4V&apos;, ip: &apos;192.168.0.181&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50642}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 9e329f7899267e5c1c40a301e9186077
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.wq.pages.RegistrationPage.checkBoxSelection(RegistrationPage.java:158)
+	at com.wq.stepdefinations.CustRegDataValidation.verify_otp_sent_notification_when_user_clicks_on_send_otp_option(CustRegDataValidation.java:912)
+	at ?.verify otp sent notification when user clicks on send otp option(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:499)
+</pre></div></td>
+<td>14</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify resend otp in 30sec option", "Optional[Customer registration page data validations]"</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-6V5GP4V&apos;, ip: &apos;192.168.0.181&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50680}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 869fa19083ba1f5cf30efa46ef5e02d6
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.wq.pages.RegistrationPage.checkBoxSelection(RegistrationPage.java:158)
+	at com.wq.stepdefinations.CustRegDataValidation.verify_resend_otp_in_30sec_option(CustRegDataValidation.java:919)
+	at ?.verify resend otp in 30sec option(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:504)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace19010846", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace19010846'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
+  (Session info: headless chrome=87.0.4280.88)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-6V5GP4V&apos;, ip: &apos;192.168.0.181&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.20 (c99e81631faa0..., userDataDir: C:\Windows\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:50680}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 869fa19083ba1f5cf30efa46ef5e02d6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.wq.pages.RegistrationPage.checkBoxSelection(RegistrationPage.java:158)
+	at com.wq.stepdefinations.CustRegDataValidation.verify_resend_otp_in_30sec_option(CustRegDataValidation.java:919)
+	at ?.verify resend otp in 30sec option(file:///C:/Work/workspace/Automation/eclipse/Moneytap-WQ/./src/test/java/com/wq/features/custRegDataValidation.feature:504)
+</pre></div></td>
+<td>14</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step one page without providing details", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>23</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify continue option by providing valid details in step one", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>16</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step one reg details by providing invalid firstname", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>17</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step one reg details by providing invalid middlename", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>11</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step one reg details by providing invalid lastname", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>12</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step one reg details by providing invalid dob", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>12</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>13</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>12</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify auto complete city list in step one page", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>12</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step one reg details by providing invalid city name", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>11</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step one reg details by providing invalid phonenumber", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>11</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step one reg details by providing number lessthan ten digits", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>11</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page without passing any details", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>13</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>17</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page by providing address1 with less than 3 chars", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>14</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>14</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page by providing address1 with three repeated chars", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>14</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>13</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page by providing address2 with less than 3 chars", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>12</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page by providing address2 with less than 3 chars which includes special chars", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>11</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page by providing address2 with unsupported special chars", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>13</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page by providing invalid pincode", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>14</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page by providing alphanumeric values in pincode", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>16</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step two page by providing pincode with less than 6 digits", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>14</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step three reg details by providing valid details", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>22</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify step three reg details without providing details", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>17</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify auto complete company list in step three page", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>18</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>18</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify auto complete designation list in step three page", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>21</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify with invalid pan in step three page", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>18</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify pannumber field by providing all alphabets", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>17</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>23</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>18</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>20</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>21</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify email text field with invalid format", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>17</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify email text field with invalid emailId at starting of the id", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>17</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify salary text field by providing less than 15k", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>17</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify salary text field by providing greater than 10Lakhs", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>19</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify submission page without providng any details", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>20</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify submission page by removing the pre-filled mobile number", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>21</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify submission page by providing mobile num with less than ten digits", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>16</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify submission page by providing mobile num with alphanumeric values", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>18</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify submission page by providing mobile num with special chars", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>18</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify submission page by providing invalid otp", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>22</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify submission page by providing otp with alphabet values", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>19</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify submission page by providing otp with less than required digits", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>22</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify submission page by providing valid mobile num with wrong otp", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>24</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify submission page by providing valid mobile num without otp", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>23</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify submission page without mobile num with valid otp", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>22</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify submission page by providing expired otp", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>18</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify apply code option by providing wrong promo code", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>18</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify apply code option by providing valid promo code", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>17</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify apply code option without providing promo code", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>14</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify user consent weblink", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>17</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify terms and conditions link", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>18</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+<tr>
+<td title='com.wq.runner.RunnerService.runScenario()'><b>runScenario</b><br>Test class: com.wq.runner.RunnerService<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify privacy policy link", "Optional[Customer registration page data validations]"</td>
+<td></td>
+<td>18</td>
+<td>com.wq.runner.RunnerService@1e2203c</td></tr>
+</table><p>
+</body>
+</html>
