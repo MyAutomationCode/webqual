@@ -7,6 +7,10 @@ Scenario: Validate landing page title
 	Then verify the webpage title 
 	Then close the webpage
 
+Scenario: Validate company logo in landing page
+	Given user already launched the moneytap webqual page
+	Then verify company logo
+	Then close the webpage
 
 Scenario: Validate moneytap benefits
 	Given user already launched the moneytap webqual page 

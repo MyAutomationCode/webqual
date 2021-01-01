@@ -30,7 +30,6 @@ public class DataHelper extends Commons{
 		//1. Fetch the excel file location
 		//2. Read the file and sheet details
 		File file = new File(filePath + "/" + fileName);
-		System.out.println(file);
 		FileInputStream fis = new FileInputStream(file);
 		XSSFWorkbook book = new XSSFWorkbook(fis);
 		XSSFSheet sheet = book.getSheet(sheetName);

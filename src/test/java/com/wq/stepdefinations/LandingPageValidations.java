@@ -26,10 +26,13 @@ public class LandingPageValidations extends Commons{
 
 	@Then("verify the webpage title")
 	public void verify_the_webpage_title() {
-
-		String title = LandingPage.validateTitle();
-		Assert.assertEquals(title,"MoneyTap - Apply for MoneyTap to get approved up to Rs. 5 lakhs in 4 minutes");
+		Assert.assertEquals(LandingPage.validateTitle(),"MoneyTap - Apply for MoneyTap to get approved up to Rs. 5 lakhs in 4 minutes");
 	} 
+	
+	@Then("verify company logo")
+	public void verify_company_logo() {
+	   Assert.assertTrue(FieldValidationPage.getIsEnabledValues(Constants.LOGO)); 
+	}
 
 	@Then("verify the main heading under the offers page")
 	public void verify_the_main_heading_under_the_offers_page() throws InterruptedException {
@@ -92,7 +95,7 @@ public class LandingPageValidations extends Commons{
 	@Then("verify login button")
 	public void verify_login_button() {
 		
-		Assert.assertTrue(FieldValidationPage.validateFields(Constants.LOGIN_BTN));
+		Assert.assertTrue(FieldValidationPage.getIsEnabledValues(Constants.LOGIN_BTN));
 	}
 
 	@Then("verify customer reg step one title")

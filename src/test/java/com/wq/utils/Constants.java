@@ -2,7 +2,7 @@ package com.wq.utils;
 
 public class Constants {
 
-
+	public static final String LOGO = "logo";
 	public static final String CUSTOMER_REG_URL = "registrationUrl";
 	public static final String LOGIN_PAGE_URL = "loginPageUrl";
 	public static final String OFFERS_HEADING="offersHeading";
@@ -40,10 +40,11 @@ public class Constants {
 	public static final String CITY_ERROR_MSG = "cityErrorMsg";
 	public static final String CH_ERROR_MSG = "creditHistoryErrorMsg";
 	public static final String PHONE_ERROR_MSG = "phoneErrorMsg";
-	public static final String STEP_ONE_PAGE="stepOne";
-	public static final String STEP_TWO_PAGE="stepTwo";
-	public static final String STEP_THREE_PAGE="stepThree";
+	public static final String STEP_ONE_OPTION="stepOne";
+	public static final String STEP_TWO_OPTION="stepTwo";
+	public static final String STEP_THREE_OPTION="stepThree";
 	public static final String STEP_NOTIFICATION = "stepNotification";
+	public static final String APPLY_NOW_BTN = "applyNowBtn";
 
 	//constants for step 2 customer registration page
 
@@ -66,7 +67,11 @@ public class Constants {
 
 	public static final String FILE_PATH= "filePath";
 	public static final String FILE_NAME = "fileName";
-	public static final String SHEET_NAME = "sheetName";
+	public static final String SHEET_ONE = "firstSheetName";
+	public static final String SHEET_TWO = "secondSheetName";
+	public static final String SHEET_THREE = "thirdSheetName";
+
+
 
 	//constants for step 3 customer registration page
 
@@ -116,18 +121,8 @@ public class Constants {
 	public static final String NOTIFICATION_ERROR_MSG = "notificationErrorMsg";
 	public static final String NOTIFICATION_SUCCESS_MSG = "notificationSuccessMsg";
 	public static final String FINAL_SUBMISSION_LOADER="finalSubmissionLoaderScreen";
-	
-	
-
-
-
-
-
-
-
-
-
-
-
+	public static final String PAN_POPUP= "panPopup";
+	public static final String PAN_POPUP_FIELD = "panPopupTextField";
+	public static final String PAN_POPUP_CTA = "panPopupCTA";
 
 }

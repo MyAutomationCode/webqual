@@ -1,8 +1,11 @@
 package com.wq.pages;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -14,6 +17,7 @@ import org.testng.Assert;
 
 import com.wq.common.Commons;
 import com.wq.utils.Constants;
+import com.wq.utils.DataHelper;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
@@ -23,8 +27,9 @@ public class RegistrationPage extends Commons{
 	Constants c = new Constants();
 	
 	//Reusing the same data for final submission test cases
-	public static String phoneNumber = "7000000800";
-	public static String panNumber = "CKOPW4009F";
+	static DataHelper helper = new DataHelper();
+	public static String phoneNumber = "";
+	public static String panNumber = "";
 
 
 	//Passing Customer info for step-1 reg page
@@ -103,11 +108,11 @@ public class RegistrationPage extends Commons{
 	}
 	
 	//Error validation method
-	public static String errorMsgValidation(String errorValue)  {		
+	public static String msgValidation(String value)  {		
 
 		WebDriverWait wait = new WebDriverWait(driver,10);
-		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(prop.getProperty(errorValue)))));
-		String errorMsg =(driver.findElement(By.xpath(prop.getProperty(errorValue)))).getText();	
+		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(prop.getProperty(value)))));
+		String errorMsg =(driver.findElement(By.xpath(prop.getProperty(value)))).getText();	
 		return errorMsg;
 	}
 
@@ -161,32 +166,57 @@ public class RegistrationPage extends Commons{
 
 	
 	//Generic methods used to complete step-1 and step-2 when test scripts are running for step-2 and step-3 cust reg pages respectively
-	public static void completeStepOne() {
-
-		RegistrationPage.passCustStepOneInfo("john","Abhraham","Mohammad","20/07/1992","Male","Bangalore","I have an active loan",phoneNumber);
+	public static void completeStepOne() throws IOException {
+		
+		DataHelper helper = new DataHelper();
+		Map<String, String> data =  helper.readExcelData(prop.getProperty(Constants.FILE_PATH),
+					prop.getProperty(Constants.FILE_NAME), prop.getProperty(Constants.SHEET_ONE));	
+		
+			RegistrationPage.passCustStepOneInfo(data.get("firstName"), data.get("middleName"),data.get("lastName"), 
+					data.get("dob"),data.get("gender"), data.get("city"),data.get("creditHistory"), 
+					data.get("phoneNumber"));
+	  phoneNumber = data.get("phoneNumber");
+		
 	}
 
-	public static void complteStepTwo() {
-
-		RegistrationPage.passCustStepTwoInfo("Rented with Family","More than 3 years","More than 3 years","14-s,M layout","Kalkere","560043");
-	}
-
-	public static void completeStepThree() {
-		RegistrationPage.passCustStepThreeInfo("MUDRA", "Multinational", "DESIGN ENGINEER", panNumber, "Salaried", "More than 3 years", "More than 3 years", "abcd@moneytap.com", 
-				"56000", "Netbanking", "ICICI Bank");
-
-	}
-
-	/*
-	public static String custStepVerification(String verifycustRegStep) {
-
-		driver.findElement(By.xpath(prop.getProperty(Constants.STEP_TWO_PAGE))).click();
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-		String notificationMsg = driver.findElement(By.xpath(prop.getProperty(Constants.STEP_NOTIFICATION))).getText();
-		return notificationMsg;
+	public static void complteStepTwo() throws IOException {
+		
+		Map<String, String> data =  helper.readExcelData(prop.getProperty(Constants.FILE_PATH),
+					prop.getProperty(Constants.FILE_NAME), prop.getProperty(Constants.SHEET_TWO));
+		
+		RegistrationPage.passCustStepTwoInfo(data.get("residenceType"), data.get("years in residence"),data.get("years in city"), 
+				data.get("address1"),data.get("address2"), data.get("pincode"));
 
 	}
-	 */
 
+	public static void completeStepThree() throws IOException {
+		
+		Map<String, String> data =  helper.readExcelData(prop.getProperty(Constants.FILE_PATH),
+				prop.getProperty(Constants.FILE_NAME), prop.getProperty(Constants.SHEET_THREE));
+
+		RegistrationPage.passCustStepThreeInfo(data.get("companyName"), data.get("companyType"),data.get("designation"), 
+				data.get("PAN"),data.get("jobType"), data.get("totalWorkExp"),data.get("currentWorkExp"), 
+				data.get("officeEmail"),data.get("salary"),data.get("salaryMode"),data.get("bankName"));		
+		panNumber = data.get("PAN");
+
+	}
+	public static String getAttributeValue(String str) {
+		
+		return driver.findElement(By.xpath(prop.getProperty(str))).getAttribute("value");
+	}
+	
+	public static void getAlertAcceptResult() {
+		
+		  Alert simpleAlert = driver.switchTo().alert();
+		    simpleAlert.accept();		
+	}
+	public static void getAlertRejectResult() {
+		
+		  Alert simpleAlert = driver.switchTo().alert();
+		    simpleAlert.dismiss();
+		
+	}
+
+	
 }
 

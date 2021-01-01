@@ -8,17 +8,16 @@ import com.wq.common.Commons;
 
 public class FieldValidationPage extends Commons{
 
-	public static Boolean validateFields(String value) {
+	public static Boolean getIsEnabledValues(String value) {
 		
 		Commons.waitTime();
-	//	WebDriverWait wait = new WebDriverWait(driver,10);
-		//wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(prop.getProperty(value)))));
 		Boolean result = driver.findElement(By.xpath(prop.getProperty(value))).isEnabled();
 		return result;
 
 	}
-	public static Boolean validateCheckBox(String value) {
-
+	public static Boolean getIsSelectedValues(String value) {
+		
+		Commons.waitTime();
 		Boolean result = driver.findElement(By.xpath(prop.getProperty(value))).isSelected();
 		return result;
 
