@@ -1,6 +1,6 @@
 @landingPageValidation
 Feature: WQ landing page Validataion 
-
+#This feature file contains all UI validations test cases
 
 Scenario: Validate landing page title 
 	Given user already launched the moneytap webqual page 

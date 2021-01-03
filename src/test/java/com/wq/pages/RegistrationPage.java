@@ -149,14 +149,14 @@ public class RegistrationPage extends Commons{
 		driver.findElement(By.xpath(prop.getProperty(Constants.OTP))).sendKeys(otp);
 		driver.findElement(By.xpath(prop.getProperty(Constants.PROMO_CODE))).sendKeys(promoCode);
 		if(phone != "" && otp != "") {
-			RegistrationPage.checkBoxSelection(Constants.TERMS_AND_CONDITIONS_CHECK_BOX);
+			RegistrationPage.clickable(Constants.TERMS_AND_CONDITIONS_CHECK_BOX);
 		}
 		driver.findElement(By.xpath(prop.getProperty(Constants.CHECK_LIMIT_BTN))).click();
 
 	}
 	
 	//This method will call when we want to perform unique actions for some field validations
-	public static void checkBoxSelection(String value) {
+	public static void clickable(String value) {
 	
 		WebDriverWait wait = new WebDriverWait(driver,10);
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(prop.getProperty(value)))));

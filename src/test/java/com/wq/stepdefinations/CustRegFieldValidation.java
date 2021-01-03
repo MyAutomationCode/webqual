@@ -18,10 +18,11 @@ import io.cucumber.java.en.*;
 import io.cucumber.messages.internal.com.google.common.base.Strings;
 
 public class CustRegFieldValidation extends Commons{
-
+		
 	CustRegDataValidation dataValidation = new CustRegDataValidation();
 	FieldValidationPage fieldValidation = new FieldValidationPage();
-
+	
+	
 	@Given("user launched the moneytap webqual page")
 	public void user_launched_the_moneytap_webqual_page() {
 		Commons.browserInitialization();
@@ -30,8 +31,9 @@ public class CustRegFieldValidation extends Commons{
 	@Then("verify moneytap logo")
 	public void verify_moneytap_logo() {
 		
-		RegistrationPage.checkBoxSelection(Constants.LOGO);
-		Assert.assertEquals(LandingPage.validateTitle(), "Get line of credit up to ₹5 Lakhs - MoneyTap");
+		RegistrationPage.clickable(Constants.LOGO);
+	//	Assert.assertEquals(LandingPage.validateTitle(), "Get line of credit up to ₹5 Lakhs - MoneyTap");
+		Assert.assertEquals(LandingPage.validateTitle(), "Get line of credit up to \u20B95 Lakhs - MoneyTap");
 		
 	}
 

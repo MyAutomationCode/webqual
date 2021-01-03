@@ -21,7 +21,7 @@ import com.wq.common.Commons;
 import com.wq.pages.RegistrationPage;
 import com.wq.stepdefinations.CustRegDataValidation;
 
-
+//This class used for fetching dynamic data from external file(Excel sheet)
 public class DataHelper extends Commons{
 
 	DataFormatter formater = new DataFormatter();
@@ -52,7 +52,7 @@ public class DataHelper extends Commons{
 
 	public static LinkedHashMap getDbData(String value) throws ClassNotFoundException, SQLException {
 
-		RegistrationPage.checkBoxSelection(Constants.SEND_OTP);	
+		RegistrationPage.clickable(Constants.SEND_OTP);	
 		String dbQeury = Connections.Dev_SelectQueryPan(value);
 		LinkedHashMap DBdata = Connections.Dev_DB_executequery(dbQeury);
 		return DBdata;

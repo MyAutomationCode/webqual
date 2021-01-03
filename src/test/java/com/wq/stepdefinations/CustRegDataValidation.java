@@ -29,7 +29,6 @@ public class CustRegDataValidation extends Commons {
 
 	RegistrationPage pages = new RegistrationPage();
 	Constants c = new Constants();
-	//	DataHelper helper = new DataHelper();
 
 	@Given("user launched webpage")
 	public void user_launched_webpage() {	
@@ -54,14 +53,14 @@ public class CustRegDataValidation extends Commons {
 	@Then("click on step two option without completing step one reg details")
 	public void click_on_step_two_option_without_completing_step_one_reg_details() throws InterruptedException {
 
-		RegistrationPage.checkBoxSelection(Constants.STEP_TWO_OPTION);
+		RegistrationPage.clickable(Constants.STEP_TWO_OPTION);
 		Assert.assertEquals((RegistrationPage.msgValidation(Constants.STEP_NOTIFICATION)),"Skipping steps is not allowed. To continue to the next steps, please complete the current one");
 	}
 
 	@Then("click on step three option without completing step one reg details")
 	public void click_on_step_three_option_without_completing_step_one_reg_details() throws InterruptedException {
 
-		RegistrationPage.checkBoxSelection(Constants.STEP_THREE_OPTION);
+		RegistrationPage.clickable(Constants.STEP_THREE_OPTION);
 		Assert.assertEquals((RegistrationPage.msgValidation(Constants.STEP_NOTIFICATION)),"Skipping steps is not allowed. To continue to the next steps, please complete the current one");
 	}
 
@@ -907,7 +906,7 @@ public class CustRegDataValidation extends Commons {
 
 			for(Map<String, String> data: regData.asMaps()) {
 				RegistrationPage.FinalSubmissionPage(RegistrationPage.phoneNumber,Strings.nullToEmpty(data.get("otp")),(data.get("promoCode")));
-				RegistrationPage.checkBoxSelection(Constants.APPLY_CODE);	
+				RegistrationPage.clickable(Constants.APPLY_CODE);	
 				Assert.assertEquals(RegistrationPage.msgValidation(Constants.NOTIFICATION_SUCCESS_MSG),"Coupon applied successfully");
 				RegistrationPage.refreshBrowser();	
 			}
@@ -919,7 +918,7 @@ public class CustRegDataValidation extends Commons {
 
 			for(Map<String, String> data: regData.asMaps()) {
 				RegistrationPage.FinalSubmissionPage(RegistrationPage.phoneNumber,Strings.nullToEmpty(data.get("otp")),(data.get("promoCode")));
-				RegistrationPage.checkBoxSelection(Constants.APPLY_CODE);
+				RegistrationPage.clickable(Constants.APPLY_CODE);
 				Assert.assertEquals(RegistrationPage.msgValidation(Constants.PROMO_CODE_ERROR_MSG), "Given promo code cannot be applied.");		
 				RegistrationPage.refreshBrowser();
 			}
@@ -929,7 +928,7 @@ public class CustRegDataValidation extends Commons {
 		@Then("verify apply code option without providing promo code")
 		public void verify_apply_code_option_without_providing_promo_code() {
 
-			RegistrationPage.checkBoxSelection(Constants.APPLY_CODE);
+			RegistrationPage.clickable(Constants.APPLY_CODE);
 			Assert.assertEquals(RegistrationPage.msgValidation(Constants.PROMO_CODE_ERROR_MSG), "Please enter a valid invite code");		
 		}
 
@@ -937,7 +936,7 @@ public class CustRegDataValidation extends Commons {
 		@Then("verify user consent weblink")
 		public void verify_user_consent_weblink() throws InterruptedException {
 
-			RegistrationPage.checkBoxSelection(Constants.USER_CONSENT);
+			RegistrationPage.clickable(Constants.USER_CONSENT);
 			Assert.assertEquals(LandingPage.validateTitle(), "Read about our user consent for data usage");
 		}
 
@@ -945,7 +944,7 @@ public class CustRegDataValidation extends Commons {
 		@Then("verify terms and conditions link")
 		public void verify_terms_and_conditions_link() {
 
-			RegistrationPage.checkBoxSelection(Constants.TERMS_AND_CONDITIONS);
+			RegistrationPage.clickable(Constants.TERMS_AND_CONDITIONS);
 			Assert.assertEquals(LandingPage.validateTitle(), "Terms and Conditions");
 		}
 
@@ -953,7 +952,7 @@ public class CustRegDataValidation extends Commons {
 		@Then("verify privacy policy link")
 		public void verify_privacy_policy_link() {
 
-			RegistrationPage.checkBoxSelection(Constants.PRIVACY_POLICY);
+			RegistrationPage.clickable(Constants.PRIVACY_POLICY);
 			Assert.assertEquals(LandingPage.validateTitle(), "Learn about our Privacy_policy and data protection");
 		}
 
@@ -964,7 +963,7 @@ public class CustRegDataValidation extends Commons {
 			for(Map<String, String> data: regData.asMaps()) {
 				LinkedHashMap<String, String> map = DataHelper.getDbData(RegistrationPage.phoneNumber);
 				RegistrationPage.FinalSubmissionPage(RegistrationPage.phoneNumber,(map.get("otp")),Strings.nullToEmpty(data.get("promoCode")));
-				//	RegistrationPage.checkBoxSelection(Constants.WHATSAPP_CHECK_BOX);
+				//	RegistrationPage.clickable(Constants.WHATSAPP_CHECK_BOX);
 				Assert.assertEquals(RegistrationPage.validateNextPageTitle(Constants.FINAL_SUBMISSION_LOADER), "Waiting for credit response");		
 				Thread.sleep(3000);
 				RegistrationPage.refreshBrowser();
@@ -990,14 +989,14 @@ public class CustRegDataValidation extends Commons {
 		@Then("verify otp sent notification when user clicks on send otp option")
 		public void verify_otp_sent_notification_when_user_clicks_on_send_otp_option() {
 
-			RegistrationPage.checkBoxSelection(Constants.SEND_OTP);		
+			RegistrationPage.clickable(Constants.SEND_OTP);		
 			Assert.assertEquals(RegistrationPage.msgValidation(Constants.NOTIFICATION_SUCCESS_MSG),"Please enter the OTP sent to your given number");
 		}
 
 		@Then("verify resend otp in 30sec option")
 		public void verify_resend_otp_in_30sec_option() throws InterruptedException {
 
-			RegistrationPage.checkBoxSelection(Constants.SEND_OTP);
+			RegistrationPage.clickable(Constants.SEND_OTP);
 			Assert.assertTrue(FieldValidationPage.getIsEnabledValues((Constants.RESEND_OTP_TIMER)));
 		}
 

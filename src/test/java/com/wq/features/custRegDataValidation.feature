@@ -1,4 +1,6 @@
 @custRegDataValidation 
+#This feature file contains all data validations test cases
+#For dynamic data used data tables with maps mechanism
 Feature: Customer registration page data validations 
 
 # test cases for step one customer registration page

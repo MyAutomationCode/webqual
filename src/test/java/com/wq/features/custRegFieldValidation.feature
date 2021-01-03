@@ -1,8 +1,10 @@
 @custRegFieldValidation 
 Feature: Customer registration page field validations 
+#This feature file contains all field validations test cases
+#For dynamic data used data tables with maps mechanism
 
 #test cases for step one customer registration page
-@smoke
+
 Scenario: verify moneytap logo
 	Given user launched the moneytap webqual page 
 	Then verify moneytap logo
@@ -196,8 +198,7 @@ Scenario: verify check limit CTA button
 	Given user launched the webpage and completed all three steps 
 	Then verify check limit CTA button 
 	Then close the page 
-	
-	
+		
 Scenario: verify panpopup text field 
 	Given user launched webpage and completed two steps 
 	Then verify text field which is present in panpopup msg 

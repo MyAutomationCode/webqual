@@ -1,6 +1,7 @@
 package com.wq.utils;
 
 import java.sql.Connection;
+
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
@@ -8,11 +9,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.LinkedHashMap;
 import java.util.Properties;
-import java.util.Random;
-
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.Session;
 
+//This class used for DB connectivity
 public class Connections {
 
 
