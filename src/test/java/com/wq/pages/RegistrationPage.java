@@ -165,7 +165,7 @@ public class RegistrationPage extends Commons{
 	}
 
 	
-	//Generic methods used to complete step-1 and step-2 when test scripts are running for step-2 and step-3 cust reg pages respectively
+	//These are Generic methods used to complete step-1 and step-2 when test scripts are running for step-2 and step-3 cust reg pages respectively
 	public static void completeStepOne() throws IOException {
 		
 		DataHelper helper = new DataHelper();
@@ -200,11 +200,13 @@ public class RegistrationPage extends Commons{
 		panNumber = data.get("PAN");
 
 	}
+	
 	public static String getAttributeValue(String str) {
 		
 		return driver.findElement(By.xpath(prop.getProperty(str))).getAttribute("value");
 	}
 	
+	//These methods used to test alert messages
 	public static void getAlertAcceptResult() {
 		
 		  Alert simpleAlert = driver.switchTo().alert();
