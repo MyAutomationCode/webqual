@@ -45,11 +45,11 @@ public class Connections {
 				session.setConfig(config);
 
 				session.setConfig("StrictHostKeyChecking", "no");
-				System.out.println("Establishing Connection...");
+	//			System.out.println("Establishing Connection...");
 				session.connect();
 				session.setTimeout(3000000);
 				int assignedPort = session.setPortForwardingL(lport, rhost, rport);
-				System.out.println("localhost:" + assignedPort + " -> " + rhost + ":" + rport);
+	//			System.out.println("localhost:" + assignedPort + " -> " + rhost + ":" + rport);
 				Dev_connectToDevDb();
 			} catch (Exception e) {
 				System.err.print(e);
@@ -68,9 +68,7 @@ public class Connections {
 			
 			try {
 				Class.forName("org.postgresql.Driver");
-				System.out.println("I'm at connect to Dev db");
 				devdb = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);
-				System.out.println(devdb);
 			} catch (Exception ex) {
 				System.out.println(ex);
 			}
@@ -91,38 +89,38 @@ public class Connections {
 
 		public static String Dev_SelectQueryPan(String value) {
 			String query = "select otp from otp where phone ='" + value + "' and purpose = 'SIGNUP' and status = 'SENT'";
-			System.out.println(query);
+		//	System.out.println(query);
 			return query;
 		}
 		
 		public static LinkedHashMap Dev_SelectQueryCust(String phoneNum) throws ClassNotFoundException, SQLException {
 			String query = "select id from customer where phone ='" + phoneNum + "'";
-			System.out.println(query);
+	//		System.out.println(query);
 			return(Dev_DB_executequery(query));
 		}
 		
 		public static String Dev_deletePan(String pan) throws ClassNotFoundException, SQLException {
 			String deleteQuery = "delete from pancard where pannumber ='" + pan + "'";
-			System.out.println(deleteQuery);
+		//	System.out.println(deleteQuery);
 			Dev_createSSHTunnelToDev();
 			stmt = devdb.createStatement();
 			int rows = stmt.executeUpdate(deleteQuery);
 			stmt.close();
 			Dev_Close_connection();
-			System.out.println("deleted the data");
+		//	System.out.println("deleted the data successfully...");
 			return deleteQuery;
 		}
 		
 		public static String Dev_updateCust(String phone, Object customerId) throws SQLException, ClassNotFoundException {
 			
 			String query = "update customer set phone ='" + phone + "." + customerId + ".deleted'" + " where phone ='" + phone + "';";
-			System.out.println(query);
+		//	System.out.println(query);
 			Dev_createSSHTunnelToDev();
 			stmt = devdb.createStatement();
 			int rows = stmt.executeUpdate(query);
 			stmt.close();
 			Dev_Close_connection();
-			System.out.println("deleted the data");
+	//		System.out.println("updated the data successfully...");
 			return query;
 			
 		}

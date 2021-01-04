@@ -96,8 +96,8 @@ public class CustRegFieldValidation extends Commons{
 	//Test cases for customer registration step two	page
 
 	@Given("user launched webpage and completed first step")
-	public void user_launched_webpage_and_completed_first_step() throws IOException {
-
+	public void user_launched_webpage_and_completed_first_step() throws IOException, ClassNotFoundException, SQLException {
+		
 		Commons.browserInitialization();
 		RegistrationPage.completeStepOne();
 	}
@@ -159,7 +159,7 @@ public class CustRegFieldValidation extends Commons{
 	//test cases for step-3 customer registration page
 
 	@Given("user launched webpage and completed two steps")
-	public void user_launched_webpage_and_completed_two_steps() throws IOException {
+	public void user_launched_webpage_and_completed_two_steps() throws IOException, ClassNotFoundException, SQLException {
 
 		Commons.browserInitialization();
 		RegistrationPage.completeStepOne();
@@ -236,7 +236,7 @@ public class CustRegFieldValidation extends Commons{
 	//test cases for verification and submission field validations
 
 	@Given("user launched the webpage and completed all three steps")
-	public void user_launched_the_webpage_and_completed_all_three_steps() throws IOException {
+	public void user_launched_the_webpage_and_completed_all_three_steps() throws IOException, ClassNotFoundException, SQLException {
 
 		Commons.browserInitialization();
 		RegistrationPage.completeStepOne();
@@ -247,7 +247,6 @@ public class CustRegFieldValidation extends Commons{
 	@Then("verify phone number text field in verification page")
 	public void verify_phone_number_text_field_in_verification_page() {
 
-		System.out.println("I'm here...");
 		System.out.println(Constants.MOBILE_NO);
 
 	}

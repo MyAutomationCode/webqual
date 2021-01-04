@@ -1,6 +1,8 @@
 package com.wq.pages;
 
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -16,6 +18,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.wq.common.Commons;
+import com.wq.utils.Connections;
 import com.wq.utils.Constants;
 import com.wq.utils.DataHelper;
 
@@ -117,7 +120,7 @@ public class RegistrationPage extends Commons{
 	}
 
 	
-	//This method calls for particular city field and given the records
+	//This method calls for particular city field and given the results
 	public static List<WebElement> autoCompleteCityList(String value) {
 
 		driver.findElement(By.xpath(prop.getProperty(Constants.CITY_OF_RESIDENCE))).sendKeys(value);
@@ -125,7 +128,7 @@ public class RegistrationPage extends Commons{
 		return autoCompleteList;
 	}
 	
-	//This method calls for particular companyName field and given the records
+	//This method calls for particular companyName field and given the results
 	public static List<WebElement> autoCompleteCompanyList(String value) {
 
 		driver.findElement(By.xpath(prop.getProperty(Constants.COMPANY_NAME))).sendKeys(value);
@@ -133,7 +136,7 @@ public class RegistrationPage extends Commons{
 		return autoCompleteList;
 	}
 	
-	//This method calls for particular Designation field and given the records
+	//This method calls for particular Designation field and given the results
 	public static List<WebElement> autoCompleteDesignationList(String value) {
 
 		driver.findElement(By.xpath(prop.getProperty(Constants.DESIGNATION))).sendKeys(value);
@@ -166,17 +169,24 @@ public class RegistrationPage extends Commons{
 
 	
 	//These are Generic methods used to complete step-1 and step-2 when test scripts are running for step-2 and step-3 cust reg pages respectively
-	public static void completeStepOne() throws IOException {
+	public static void completeStepOne() throws IOException, ClassNotFoundException, SQLException {
 		
 		DataHelper helper = new DataHelper();
 		Map<String, String> data =  helper.readExcelData(prop.getProperty(Constants.FILE_PATH),
-					prop.getProperty(Constants.FILE_NAME), prop.getProperty(Constants.SHEET_ONE));	
-		
+					prop.getProperty(Constants.FILE_NAME), prop.getProperty(Constants.SHEET_ONE));
+		phoneNumber = data.get("phoneNumber");
+		LinkedHashMap customerId = Connections.Dev_SelectQueryCust(RegistrationPage.phoneNumber);
+		if(customerId.get("id") != null) {
+			DataHelper.deleteDbData();	
 			RegistrationPage.passCustStepOneInfo(data.get("firstName"), data.get("middleName"),data.get("lastName"), 
 					data.get("dob"),data.get("gender"), data.get("city"),data.get("creditHistory"), 
 					data.get("phoneNumber"));
-	  phoneNumber = data.get("phoneNumber");
-		
+		}
+		else {
+			RegistrationPage.passCustStepOneInfo(data.get("firstName"), data.get("middleName"),data.get("lastName"), 
+					data.get("dob"),data.get("gender"), data.get("city"),data.get("creditHistory"), 
+					data.get("phoneNumber"));
+		}
 	}
 
 	public static void complteStepTwo() throws IOException {
@@ -189,15 +199,16 @@ public class RegistrationPage extends Commons{
 
 	}
 
-	public static void completeStepThree() throws IOException {
+	public static void completeStepThree() throws IOException, ClassNotFoundException, SQLException {
 		
 		Map<String, String> data =  helper.readExcelData(prop.getProperty(Constants.FILE_PATH),
 				prop.getProperty(Constants.FILE_NAME), prop.getProperty(Constants.SHEET_THREE));
-
+		
+		panNumber = data.get("PAN");
+		Connections.Dev_deletePan(panNumber);
 		RegistrationPage.passCustStepThreeInfo(data.get("companyName"), data.get("companyType"),data.get("designation"), 
 				data.get("PAN"),data.get("jobType"), data.get("totalWorkExp"),data.get("currentWorkExp"), 
 				data.get("officeEmail"),data.get("salary"),data.get("salaryMode"),data.get("bankName"));		
-		panNumber = data.get("PAN");
 
 	}
 	

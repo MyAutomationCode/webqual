@@ -1,5 +1,7 @@
 package com.wq.stepdefinations;
 
+import java.sql.SQLException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -11,6 +13,7 @@ import com.wq.pages.FieldValidationPage;
 import com.wq.pages.LandingPage;
 import com.wq.pages.RegistrationPage;
 import com.wq.utils.Constants;
+import com.wq.utils.DataHelper;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -20,7 +23,7 @@ public class LandingPageValidations extends Commons{
 	
 	
 	@Given("user already launched the moneytap webqual page")
-	public void user_already_launched_the_moneytap_webqual_page() {
+	public void user_already_launched_the_moneytap_webqual_page() throws ClassNotFoundException, SQLException {
 		Commons.browserInitialization();
 	}
 

@@ -8,18 +8,12 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.DataFormatter;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.remote.Command;
 
 import com.wq.common.Commons;
 import com.wq.pages.RegistrationPage;
-import com.wq.stepdefinations.CustRegDataValidation;
 
 //This class used for fetching dynamic data from external file(Excel sheet)
 public class DataHelper extends Commons{

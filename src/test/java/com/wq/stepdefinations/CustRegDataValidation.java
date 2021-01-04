@@ -31,8 +31,9 @@ public class CustRegDataValidation extends Commons {
 	Constants c = new Constants();
 
 	@Given("user launched webpage")
-	public void user_launched_webpage() {	
+	public void user_launched_webpage() throws ClassNotFoundException, SQLException {	
 
+		//DataHelper.deleteDbData();
 		Commons.browserInitialization();
 	}
 
@@ -271,7 +272,7 @@ public class CustRegDataValidation extends Commons {
 	//test cases for customer registration step-2 page
 
 	@Given("user launched webpage and completed step one")
-	public void user_launched_webpage_and_completed_step_one() throws IOException {
+	public void user_launched_webpage_and_completed_step_one() throws IOException, ClassNotFoundException, SQLException {
 
 		Commons.browserInitialization();
 		RegistrationPage.completeStepOne();
@@ -443,8 +444,9 @@ public class CustRegDataValidation extends Commons {
 	}
 
 	@Given("user launched webpage and completed two pending steps")
-	public void user_launched_webpage_and_completed_two_pending_steps() throws IOException {
+	public void user_launched_webpage_and_completed_two_pending_steps() throws IOException, ClassNotFoundException, SQLException {
 
+	//	DataHelper.deleteDbData();
 		Commons.browserInitialization();
 		RegistrationPage.completeStepOne();
 		RegistrationPage.complteStepTwo();
@@ -713,8 +715,9 @@ public class CustRegDataValidation extends Commons {
 		//test cases for verification and submission page	
 
 		@Given("user launched webpage and completed all three steps")
-		public void user_launched_webpage_and_completed_all_three_steps() throws IOException {
+		public void user_launched_webpage_and_completed_all_three_steps() throws IOException, ClassNotFoundException, SQLException {
 
+	//		DataHelper.deleteDbData();
 			Commons.browserInitialization();
 			RegistrationPage.completeStepOne();
 			RegistrationPage.complteStepTwo();  

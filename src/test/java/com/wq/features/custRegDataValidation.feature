@@ -117,7 +117,7 @@ Scenario: verify alertMsg when user rejects creditHistory with no cc and loan op
 		|firstname| middlename | lastname | dob | gender | city | creditHistory | phoneNumber |
 		| john | abraham | roy | 20/08/1993 | Male | Bangalore | I don't have any active credit cards or loans | 7666666800 |
 	Then quit the page
-
+@smoke
 Scenario: verify step one reg details by providing phonenumber which is already exists
 	Given  user launched webpage 
 	Then  user entered phonenumber which is already exists
@@ -331,6 +331,7 @@ Scenario: verify pannumber by providing number which is already exists
 		|MUDRA|Private Limited|Engineer|FXSPK4506F|Salaried|More than 3 years|More than 3 years|test@moneytap.com|45000|Netbanking|ICICI Bank|
 	Then quit the page 
 	
+
 Scenario: 
 	verify pannumber field by providing less than required letters in step three page 
 	Given  user launched webpage and completed two pending steps 
