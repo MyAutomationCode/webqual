@@ -39,10 +39,11 @@ public class Commons {
 
 		if(browserName.equals("chrome")) {			
 			System.setProperty("webdriver.chrome.driver", prop.getProperty("chromeLocation"));
-//			chromeOptions.addArguments("headless");
-//			chromeOptions.addArguments("--window-size=1920,1080");
-//			driver = new ChromeDriver(chromeOptions);
-			driver = new ChromeDriver();
+			chromeOptions.addArguments("headless");
+			chromeOptions.addArguments("--window-size=1920,1080");
+			chromeOptions.addArguments("--no-sandbox"); //this will bypass OS security model
+			driver = new ChromeDriver(chromeOptions);
+//			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.get(prop.getProperty(Constants.CUSTOMER_REG_URL));
 		}
